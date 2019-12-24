@@ -10,27 +10,26 @@
 // Related Topics 链表
 
 
-
 //leetcode submit region begin(Prohibit modification and deletion)
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) { val = x; }
  * }
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
-        if(head==null)
-        {
+        if (head == null) {
             return head;
         }
-        ListNode new_head=head;
-        while (head.next!=null) {
+        ListNode new_head = head;
+        while (head.next != null) {
             ListNode next = head.next;
             head.next = head.next.next;
-            next.next=new_head;
+            next.next = null;
             new_head = next;
         }
         return new_head;
