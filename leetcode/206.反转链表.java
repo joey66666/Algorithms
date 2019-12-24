@@ -13,6 +13,8 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+
+ // 头插法
 class Solution {
     public ListNode reverseList(ListNode head) {
         if (head == null) {
