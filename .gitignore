@@ -25,7 +25,7 @@ hs_err_pid*
 # idea
 .idea/
 
-# en
-leetcode/editor/en
 
 leetcode/editor/cn/all.json
+
+.gitignore
