@@ -1,4 +1,4 @@
-# Algorithms
+# Data Structure & Algorithms
 
 [UC Berkeley Data Structures, Spring 2019][1]
 
