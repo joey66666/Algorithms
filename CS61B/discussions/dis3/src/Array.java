@@ -46,18 +46,18 @@ public class Array {
         int[] newArr = new int[total];
 
         int b = 0;
-        for (int item : arr) {
-            for (int i = 0; i < item; i++) {
-                newArr[b] = item;
-                b++;
-            }
-        }
-//        for (int i = 0; i < arr.length; i++) {
-//            for (int a = 0; a < arr[i]; a++) {
-//                newArr[b] = arr[i];
+//        for (int item : arr) {
+//            for (int i = 0; i < item; i++) {
+//                newArr[b] = item;
 //                b++;
 //            }
 //        }
+        for (int i = 0; i < arr.length; i++) {
+            for (int a = 0; a < arr[i]; a++) {
+                newArr[b] = arr[i];
+                b++;
+            }
+        }
         return newArr;
 
     }
