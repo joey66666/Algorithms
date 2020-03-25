@@ -30,12 +30,7 @@ public class LinkedListDeque<T> {
             lb1.addFirst(i);
         }
         lb1.printDeque();
-//        System.out.println(lb1.get(4));
         System.out.println(lb1.getRecursive(4));
-
-//        LinkedListDeque lb2 = new LinkedListDeque(lb1);
-//        lb2.printDeque();
-
     }
 
     /*Adds an item of type T to the front of the deque.*/
@@ -79,7 +74,6 @@ public class LinkedListDeque<T> {
         if (sentinel.next == sentinel) {
             return null;
         }
-//        sentinel.next.prev = null;
         sentinel.next = sentinel.next.next;
         sentinel.next.prev = sentinel;
         return sentinel.next.item;
@@ -122,7 +116,6 @@ public class LinkedListDeque<T> {
         } else {
             return getRecursive(index - 1, p.next);
         }
-
     }
 
     public class deNode {
