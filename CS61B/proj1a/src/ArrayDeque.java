@@ -1,53 +1,121 @@
-public class ArrayDeque {
-    int nextFirst;
-    int nextLast;
-    private int[] items;
+public class ArrayDeque<T> {
+    private int nextFirst;
+    private int nextLast;
+    private T[] items;
     private int size;
 
 
     public ArrayDeque() {
-        items = new int[8];
+        items = (T[]) new Object[8];
         size = 0;
+        nextFirst = 0;
+        nextLast = 1;
     }
 
     public ArrayDeque(ArrayDeque other) {
-        // items2长度 = size长度，去除后面为空的冗余
-//        int[] items2 = new int[other.size()];
-
-        // items2长度 = other长度literally
-        int[] items2 = new int[other.items.length];
-        System.arraycopy(other.items, 0, items2, 0, other.size());
-        this.items = items2;
-        this.size = other.size();
-//        return items2;
+        this.items = (T[]) new Object[other.items.length];
+        this.size = other.size;
+        this.nextFirst = other.nextFirst;
+        this.nextLast = other.nextLast;
+        System.arraycopy(other.items, 0, this.items, 0, other.size);
     }
 
-    public void add(int x) {
-        items[size] = x;
-        size += 1;
-        if (size == items.length) {
-            resize();
+    public int addOne(int x) {
+        return (x + 1) % items.length;
+    }
+
+    public int minusOne(int x) {
+        return (x - 1 + items.length) % items.length;
+    }
+
+    public boolean isFull() {
+        return (size == items.length);
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public boolean isEfficient() {
+        return size >= 16 && (size / items.length) < 0.25;
+    }
+
+    public void resize(int newSize) {
+        T[] a = (T[]) new Object[newSize];
+        int oldIndex = addOne(nextFirst);
+        for (int newIndex = 0; newIndex < size; newIndex++) {
+            a[newIndex] = items[oldIndex];
+            oldIndex = addOne(oldIndex);
+            size++;
         }
-    }
-
-    public void resize() {
-        int[] a = new int[size * 2];
-        System.arraycopy(items, 0, a, 0, size);
         items = a;
+        nextFirst = newSize - 1;
+        nextLast = size;
+
     }
 
-    public void remove() {
-        items[size - 1] = 0;
-        size -= 1;
+    public void addLast(T item) {
+        if (isFull()) {
+            resize(size * 2);
+        }
+        items[nextLast] = item;
+        nextLast = addOne(nextLast);
+        size += 1;
     }
 
-    public int get(int index) {
-        return items[index];
+    public void addFirst(T item) {
+        if (isFull()) {
+            resize(size * 2);
+        }
+        items[nextFirst] = item;
+        nextFirst = minusOne(nextFirst);
+        size += 1;
+    }
+
+    public T removeLast() {
+        if (!isEfficient()) {
+            resize(size / 2);
+        }
+        int removeIndex = minusOne(nextLast);
+        T removeItem = items[removeIndex];
+        items[removeIndex] = null;
+
+        if (!isEmpty()) {
+            size -= 1;
+        }
+        return removeItem;
     }
 
     public int size() {
         return size;
     }
 
+    public T removeFirst() {
+        if (!isEfficient()) {
+            resize(size / 2);
+        }
+        int removeIndex = addOne(nextFirst);
+        T removeItem = items[removeIndex];
+        items[removeIndex] = null;
 
+        if (!isEmpty()) {
+            size -= 1;
+        }
+        return removeItem;
+    }
+
+    public T get(int index) {
+        if (index >= size) {
+            return null;
+        }
+        int start = addOne(nextFirst);
+        return items[(start + index) % items.length];
+    }
+
+    public void printDeque() {
+        for (int i = addOne(nextFirst); i != nextLast; i = addOne(i)) {
+            System.out.print(items[i] + " ");
+        }
+        System.out.println();
+    }
 }
