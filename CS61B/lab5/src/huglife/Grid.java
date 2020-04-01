@@ -1,5 +1,3 @@
-package huglife;
-
 import java.util.Queue;
 import java.util.ArrayDeque;
 import java.util.HashMap;
@@ -234,7 +232,7 @@ public class Grid {
      * @param worldName name fo the world that is being written
      */
     public void writeWorld(String worldName) {
-        Out out = new Out("huglife/" + worldName + ".world");
+        Out out = new Out("/" + worldName + ".world");
         for (int j = N; j >= 0; j--) {
             for (int i = 0; i < N; i++) {
                 Occupant o = getOccupant(i, j);

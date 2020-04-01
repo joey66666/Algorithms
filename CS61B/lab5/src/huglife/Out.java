@@ -1,4 +1,3 @@
-package huglife;
 /*************************************************************************
  *  Compilation:  javac Out.java
  *  Execution:    java Out

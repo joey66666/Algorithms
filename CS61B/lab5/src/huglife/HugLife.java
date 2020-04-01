@@ -1,5 +1,3 @@
-package huglife;
-
 import creatures.*;
 
 /**
@@ -124,7 +122,7 @@ public class HugLife {
      * @return a newly initialized HugLife
      */
     public static HugLife readWorld(String worldName) {
-        In in = new In("huglife/" + worldName + ".world");
+        In in = new In("/" + worldName + ".world");
         HugLife h = new HugLife(WORLD_SIZE);
         while (!in.isEmpty()) {
             String creature = in.readString();

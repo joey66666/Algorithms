@@ -1,5 +1,3 @@
-package huglife;
-
 /**
  * Actions are created by Creatures to signify intent, and take effect via
  * the HugLife simulator.
@@ -141,12 +139,12 @@ public class Action {
     public String toString() {
         if ((dir == null) && (x != UNDEFINED)) {
             return String.format("Action: " + type + " at " + x + ", "
-                    + y + ".");
+                    + y + "");
         } else if ((dir != null)) {
             return String.format("Action: " + type + " in direction "
-                    + dir + ".");
+                    + dir + "");
         } else {
-            return String.format("Action: " + type + ".");
+            return String.format("Action: " + type + "");
         }
 
     }

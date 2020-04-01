@@ -3,11 +3,9 @@
  *
  * @author Josh Hug
  */
-package huglife;
 
 import java.util.Deque;
 import java.util.Random;
-import java.util.List;
 import java.util.Stack;
 
 

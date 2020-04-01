@@ -1,8 +1,4 @@
-package huglife;
-
-import java.util.ArrayList;
 import java.util.Map;
-import java.util.List;
 
 /**
  * @author Josh Hug

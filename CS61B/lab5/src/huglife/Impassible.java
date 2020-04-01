@@ -1,5 +1,3 @@
-package huglife;
-
 import java.awt.Color;
 
 public class Impassible extends Occupant {

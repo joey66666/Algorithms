@@ -1,5 +1,3 @@
-package huglife;
-
 /*************************************************************************
  *  Compilation:  javac StdDraw.java
  *  Execution:    java StdDraw

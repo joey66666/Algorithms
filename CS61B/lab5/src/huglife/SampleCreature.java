@@ -1,8 +1,5 @@
-package huglife;
-
 import java.awt.Color;
 import java.util.Map;
-import java.util.List;
 
 /**
  * Example of a creature you might create for your world.
