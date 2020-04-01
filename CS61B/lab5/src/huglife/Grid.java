@@ -1,3 +1,5 @@
+package huglife;
+
 import java.util.Queue;
 import java.util.ArrayDeque;
 import java.util.HashMap;

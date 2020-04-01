@@ -1,4 +1,4 @@
-/**
+package huglife; /**
  * Utilities for lab 5
  *
  * @author Josh Hug

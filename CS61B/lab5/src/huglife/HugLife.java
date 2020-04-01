@@ -1,3 +1,5 @@
+package huglife;
+
 import creatures.*;
 
 /**
