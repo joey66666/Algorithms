@@ -67,30 +67,30 @@ class Solution {
 // Time: O(m * n)，但 runtime：11%
 // Space: O(n)
 // class Solution {
-// public List<List<String>> groupAnagrams(String[] strs) {
-// HashMap<String, List<String>> hm = new HashMap<>();
+//     public List<List<String>> groupAnagrams(String[] strs) {
+//         HashMap<String, List<String>> hm = new HashMap<>();
 
-// for (String str : strs) {
-// int[] count = new int[26];
-// for (Character ch : str.toCharArray()) {
-// count[ch - 'a']++;
-// }
-// String s = "";
-// for (int i = 0; i < count.length; i++) {
-// if (count[i] != 0) {
-// s += String.valueOf(count[i]) + String.valueOf((char) (i + 'a'));
-// }
-// }
-// if (hm.containsKey(s)) {
-// List<String> list = hm.get(s);
-// list.add(str);
-// } else {
-// List<String> list = new ArrayList<>();
-// list.add(str);
-// hm.put(s, list);
-// }
-// }
-// return new ArrayList<>(hm.values());
-// }
+//         for (String str : strs) {
+//             int[] count = new int[26];
+//             for (Character ch : str.toCharArray()) {
+//                 count[ch - 'a']++;
+//             }
+//             String s = "";
+//             for (int i = 0; i < count.length; i++) {
+//                 if (count[i] != 0) {
+//                     s += String.valueOf(count[i]) + String.valueOf((char) (i + 'a'));
+//                 }
+//             }
+//             if (hm.containsKey(s)) {
+//                 List<String> list = hm.get(s);
+//                 list.add(str);
+//             } else {
+//                 List<String> list = new ArrayList<>();
+//                 list.add(str);
+//                 hm.put(s, list);
+//             }
+//         }
+//         return new ArrayList<>(hm.values());
+//     }
 // }
 // @lc code=end
