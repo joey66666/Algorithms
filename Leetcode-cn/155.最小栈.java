@@ -37,7 +37,6 @@
  *
  */
 
-import java.util.Stack;
 
 // @lc code=start
 class MinStack {
