@@ -38,13 +38,17 @@
 
 // @lc code=start
 /**
- * Definition for a binary tree node. public class TreeNode { int val; TreeNode
- * left; TreeNode right; TreeNode(int x) { val = x; } }
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
  */
 class Solution {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        if (root == null)
-            return new ArrayList<>();
+        if (root == null) return new ArrayList<>();
         else {
             List<List<Integer>> res = new ArrayList<>();
             List<TreeNode> cur = new ArrayList<>();
@@ -54,10 +58,8 @@ class Solution {
                 List<Integer> vals = new ArrayList<>();
                 List<TreeNode> next_level = new ArrayList<>();
                 for (TreeNode node : cur) {
-                    if (node.left != null)
-                        next_level.add(node.left);
-                    if (node.right != null)
-                        next_level.add(node.right);
+                    if (node.left != null) next_level.add(node.left);
+                    if (node.right != null) next_level.add(node.right);
                     vals.add(node.val);
                 }
                 res.add(vals);
@@ -69,3 +71,4 @@ class Solution {
     }
 }
 // @lc code=end
+
