@@ -32,32 +32,49 @@
  */
 
 // @lc code=start
+// Solution1 双指针比较
+// class Solution {
+//     public boolean isPalindrome(String s) {
+//         if (s.length() == 0 || s.length() == 1) return true;
+//         int i = 0;
+//         int j = s.length() - i - 1;
+//         s = s.toLowerCase();
+//         // 跑到一半，节约时间
+//         while (i < s.length() / 2 + 1 && j > s.length() / 2 - 1) {
+//             Character front = s.charAt(i);
+//             Character back = s.charAt(j);
+//             // 0-9：48-57，A-Z：65-90，a-z：97-122
+//             if (((front > 47 && front < 58) || (front > 64 && front < 91) || (front > 96 && front < 123)) &&
+//                     ((back > 47 && back < 58) || (back > 64 && back < 91) || (back > 96 && back < 123))) {
+//                 if (front.equals(back)) {
+//                     i++;
+//                     j--;
+//                 } else {
+//                     return false;
+//                 }
+//             } else if ((front > 47 && front < 58) || (front > 64 && front < 91) || (front > 96 && front < 123)) {
+//                 j--;
+//             } else {
+//                 i++;
+//             }
+//         }
+//         return true;
+//     }
+// }
+
+// Solution2，比较Reversed String
 class Solution {
     public boolean isPalindrome(String s) {
-        if (s.length() == 0 || s.length() == 1) return true;
-        int i = 0;
-        int j = s.length() - i - 1;
+        if (s == null) return true;
         s = s.toLowerCase();
-        // 跑到一半，节约时间
-        while (i < s.length() / 2 + 1 && j > s.length() / 2 - 1) {
-            Character front = s.charAt(i);
-            Character back = s.charAt(j);
-            // 0-9：48-57，A-Z：65-90，a-z：97-122
-            if (((front > 47 && front < 58) || (front > 64 && front < 91) || (front > 96 && front < 123)) &&
-                    ((back > 47 && back < 58) || (back > 64 && back < 91) || (back > 96 && back < 123))) {
-                if (front.equals(back)) {
-                    i++;
-                    j--;
-                } else {
-                    return false;
-                }
-            } else if ((front > 47 && front < 58) || (front > 64 && front < 91) || (front > 96 && front < 123)) {
-                j--;
-            } else {
-                i++;
+        int l = s.length();
+        StringBuilder str = new StringBuilder(l);
+        for (char c : s.toCharArray()) {
+            if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z')) {
+                str.append(c);
             }
         }
-        return true;
+        return str.toString().equals(str.reverse().toString());
     }
 }
 // @lc code=end
