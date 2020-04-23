@@ -47,11 +47,7 @@ class Solution {
         }
         for (int i = 1; i < line; i++) {
             for (int j = 1; j < row; j++) {
-                if (dp[i - 1][j] > dp[i][j - 1]) {
-                    dp[i][j] = dp[i][j - 1] + grid[i][j];
-                } else {
-                    dp[i][j] = dp[i - 1][j] + grid[i][j];
-                }
+                dp[i][j] = grid[i][j] + Math.min(dp[i - 1][j], dp[i][j - 1]);
             }
         }
         return dp[line - 1][row - 1];
