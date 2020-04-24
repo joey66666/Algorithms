@@ -29,10 +29,49 @@
 // Example 4:
 // Input: mat = [[0,0,0,1],[0,0,1,1],[0,1,1,1]]
 // Output: 1
- 
+
 // Constraints:
 // rows == mat.length
 // cols == mat[i].length
 // 1 <= rows, cols <= 100
 // mat[i][j] is either 0 or 1.
 // mat[i] is sorted in a non-decreasing way.
+
+/**
+ * // This is the BinaryMatrix's API interface.
+ * // You should not implement it, or speculate about its implementation
+ * interface BinaryMatrix {
+ * public int get(int row, int col) {}
+ * public List<Integer> dimensions {}
+ * };
+ */
+
+
+// Solution
+
+/**
+ * (Optimal Approach) Imagine there is a pointer p(x, y) starting from top right corner.
+ * p can only move left or down.
+ * If the value at p is 0, move down.
+ * If the value at p is 1, move left.
+ * Try to figure out the correctness and time complexity of this algorithm.
+ **/
+class Solution {
+    public int leftMostColumnWithOne(BinaryMatrix binaryMatrix) {
+        List<Integer> dimension=binaryMatrix.dimensions();
+        int rows = dimension.get(0);
+        int cols = dimension.get(1);
+
+        int i = 0;
+        int j = cols - 1;
+        int count = -1;
+        while (i < rows && j >= 0) {
+            if (binaryMatrix.get(i, j) == 0) i += 1;
+            else {
+                count = j;
+                j -= 1;
+            }
+        }
+        return count;
+    }
+}
