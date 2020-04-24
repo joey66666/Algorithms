@@ -12,6 +12,14 @@ Medium**
     - 否则说明target在[mid, right]的不规则区间里，搜索右边区间，则使left = mid + 1;
 
 
+**49  Group Anagrams，字母异位词分组
+Medium**
+
+- https://leetcode-cn.com/problems/group-anagrams/description/
+1. 每个单词 sorted 作为 key 放入 HashMap
+2. 每个单词每个字母映射成字母表 int 数组，组成唯一 String key (E.g. 1a1e1t) 作为 key 
+
+
 **[64] 最小路径和
 Medium**
 
@@ -19,6 +27,16 @@ Medium**
 - 用`dp`数组记录当前行走到当前点的最小路径值，`dp[i][j] = grid[i][j] + Math.min(dp[i - 1][j], dp[i][j - 1])`
 - `dp`第一行只能从左走，第一列只能从上走，提前初始化
 
+
+**92. Reverse Linked List II
+Medium**
+
+- https://leetcode.com/problems/reverse-linked-list-ii/
+- 翻转开始前一个节点
+- 翻转完成后一个节点
+- 中间翻转
+- 转完连接
+  
 
 **[200] 岛屿数量
 Medium**

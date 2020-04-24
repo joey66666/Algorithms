@@ -69,15 +69,6 @@ Easy**
 - 这题挺有意思
 
 
-**49  Group Anagrams，字母异位词分组
-Medium**
-
-- https://leetcode-cn.com/problems/group-anagrams/description/
-1. 每个单词 sorted 作为 key 放入 HashMap
-2. 每个单词每个字母映射成字母表 int 数组，组成唯一 String key (E.g. 1a1e1t) 作为 key 
-
-
-
 **53. Maximum Subarray
 Easy**
 
@@ -128,16 +119,6 @@ Easy**
 - 排序好的数组，从后往前插入
 - 比大小，大于从尾插，小于则swap
 - 剩下直接插在头
-
-
-**92. Reverse Linked List II
-Medium**
-
-- https://leetcode.com/problems/reverse-linked-list-ii/
-- 翻转开始前一个节点
-- 翻转完成后一个节点
-- 中间翻转
-- 转完连接
 
 
 **[100] 相同的树
