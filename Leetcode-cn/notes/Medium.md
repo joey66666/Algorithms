@@ -87,3 +87,14 @@ Medium**
 - https://leetcode-cn.com/problems/construct-binary-search-tree-from-preorder-traversal/description/
 - 第一个是根，往后遍历，<=根为左子树，剩下为右子树
 - 递归遍历 
+
+
+**[560] 和为K的子数组
+Medium**
+
+- https://leetcode-cn.com/problems/subarray-sum-equals-k/description/
+-  prefixSum array 记录从0到i的前缀sum
+-  subarray(i, j) = prefixSum(j) - prefixSum(i - 1)
+-  找到 prefixSum(j)- prefixSum(i) == k == subarray(i, j)
+-  HashMap<Integer, Integer>: <prefixSum, prefixSum出现的次数>
+-  Time:O(n), Space:O(n)
