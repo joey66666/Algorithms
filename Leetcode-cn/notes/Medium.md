@@ -98,3 +98,18 @@ Medium**
 -  找到 prefixSum(j)- prefixSum(i) == k == subarray(i, j)
 -  HashMap<Integer, Integer>: <prefixSum, prefixSum出现的次数>
 -  Time:O(n), Space:O(n)
+
+
+**[201] 数字范围按位与
+Medium**
+- https://leetcode-cn.com/problems/bitwise-and-of-numbers-range/description/
+1. Solution 1 
+   - 最后的数是该数字范围内所有的数的左边共同的部分
+   - 只要找到左边公共的部分
+   - 直接平移m和n，每次向右移一位，直到m和n相等
+   - 记录下所有平移的次数i，然后再把m左移i位即为最终结果
+2. Solution 2
+   - 从后往前每次 n = (n & (n-1)), 直到n <= m, 然后返回n,
+   - 逐渐将最右边不同的置为0, 最后只剩下最左边m 和 n相同的位置.
+   - 举例：110与上(110-1)，得到100，相当于去掉最低位的1，
+   - n就这样每次去掉最低位的1，如果小于等于m了，返回此时的n
