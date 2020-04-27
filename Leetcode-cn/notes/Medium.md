@@ -45,6 +45,21 @@ Medium**
 - == 1 则DFS遍历每个点的上下左右，把 1 变为 0，遍历结束count += 1
 
 
+**[201] 数字范围按位与
+Medium**
+- https://leetcode-cn.com/problems/bitwise-and-of-numbers-range/description/
+1. Solution 1 
+   - 最后的数是该数字范围内所有的数的左边共同的部分
+   - 只要找到左边公共的部分
+   - 直接平移m和n，每次向右移一位，直到m和n相等
+   - 记录下所有平移的次数i，然后再把m左移i位即为最终结果
+2. Solution 2
+   - 从后往前每次 n = (n & (n-1)), 直到n <= m, 然后返回n,
+   - 逐渐将最右边不同的置为0, 最后只剩下最左边m 和 n相同的位置.
+   - 举例：110与上(110-1)，得到100，相当于去掉最低位的1，
+   - n就这样每次去掉最低位的1，如果小于等于m了，返回此时的n
+
+
 **[238] 除自身以外数组的乘积
 Medium**
 
@@ -59,6 +74,17 @@ Medium**
 - https://leetcode-cn.com/problems/contiguous-array/description/
 - 测试用例只包含0和1，遇0减1、遇1加1，存`sum`值到HashMap中，若`sum`之前存在，则说明`sum + 0 = sum`，即中间子序列和为0，即0和1个数相
 - HashMap中需要先`put(0, -1)`来使比如在`[0, 1]`上遍历`sum = 0`时`index = 1`，此时应该更新`res = 2`，而非记录为`index=1, res = 0`
+
+
+**[560] 和为K的子数组
+Medium**
+
+- https://leetcode-cn.com/problems/subarray-sum-equals-k/description/
+-  prefixSum array 记录从0到i的前缀sum
+-  subarray(i, j) = prefixSum(j) - prefixSum(i - 1)
+-  找到 prefixSum(j)- prefixSum(i) == k == subarray(i, j)
+-  HashMap<Integer, Integer>: <prefixSum, prefixSum出现的次数>
+-  Time:O(n), Space:O(n)
 
 
 **[678] 有效的括号字符串
@@ -89,27 +115,11 @@ Medium**
 - 递归遍历 
 
 
-**[560] 和为K的子数组
+**[146] LRU缓存机制
 Medium**
-
-- https://leetcode-cn.com/problems/subarray-sum-equals-k/description/
--  prefixSum array 记录从0到i的前缀sum
--  subarray(i, j) = prefixSum(j) - prefixSum(i - 1)
--  找到 prefixSum(j)- prefixSum(i) == k == subarray(i, j)
--  HashMap<Integer, Integer>: <prefixSum, prefixSum出现的次数>
--  Time:O(n), Space:O(n)
-
-
-**[201] 数字范围按位与
-Medium**
-- https://leetcode-cn.com/problems/bitwise-and-of-numbers-range/description/
-1. Solution 1 
-   - 最后的数是该数字范围内所有的数的左边共同的部分
-   - 只要找到左边公共的部分
-   - 直接平移m和n，每次向右移一位，直到m和n相等
-   - 记录下所有平移的次数i，然后再把m左移i位即为最终结果
-2. Solution 2
-   - 从后往前每次 n = (n & (n-1)), 直到n <= m, 然后返回n,
-   - 逐渐将最右边不同的置为0, 最后只剩下最左边m 和 n相同的位置.
-   - 举例：110与上(110-1)，得到100，相当于去掉最低位的1，
-   - n就这样每次去掉最低位的1，如果小于等于m了，返回此时的n
+- https://leetcode-cn.com/problems/lru-cache/description/
+- Time: O(1), Size: O(n)
+- 双向链表中存储`Key`和`Value`, `HashMap`中存储`Key`和`Node`
+- 链表从头到尾按以旧到新，新插入放到尾，最近get放到尾，`HashMap.size() >= capcity`删除头，`put`新`Node`
+- 
+![image](https://user-images.githubusercontent.com/25404074/80353709-4fa02500-88a8-11ea-90ee-770fb2ad2277.png)
