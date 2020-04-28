@@ -131,3 +131,13 @@ Medium**
 - `dp`数组中 `dp[i]` 表示达到`i`位置时剩余的跳力，若到达某个位置时跳力为负了，说明无法到达该位置。
 - 到达当前位置的剩余跳力跟上一个位置的剩余跳力（`dp` 值）和上一个位置新的跳力（`nums` 数组中的值）有关。所以当前位置的剩余跳力（`dp` 值）和当前位置新的跳力中的较大那个数决定了当前能到的最远距离，而下一个位置的剩余跳力（`dp` 值）就等于当前的这个较大值减去1，因为需要花一个跳力到达下一个位置
 - 所以就有状态转移方程了：`dp[i] = max(dp[i - 1], nums[i - 1]) - 1`，如果当某一个时刻 `dp` 数组的值为负了，说明无法抵达当前位置，则直接返回 `false`，最后循环结束后直接返回 `true ` 即可
+
+
+** [1143] 最长公共子序列
+Medium**
+- https://leetcode-cn.com/problems/longest-common-subsequence/description/
+- dp[text1.length() + 1][text2.length() + 1]
+- dp[i][j]表示两个字符串在i, j之前位置（不包含i, j）的最大公共子序列长度
+- if(text1.charAt(i - 1) == text2.charAt(j - 1)) dp[i][j] = dp[i - 1][j - 1] + 1
+- else dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1])
+- ![image](https://user-images.githubusercontent.com/25404074/80450199-96972480-8953-11ea-8641-656efe8beffe.png)
