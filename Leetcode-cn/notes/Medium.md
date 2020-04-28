@@ -121,8 +121,7 @@ Medium**
 - Time: O(1), Size: O(n)
 - 双向链表中存储`Key`和`Value`, `HashMap`中存储`Key`和`Node`
 - 链表从头到尾按以旧到新，新插入放到尾，最近get放到尾，`HashMap.size() >= capcity`删除头，`put`新`Node`
-- 
-![image](https://user-images.githubusercontent.com/25404074/80353709-4fa02500-88a8-11ea-90ee-770fb2ad2277.png)
+- ![image](https://user-images.githubusercontent.com/25404074/80353709-4fa02500-88a8-11ea-90ee-770fb2ad2277.png)
 
 
 **[55] 跳跃游戏
