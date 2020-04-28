@@ -132,7 +132,7 @@ Medium**
 - 所以就有状态转移方程了：`dp[i] = max(dp[i - 1], nums[i - 1]) - 1`，如果当某一个时刻 `dp` 数组的值为负了，说明无法抵达当前位置，则直接返回 `false`，最后循环结束后直接返回 `true ` 即可
 
 
-** [1143] 最长公共子序列
+**[1143] 最长公共子序列
 Medium**
 - https://leetcode-cn.com/problems/longest-common-subsequence/description/
 - dp[text1.length() + 1][text2.length() + 1]
@@ -140,3 +140,16 @@ Medium**
 - if(text1.charAt(i - 1) == text2.charAt(j - 1)) dp[i][j] = dp[i - 1][j - 1] + 1
 - else dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1])
 - ![image](https://user-images.githubusercontent.com/25404074/80450199-96972480-8953-11ea-8641-656efe8beffe.png)
+
+
+**[221] 最大正方形
+Medium**
+- https://leetcode-cn.com/problems/maximal-square/description/
+- dp[i][j]数组用来保存以matrix[i][j]为右下角的最大正方形边长
+```java
+if(matrix[i][j] == 1){ 
+     dp[i][j] = Math.min(dp[i - 1][j],dp[i][j - 1],dp[i - 1][j - 1]) + 1
+}
+```
+- return dp 数组中最大值的 ^2 
+- ![image](https://user-images.githubusercontent.com/25404074/80496729-2eb8fc00-899c-11ea-973d-8c0b39fde046.png)
