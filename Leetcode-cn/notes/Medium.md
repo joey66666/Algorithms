@@ -158,7 +158,7 @@ if(matrix[i][j] == 1){
 **First Unique Numer
 Medium**
 - https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3313/
-- 思路同[[146] LRU Cache](https://github.com/joey66666/Algorithms/issues/4#issuecomment-619837412_)
+- 思路同[[146] LRU Cache](https://leetcode-cn.com/problems/lru-cache/description/)
 - 使用双链表 + HashMap，链表节点存`Key`，HashMap中存储`Key`和`Node`
 - 添加时检查`number`是否为 unique ，否则的话从链表中删除
 - 如果从HashMap中删除，可能存在单数形式被认为是unique number
