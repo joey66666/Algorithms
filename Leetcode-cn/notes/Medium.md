@@ -153,3 +153,13 @@ if(matrix[i][j] == 1){
 ```
 - return dp 数组中最大值的 ^2 
 - ![image](https://user-images.githubusercontent.com/25404074/80496729-2eb8fc00-899c-11ea-973d-8c0b39fde046.png)
+
+
+**First Unique Numer
+Medium**
+- https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3313/
+- 思路同[[146] LRU Cache](https://leetcode-cn.com/problems/lru-cache/description/)
+- 使用双链表 + HashMap，链表节点存`Key`，HashMap中存储`Key`和`Node`
+- 添加时检查`number`是否为 unique ，否则的话从链表中删除
+- 如果从HashMap中删除，可能存在单数形式被认为是unique number
+- 解决方法：不从HashMap中删除，在每次从`DoubleLinkedList`删除`Node`的逻辑里判断是否已经删除过这个`Node`了，如果已删除过，则重复，直接`return`
