@@ -12,12 +12,20 @@ Medium**
     - 否则说明target在[mid, right]的不规则区间里，搜索右边区间，则使left = mid + 1;
 
 
-**49  Group Anagrams，字母异位词分组
+**[49]  Group Anagrams，字母异位词分组
 Medium**
 
 - https://leetcode-cn.com/problems/group-anagrams/description/
 1. 每个单词 sorted 作为 key 放入 HashMap
 2. 每个单词每个字母映射成字母表 int 数组，组成唯一 String key (E.g. 1a1e1t) 作为 key 
+
+
+**[55] 跳跃游戏
+Medium**
+- https://leetcode-cn.com/problems/jump-game/description/
+- `dp`数组中 `dp[i]` 表示达到`i`位置时剩余的跳力，若到达某个位置时跳力为负了，说明无法到达该位置。
+- 到达当前位置的剩余跳力跟上一个位置的剩余跳力（`dp` 值）和上一个位置新的跳力（`nums` 数组中的值）有关。所以当前位置的剩余跳力（`dp` 值）和当前位置新的跳力中的较大那个数决定了当前能到的最远距离，而下一个位置的剩余跳力（`dp` 值）就等于当前的这个较大值减去1，因为需要花一个跳力到达下一个位置
+- 所以就有状态转移方程了：`dp[i] = max(dp[i - 1], nums[i - 1]) - 1`，如果当某一个时刻 `dp` 数组的值为负了，说明无法抵达当前位置，则直接返回 `false`，最后循环结束后直接返回 `true ` 即可
 
 
 **[64] 最小路径和
@@ -28,7 +36,7 @@ Medium**
 - `dp`第一行只能从左走，第一列只能从上走，提前初始化
 
 
-**92. Reverse Linked List II
+**[92] Reverse Linked List II
 Medium**
 
 - https://leetcode.com/problems/reverse-linked-list-ii/
@@ -36,7 +44,23 @@ Medium**
 - 翻转完成后一个节点
 - 中间翻转
 - 转完连接
+
+
+**[124] 二叉树中的最大路径和
+Medium**
+- https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/description/
+- 最大路径和 = 当前节点value + 左子树最大路径和 + 右子树最大路径和
+- 如果子树路径 < 0 则返回 0，否则返回 当前节点value + Math.max(左子树最大路径和 + 右子树最大路径和)
+- 使用数组来保存值，如果使用变量每次递归会更新值，无法保存最大的值
   
+
+**[146] LRU缓存机制
+Medium**
+- https://leetcode-cn.com/problems/lru-cache/description/
+- Time: O(1), Size: O(n)
+- 双向链表中存储`Key`和`Value`, `HashMap`中存储`Key`和`Node`
+- 链表从头到尾按以旧到新，新插入放到尾，最近get放到尾，`HashMap.size() >= capcity`删除头，`put`新`Node`
+- ![image](https://user-images.githubusercontent.com/25404074/80353709-4fa02500-88a8-11ea-90ee-770fb2ad2277.png)
 
 **[200] 岛屿数量
 Medium**
@@ -58,6 +82,19 @@ Medium**
    - 逐渐将最右边不同的置为0, 最后只剩下最左边m 和 n相同的位置.
    - 举例：110与上(110-1)，得到100，相当于去掉最低位的1，
    - n就这样每次去掉最低位的1，如果小于等于m了，返回此时的n
+
+
+**[221] 最大正方形
+Medium**
+- https://leetcode-cn.com/problems/maximal-square/description/
+- dp[i][j]数组用来保存以matrix[i][j]为右下角的最大正方形边长
+```java
+if(matrix[i][j] == 1){ 
+     dp[i][j] = Math.min(dp[i - 1][j],dp[i][j - 1],dp[i - 1][j - 1]) + 1
+}
+```
+- return dp 数组中最大值的 ^2 
+- ![image](https://user-images.githubusercontent.com/25404074/80496729-2eb8fc00-899c-11ea-973d-8c0b39fde046.png)
 
 
 **[238] 除自身以外数组的乘积
@@ -115,23 +152,6 @@ Medium**
 - 递归遍历 
 
 
-**[146] LRU缓存机制
-Medium**
-- https://leetcode-cn.com/problems/lru-cache/description/
-- Time: O(1), Size: O(n)
-- 双向链表中存储`Key`和`Value`, `HashMap`中存储`Key`和`Node`
-- 链表从头到尾按以旧到新，新插入放到尾，最近get放到尾，`HashMap.size() >= capcity`删除头，`put`新`Node`
-- ![image](https://user-images.githubusercontent.com/25404074/80353709-4fa02500-88a8-11ea-90ee-770fb2ad2277.png)
-
-
-**[55] 跳跃游戏
-Medium**
-- https://leetcode-cn.com/problems/jump-game/description/
-- `dp`数组中 `dp[i]` 表示达到`i`位置时剩余的跳力，若到达某个位置时跳力为负了，说明无法到达该位置。
-- 到达当前位置的剩余跳力跟上一个位置的剩余跳力（`dp` 值）和上一个位置新的跳力（`nums` 数组中的值）有关。所以当前位置的剩余跳力（`dp` 值）和当前位置新的跳力中的较大那个数决定了当前能到的最远距离，而下一个位置的剩余跳力（`dp` 值）就等于当前的这个较大值减去1，因为需要花一个跳力到达下一个位置
-- 所以就有状态转移方程了：`dp[i] = max(dp[i - 1], nums[i - 1]) - 1`，如果当某一个时刻 `dp` 数组的值为负了，说明无法抵达当前位置，则直接返回 `false`，最后循环结束后直接返回 `true ` 即可
-
-
 **[1143] 最长公共子序列
 Medium**
 - https://leetcode-cn.com/problems/longest-common-subsequence/description/
@@ -142,24 +162,10 @@ Medium**
 - ![image](https://user-images.githubusercontent.com/25404074/80450199-96972480-8953-11ea-8641-656efe8beffe.png)
 
 
-**[221] 最大正方形
-Medium**
-- https://leetcode-cn.com/problems/maximal-square/description/
-- dp[i][j]数组用来保存以matrix[i][j]为右下角的最大正方形边长
-```java
-if(matrix[i][j] == 1){ 
-     dp[i][j] = Math.min(dp[i - 1][j],dp[i][j - 1],dp[i - 1][j - 1]) + 1
-}
-```
-- return dp 数组中最大值的 ^2 
-- ![image](https://user-images.githubusercontent.com/25404074/80496729-2eb8fc00-899c-11ea-973d-8c0b39fde046.png)
-
-
 **First Unique Numer
 Medium**
 - https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3313/
 - 思路同[[146] LRU Cache](https://leetcode-cn.com/problems/lru-cache/description/)
-- 使用双链表 + HashMap，链表节点存`Key`，HashMap中存储`Key`和`Node`
-- 添加时检查`number`是否为 unique ，否则的话从链表中删除
-- 如果从HashMap中删除，可能存在单数形式被认为是unique number
+- 使用双链表 + HashMap，链表节点存`Key`，HashMap中存储`Key`和`Node`，添加时检查`number`是否为 unique ，否则的话从链表中删除。如果从HashMap中删除，可能存在单数形式被认为是unique number。
 - 解决方法：不从HashMap中删除，在每次从`DoubleLinkedList`删除`Node`的逻辑里判断是否已经删除过这个`Node`了，如果已删除过，则重复，直接`return`
+
