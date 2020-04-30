@@ -163,9 +163,18 @@ Medium**
 
 
 **First Unique Numer
-Medium**
+Medium(Maybe)**
 - https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3313/
 - 思路同[[146] LRU Cache](https://leetcode-cn.com/problems/lru-cache/description/)
 - 使用双链表 + HashMap，链表节点存`Key`，HashMap中存储`Key`和`Node`，添加时检查`number`是否为 unique ，否则的话从链表中删除。如果从HashMap中删除，可能存在单数形式被认为是unique number。
 - 解决方法：不从HashMap中删除，在每次从`DoubleLinkedList`删除`Node`的逻辑里判断是否已经删除过这个`Node`了，如果已删除过，则重复，直接`return`
 
+
+**Check If a String Is a Valid Sequence from Root to Leaves Path in a Binary Tree
+Medium(Maybe)**
+- https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/532/week-5/3315/
+- 必须从root开始，到leaf结束
+- 两种情况
+   1. 当前节点value != arr[i], return false;
+   2. arr到达末尾，树未遍历到leaf, return false;
+- 遍历左右子树，root为根有一棵子树为true则存在序列
