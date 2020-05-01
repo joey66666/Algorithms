@@ -227,6 +227,12 @@ Easy**
 - https://leetcode.com/problems/reverse-linked-list/
 
 
+**[278] 第一个错误的版本
+**
+- https://leetcode-cn.com/problems/first-bad-version/description/
+- 简单二分，注意循环条件
+
+
 **[283]  Move Zeros，0元素移到最后，其他不变
 Easy**
 - https://leetcode-cn.com/problems/move-zeroes
