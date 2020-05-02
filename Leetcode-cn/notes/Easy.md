@@ -232,6 +232,21 @@ Easy**
 - `StringBuilder.append()`比`String += `速度快很多
 
 
+
+**[169] 多数元素
+Easy**
+- https://leetcode-cn.com/problems/majority-element/description/
+1. Solution1: HashMap
+   - HashMap，过程中 `if hm.get(nums[i]) > nums.length /2`则return
+   - Runtime: 38%
+   - Time: O(n), Space: O(n)
+2. Solution2: 摩尔投票法
+   - 假设 nums[0] 为最多元素，遍历，相同 + 1，不同 - 1
+   - 若归零，则前面其他和本身数量相等，对冲抵消，指针当下指向另一个数，换成另一个数，对后面继续遍历比较
+   - Runtime: 99%
+   -  Time: O(n), Space: O(1)
+
+
 **[202] Happy Number
 Easy**
 - https://leetcode-cn.com/problems/happy-number
