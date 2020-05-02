@@ -1,40 +1,40 @@
-**1. Two Sum 两数之和
+**[1] Two Sum 两数之和
 Easy**
 - https://leetcode-cn.com/problems/two-sum/
 - HashSet 解决注意小index在前
 
 
-**7 Reverse Int
+**[7] Reverse Int
 Easy**
 - https://leetcode-cn.com/problems/reverse-integer/
 
 
-**9 isPalindrome
+**[9] isPalindrome
 Easy**
 - https://leetcode-cn.com/problems/palindrome-number/
 
 
-**14 longestCommonPrefix
+**[14] longestCommonPrefix
 Easy**
 - https://leetcode-cn.com/problems/longest-common-prefix
 1. 暴力，注意边界条件，先纵向再横向，逻辑要写清晰
 2. 从后往前裁剪至符合，若不符合则裁剪至空
 
 
-**20 Valid Parentheses，判断对等括号
+**[20] Valid Parentheses，判断对等括号
 Easy**
 - https://leetcode-cn.com/problems/valid-parentheses/
 - 根据 now 指向来 push 对应的括号，判断 pop 是否==对应
 
 
-**26. Remove Duplicated from Sorted Array 删除排序数组中的重复项
+**[26] Remove Duplicated from Sorted Array 删除排序数组中的重复项
 Easy**
 - https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array
 - 只需要前i个，后面不用管
 - return的count要+1，因为根据count来print数组
 
 
-**27. Remove Element 移除元素
+**[27] Remove Element 移除元素
 Easy**
 - https://leetcode-cn.com/problems/remove-element
 - 循环中不动即跳过
@@ -45,7 +45,7 @@ Easy**
 - https://leetcode-cn.com/problems/implement-strstr/description/
 
 
-**35. Search Insert Position 搜索插入位置
+**[35] Search Insert Position 搜索插入位置
 Easy**
 - https://leetcode-cn.com/problems/search-insert-position
 - once < or = 则返回，为插入位置
@@ -59,7 +59,7 @@ Easy**
 - 这题挺有意思
 
 
-**53. Maximum Subarray
+**[53] Maximum Subarray
 Easy**
 - https://leetcode-cn.com/problems/maximum-subarray
 - 暴力, O(n^2). **（不正确）**
@@ -71,7 +71,7 @@ Easy**
 - https://leetcode-cn.com/problems/length-of-last-word/description/
 
 
-**66 Plus One
+**[66] Plus One
 Easy**
 - https://leetcode-cn.com/problems/plus-one/
 - 判断是否进位
@@ -222,6 +222,14 @@ Easy**
 - https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/description/
 - 头尾指针，头尾和 > target, 尾指针左移；头尾和 < target, 头指针右移
 - Time: O(n)
+
+
+**[168] Excel表列名称
+Easy**
+- https://leetcode-cn.com/problems/excel-sheet-column-title/description/
+- 思路：取余到底，转换成字母，再反向输出
+- n直接除以26会出错，如`52/26=2···0`，但在Excel用实际`AZ`表示，所以先`n -= 1`。深层原因即计算机以0为第一位，Excel以1为第一位
+- `StringBuilder.append()`比`String += `速度快很多
 
 
 **[202] Happy Number
