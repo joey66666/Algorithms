@@ -246,6 +246,13 @@ Easy**
    -  Time: O(n), Space: O(1)
 
 
+**[171] Excel表列序号
+Easy**
+- https://leetcode-cn.com/problems/excel-sheet-column-number/description/
+- [[168] Excel表列名称](https://leetcode-cn.com/problems/excel-sheet-column-title/description/)的反面题
+- 等同 26 -> 10 进制转换
+
+
 **[202] Happy Number
 Easy**
 - https://leetcode-cn.com/problems/happy-number
