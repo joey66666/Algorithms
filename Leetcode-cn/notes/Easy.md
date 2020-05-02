@@ -217,6 +217,13 @@ Easy**
 - 计算长度差，长的先走到两边平齐，再一起走，相交则return，走到头不相交return null
 
 
+**[167] 两数之和 II - 输入有序数组
+Easy**
+- https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/description/
+- 头尾指针，头尾和 > target, 尾指针左移；头尾和 < target, 头指针右移
+- Time: O(n)
+
+
 **[202] Happy Number
 Easy**
 - https://leetcode-cn.com/problems/happy-number
@@ -247,7 +254,7 @@ Easy**
 - **向上一层 return 1 + Math.max( left_depth, right_depth )**
 
 
-** [771] 宝石与石头
+**[771] 宝石与石头
 Easy**
 - https://leetcode-cn.com/problems/jewels-and-stones/description/
 - 简单`HashMap`
