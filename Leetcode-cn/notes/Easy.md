@@ -228,7 +228,7 @@ Easy**
 
 
 **[278] 第一个错误的版本
-**
+Easy**
 - https://leetcode-cn.com/problems/first-bad-version/description/
 - 简单二分，注意循环条件
 
@@ -245,6 +245,12 @@ Easy**
 - https://leetcode-cn.com/problems/diameter-of-binary-tree/description/
 - **depth = Math.max( depth, left_depth + right_depth )**
 - **向上一层 return 1 + Math.max( left_depth, right_depth )**
+
+
+** [771] 宝石与石头
+Easy**
+- https://leetcode-cn.com/problems/jewels-and-stones/description/
+- 简单`HashMap`
 
 
 **[844] 比较含退格的字符串
