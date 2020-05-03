@@ -285,6 +285,12 @@ Easy**
 2. S2，单指针，非0往前移，统计0个数n；后n个置0
 
 
+**[383] 赎金信
+Easy**
+- https://leetcode-cn.com/problems/ransom-note/description/
+- `int[26]`数组遍历`magzine`统计26个字母使用次数，再遍历`ransomNote`, `if 对应字母 <= 0`则return
+
+
 **[543] 二叉树的直径
 Easy**
 - https://leetcode-cn.com/problems/diameter-of-binary-tree/description/
