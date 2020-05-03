@@ -253,6 +253,15 @@ Easy**
 - 等同 26 -> 10 进制转换
 
 
+**[172] 阶乘后的零
+Easy**
+- https://leetcode-cn.com/problems/factorial-trailing-zeroes/description/
+- 0 的个数，即 10 ^ 个数
+- 10 = 5 * 2
+- 2 的个数易得到，所以10的个数 = 5的个数
+- 如15！中有15，10，5，结果为3
+
+
 **[202] Happy Number
 Easy**
 - https://leetcode-cn.com/problems/happy-number
