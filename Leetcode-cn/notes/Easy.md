@@ -262,6 +262,14 @@ Easy**
 - 如15！中有15，10，5，结果为3
 
 
+**[189] 旋转数组
+Easy**
+- https://leetcode-cn.com/problems/rotate-array/description/
+- Solution2, 三次翻转，第一次数组倒序，第二次以k为分界线前后子数组分别倒序
+- 比如12345经过翻转就变成了54321，这样已经做到了把前面的数字放到后面去，但是还没有完全达到要求，只需要把12放在后面去，目标数组就是34512。与54321对比发现我们就只需要在把分界线前后数组再进行翻转一次就可得到目标数组了
+- Time:O(n) //O(2n)
+
+
 **[202] Happy Number
 Easy**
 - https://leetcode-cn.com/problems/happy-number
