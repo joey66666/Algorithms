@@ -316,6 +316,18 @@ Easy**
 - `int[26]`数组遍历`magzine`统计26个字母使用次数，再遍历`ransomNote`, `if 对应字母 <= 0`则return
 
 
+**[476] 数字的补数
+Easy**
+- https://leetcode-cn.com/problems/number-complement/description/
+- 直接 ~ 按位取反，前缀的0也会被取反。
+- 所以用 ^ 异或，直接`^1`前面的位数也会异或，用与`num`相同位数的数异或
+- 如：101 ^ 111 = 010。怎么得到111？考虑111 + 1 = 1000，而1000又是 最小的 大于101的 只有一位是1 的二进制数。
+- 解决方法：
+   1. 找到最小的大于原数字的二进制值仅有一位为1的数；
+   2. 将此数减1；
+   3. 与原数字按位求异或。
+
+
 **[543] 二叉树的直径
 Easy**
 - https://leetcode-cn.com/problems/diameter-of-binary-tree/description/
