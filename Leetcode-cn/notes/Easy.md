@@ -287,6 +287,12 @@ n >>= 1
 - Time: O(logN)
 
 
+**[191] 位1的个数
+Easy**
+- https://leetcode-cn.com/problems/number-of-1-bits/description/
+- 取最低位数，为1相加
+
+
 **[202] Happy Number
 Easy**
 - https://leetcode-cn.com/problems/happy-number
@@ -326,7 +332,7 @@ Easy**
    1. 找到最小的大于原数字的二进制值仅有一位为1的数；
    2. 将此数减1；
    3. 与原数字按位求异或。
-
+- `Integer.highestOneBit(num)`：拿到num最高位，后面补0，如 101 返回 100 
 
 **[543] 二叉树的直径
 Easy**

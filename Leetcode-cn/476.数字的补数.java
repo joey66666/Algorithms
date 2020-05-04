@@ -55,6 +55,7 @@
 // 3. 与原数字按位求异或。
 class Solution {
     public int findComplement(int num) {
+        // Integer.highestOneBit(num)：拿到num最高位，后面补0，如 101 返回 100 
         return num ^ ((Integer.highestOneBit(num) << 1) - 1);
     }
 }
