@@ -293,6 +293,17 @@ Easy**
 - 取最低位数，为1相加
 
 
+**[198] 打家劫舍
+Easy**
+- https://leetcode-cn.com/problems/house-robber/description/
+- 维护一个一位数组 dp，其中 dp[i] 表示 [0, i] 区间可以抢夺的最大值，对当前i来说，有抢和不抢两种互斥的选择。
+- 不抢：dp[i-1]（等价于去掉 nums[i] 只抢 [0, i-1] 区间最大值）
+- 抢：dp[i-2] + nums[i]（等价于去掉 nums[i-1]）
+- 比如 nums为{3, 2, 1, 5}，首先 dp[0]=3 , dp[1]，由于3比2大，所以抢第一个房子的3，当前房子的2不抢，则dp[1]=3。dp[2]由于不能抢相邻的，所以可以用再前面的一个的 dp 值加上当前的房间值，和当前房间的前面一个 dp 值比较，取较大值当做当前 dp 值
+- 状态转移方程 dp[i] = max(num[i] + dp[i - 2], dp[i - 1]),
+- 需要初始化 dp[0] 和 dp[1]，dp[0] 为 num[0]，dp[1] 为 max(num[0], num[1])
+
+
 **[202] Happy Number
 Easy**
 - https://leetcode-cn.com/problems/happy-number
