@@ -1,4 +1,4 @@
-# Data Structure & Algorithms
+# Data Structure & Algorithms in Java
 
 [UC Berkeley Data Structures, Spring 2019][1]
 
@@ -6,3 +6,9 @@
 
 [1]:	https://sp19.datastructur.es/
 [2]:	https://leetcode-cn.com
+
+**Leetcode Solution Notes**
+
+[Easy](https://github.com/joey66666/Algorithms/blob/master/Leetcode-cn/notes/Easy.md)
+
+[Medium](https://github.com/joey66666/Algorithms/blob/master/Leetcode-cn/notes/Medium.md)
