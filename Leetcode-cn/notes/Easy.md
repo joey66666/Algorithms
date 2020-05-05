@@ -316,6 +316,14 @@ Easy**
 - 双指针遍历删除
 
 
+**[204] 计数质数
+Easy**
+- https://leetcode-cn.com/problems/count-primes/description/
+- 质数：只有1和它本身两个因数的自然数（1不是质数）
+- 从boolean[n]数组中，2开始反向去除所有的非质数(2的倍数，3的倍数，4的倍数...)，质数false，非质数true
+- 遍历过程使用count记录true的个数
+
+
 **[206] Reverse Linked List
 Easy**
 - https://leetcode.com/problems/reverse-linked-list/
