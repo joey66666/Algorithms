@@ -324,6 +324,20 @@ Easy**
 - 遍历过程使用count记录true的个数
 
 
+**[205] 同构字符串
+Easy**
+- https://leetcode-cn.com/problems/isomorphic-strings/description/
+1. Solution1，HashMap
+   - HashMap<Character, Character>存放 s 和 t 的字符映射
+   - 遍历，如果遍历到相同的字符hm.get()不同则return false
+   - 需要对s和t都要遍历
+   - 如"ab","aa"的test case第一次遍历得到['a','a'],['b','a'], 第二次['a','a'],['a','b'] return false
+   - Runtime: 64%
+2. Solution2，HashMap使用Obejct[]数组重写
+   - 字符ASCII码的存放index，值对应HashMap的key，val
+   - Runtime: 76%
+
+
 **[206] Reverse Linked List
 Easy**
 - https://leetcode.com/problems/reverse-linked-list/
