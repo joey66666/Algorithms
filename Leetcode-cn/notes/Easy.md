@@ -358,6 +358,15 @@ Easy**
 - HashMap存Index，每次比较，达条件return true，否则更新Index
 
 
+**[225] 用队列实现栈
+Easy**
+- https://leetcode-cn.com/problems/implement-stack-using-queues/description/
+- 双队列实现，a：临时队列，b：总队列
+- 队列a存当前push的数，队列b存之前处理完的完整栈
+- 当前push的存到a的头，把b的每一个add到a的尾
+- 核心：每次完成add后交换a和b，保证a始终为空
+
+
 **[278] 第一个错误的版本
 Easy**
 - https://leetcode-cn.com/problems/first-bad-version/description/
