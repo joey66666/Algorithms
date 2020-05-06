@@ -343,6 +343,15 @@ Easy**
 - https://leetcode.com/problems/reverse-linked-list/
 
 
+**[217] 存在重复元素
+Easy**
+- https://leetcode-cn.com/problems/contains-duplicate/description/
+1. Solution1, 简单HashMap
+2. Solution2, HashSet
+   - HashSet特点：无序；不存储重复元素；没有get()，只能iterator访问
+   - 遍历一遍存入HashSet，`HashSet.size() < nums.length() ? true : false `
+
+
 **[278] 第一个错误的版本
 Easy**
 - https://leetcode-cn.com/problems/first-bad-version/description/
@@ -411,4 +420,3 @@ Easy**
 
 **[1046] 最后一块石头的重量
 Easy**
-- https://leetcode-cn.com/problems/last-stone-weight/description/
