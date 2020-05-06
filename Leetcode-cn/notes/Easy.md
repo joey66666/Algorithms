@@ -352,6 +352,12 @@ Easy**
    - 遍历一遍存入HashSet，`HashSet.size() < nums.length() ? true : false `
 
 
+**[219] 存在重复元素 II
+Easy**
+- https://leetcode-cn.com/problems/contains-duplicate-ii/description/
+- HashMap存Index，每次比较，达条件return true，否则更新Index
+
+
 **[278] 第一个错误的版本
 Easy**
 - https://leetcode-cn.com/problems/first-bad-version/description/
