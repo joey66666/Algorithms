@@ -439,5 +439,12 @@ Easy**
 - 快慢指针，注意 if( p.next! = null )
 
 
+**[993] 二叉树的堂兄弟节点
+Easy**
+- https://leetcode-cn.com/problems/cousins-in-binary-tree/description/
+- 递归遍历，到x,y节点保存parent和depth
+- 最后比较 parent不相等且depth相等
+
+
 **[1046] 最后一块石头的重量
 Easy**
