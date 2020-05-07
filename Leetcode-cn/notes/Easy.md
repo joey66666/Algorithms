@@ -367,6 +367,12 @@ Easy**
 - 核心：每次完成add后交换a和b，保证a始终为空
 
 
+**[226] 翻转二叉树
+Easy**
+- https://leetcode-cn.com/problems/invert-binary-tree/description/
+- 递归调换，先进入子树调换完，再调换root.left, root.right
+
+
 **[278] 第一个错误的版本
 Easy**
 - https://leetcode-cn.com/problems/first-bad-version/description/
