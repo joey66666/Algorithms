@@ -38,9 +38,7 @@
 class Solution {
     public boolean isPowerOfTwo(int n) {
         if(n <= 0) return false;
-        // int res = ;
         return (Integer.highestOneBit(n) ^ n) == 0 ? true : false;
-
     }
 }
 // @lc code=end

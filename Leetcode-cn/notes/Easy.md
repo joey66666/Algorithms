@@ -457,3 +457,10 @@ Easy**
 
 **[1046] 最后一块石头的重量
 Easy**
+
+
+**[1232] 缀点成线
+Easy**
+- https://leetcode-cn.com/problems/check-if-it-is-a-straight-line/description/
+- 只存在两个点直接return true
+- 检查第三个点与12两点之间的斜率是否相等(使用Double)
