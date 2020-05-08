@@ -373,6 +373,15 @@ Easy**
 - 递归调换，先进入子树调换完，再调换root.left, root.right
 
 
+**[231] 2的幂
+Easy**
+- https://leetcode-cn.com/problems/power-of-two/description/
+- 2的倍数二进制第一位为1，后面均为0，取最高位异或本身
+- 处理 `n <= 0`的情况
+- `return (Integer.highestOneBit(n) ^ n) == 0`                                  Runtime: 23%
+- `return (Integer.highestOneBit(n) ^ n) == 0 ? true : false`            Runtime: 100%
+
+
 **[278] 第一个错误的版本
 Easy**
 - https://leetcode-cn.com/problems/first-bad-version/description/
@@ -442,7 +451,7 @@ Easy**
 **[993] 二叉树的堂兄弟节点
 Easy**
 - https://leetcode-cn.com/problems/cousins-in-binary-tree/description/
-- 递归遍历，到x,y节点保存parent和depth
+- 递归遍历，到x, y节点保存parent和depth
 - 最后比较 parent不相等且depth相等
 
 
