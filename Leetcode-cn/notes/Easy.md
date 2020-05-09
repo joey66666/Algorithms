@@ -395,6 +395,20 @@ Easy**
 2. S2，单指针，非0往前移，统计0个数n；后n个置0
 
 
+**[367] 有效的完全平方数
+Easy**
+- https://leetcode-cn.com/problems/valid-perfect-square/description/
+- 从`left = 0, right = num`开始二分
+```java
+long mid = left + (right - left) / 2
+long t = mid * mid
+if(t == num) return true;
+else if(t < num) left = mid + 1;
+else right = mid - 1; 
+```  
+- 注意要用`long`数据类型
+
+
 **[383] 赎金信
 Easy**
 - https://leetcode-cn.com/problems/ransom-note/description/
