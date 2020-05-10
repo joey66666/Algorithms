@@ -378,8 +378,16 @@ Easy**
 - https://leetcode-cn.com/problems/power-of-two/description/
 - 2的倍数二进制第一位为1，后面均为0，取最高位异或本身
 - 处理 `n <= 0`的情况
-- `return (Integer.highestOneBit(n) ^ n) == 0`                                  Runtime: 23%
-- `return (Integer.highestOneBit(n) ^ n) == 0 ? true : false`            Runtime: 100%
+- `return (Integer.highestOneBit(n) ^ n) == 0` Runtime: 23%
+- `return (Integer.highestOneBit(n) ^ n) == 0 ? true : false` Runtime: 100%
+
+
+**[232] 用栈实现队列
+Easy**
+- https://leetcode-cn.com/problems/implement-queue-using-stacks/description/
+- 双栈`in`和`out`
+- Push: `in.push()`
+- Pop: 若`out`不为空则`out.pop()`，若`out`空则`out.push(in.pop())`转移所有`in`元素，再`out.pop()`
 
 
 **[278] 第一个错误的版本
@@ -481,6 +489,7 @@ Easy**
 
 **[1046] 最后一块石头的重量
 Easy**
+- https://leetcode-cn.com/problems/last-stone-weight/
 
 
 **[1232] 缀点成线
