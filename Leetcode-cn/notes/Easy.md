@@ -1,7 +1,8 @@
 **[1] Two Sum 两数之和
 Easy**
 - https://leetcode-cn.com/problems/two-sum/
-- HashSet 解决注意小index在前
+- HashSet
+- 使用一个 HashMap，来建立数字和其坐标位置之间的映射，在遍历数组的时候，用 target 减去遍历到的数字，就是另一个需要的数字了，直接在 HashMap 中查找其是否存在即可，注意要判断查找到的数字不是第一个数字，比如 target 是4，遍历到了一个2，那么另外一个2不能是之前那个2
 
 
 **[7] Reverse Int
