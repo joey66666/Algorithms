@@ -115,6 +115,15 @@ Medium**
 - HashMap中需要先`put(0, -1)`来使比如在`[0, 1]`上遍历`sum = 0`时`index = 1`，此时应该更新`res = 2`，而非记录为`index=1, res = 0`
 
 
+**[540] 有序数组中的单一元素
+Medium**
+- https://leetcode-cn.com/problems/single-element-in-a-sorted-array/description/
+- 其他成对出现，所以SingleNumber存在的序列长度为奇数
+- 对于中点位置和左右进行判断，再对左右子序列中的元素个数进行判断奇偶，找到单个元素存在的方向，进行二分查找
+- 注意若是偶数则 +=2 相同序列，否则 +=1
+- 再搞不清打草稿列举一下（[11223],[12233],[1122334],[0112233]）
+
+
 **[560] 和为K的子数组
 Medium**
 - https://leetcode-cn.com/problems/subarray-sum-equals-k/description/
