@@ -1,3 +1,12 @@
+**[31] 下一个排列
+Medium**
+- https://leetcode-cn.com/problems/next-permutation/description/
+1. 数组从后往前遍历，找到第一个降序数字
+2. 与后面子序列中最小的大于它的值交换
+3. 将子序列倒序
+![image](https://user-images.githubusercontent.com/25404074/81701462-9d1db400-949c-11ea-9a4c-8d0b69c52351.png)
+
+
 **[33] 搜索旋转排序数组
 Medium**
 - https://leetcode-cn.com/problems/search-in-rotated-sorted-array/description/
