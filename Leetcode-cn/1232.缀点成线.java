@@ -50,21 +50,22 @@
  */
 
 // @lc code=start
+// 斜率
 class Solution {
     public boolean checkStraightLine(int[][] coordinates) {
-        if (coordinates.length == 2 && coordinates[0].length == 2) return true;
-        double xa = coordinates[0][0];
-        double ya = coordinates[0][1];
-        double xb = coordinates[1][0];
-        double yb = coordinates[1][1];
+        if (coordinates.length == 2) return true;
+        int xa = coordinates[0][0];
+        int ya = coordinates[0][1];
+        int xb = coordinates[1][0];
+        int yb = coordinates[1][1];
 
-        double angle = (yb - ya) / (xb - xa);
         for (int i = 2; i < coordinates.length; i++) {
-            double tmp = (coordinates[i][1] - ya) / (coordinates[i][0] - xa);
-            if (angle != tmp) return false;
+            int x = coordinates[i][0];
+            int y = coordinates[i][1];            
+            if ((x - xa) * (yb - ya) != (xb - xa) * (y - ya))               
+                return false;
         }
         return true;
     }
 }
 // @lc code=end
-

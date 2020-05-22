@@ -497,4 +497,4 @@ Easy**
 Easy**
 - https://leetcode-cn.com/problems/check-if-it-is-a-straight-line/description/
 - 只存在两个点直接return true
-- 检查第三个点与12两点之间的斜率是否相等(使用Double)
+- 检查第三个点与12两点之间的斜率是否相等(乘法计算替代除法，防止除数corner case)
