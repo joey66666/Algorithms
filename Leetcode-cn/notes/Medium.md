@@ -1,3 +1,18 @@
+**[3] 无重复字符的最长子串
+Medium**
+- https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/description/
+1. Solution 1, 双循环遍历
+   - Runtime：13%
+2. Solution 2，双指针
+   - [left, right]区间保存子串的左右区间，set里面是不重复的字符。
+   - 使用while循环，如果right字符不在set中，put; 如果right在，就把left对应的字符remove。
+   - Runtime: 48%
+3. Solution 3, 保存前缀，一次遍历
+   - 当right遍历若出现重复则这个区间不符合要求，移动left到right字符上次出现的下一位置（hm.get(s.charAt(right)) + 1）
+   - left更新的时候需要保留最大（最右）的位置，即left不回头
+   - e.g.: 对于abba，当right指向最后的a的时候，left指向的是字典中保留的有第一个位置的a，如果不对此进行判断的话，left会移动到第一个字符b（回头）
+
+
 **[31] 下一个排列
 Medium**
 - https://leetcode-cn.com/problems/next-permutation/description/
