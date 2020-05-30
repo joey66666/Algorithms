@@ -83,6 +83,12 @@ Medium**
 - 使用数组来保存值，如果使用变量每次递归会更新值，无法保存最大的值
   
 
+**[144] 二叉树的前序遍历
+Medium**
+- https://leetcode-cn.com/problems/binary-tree-preorder-traversal/description/
+- 同[94] 二叉树的中序遍历 https://leetcode-cn.com/problems/binary-tree-inorder-traversal/description/
+
+
 **[146] LRU缓存机制
 Medium**
 - https://leetcode-cn.com/problems/lru-cache/description/
