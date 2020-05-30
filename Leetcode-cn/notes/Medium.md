@@ -66,6 +66,15 @@ Medium**
 - 转完连接
 
 
+**[94] 二叉树的中序遍历
+Medium**
+- https://leetcode-cn.com/problems/binary-tree-inorder-traversal/description/
+- 将二叉树分为“左”（包括一路向左，经过的所有实际左+根）、“右”（包括实际的右）两种节点
+- 使用同样的顺序将“左”节点入栈
+- 在合适的时机转向（转向后，“右”节点即成为“左”节点）、访问节点、或出栈
+- 在出栈之后才访问这个节点。因为先序先访问实际根，后访问实际左，而中序恰好相反。相同的是，访问完根+左子树（先序）或左子树+根（中序）后，都需要转向到“右”节点，使“右”节点称为新的“左”节点。
+
+
 **[124] 二叉树中的最大路径和
 Medium**
 - https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/description/
