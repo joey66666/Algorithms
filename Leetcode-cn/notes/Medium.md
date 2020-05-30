@@ -69,6 +69,7 @@ Medium**
 **[94] 二叉树的中序遍历
 Medium**
 - https://leetcode-cn.com/problems/binary-tree-inorder-traversal/description/
+- https://juejin.im/post/59e3fde451882578c20858a5
 - 将二叉树分为“左”（包括一路向左，经过的所有实际左+根）、“右”（包括实际的右）两种节点
 - 使用同样的顺序将“左”节点入栈
 - 在合适的时机转向（转向后，“右”节点即成为“左”节点）、访问节点、或出栈
@@ -86,6 +87,7 @@ Medium**
 **[144] 二叉树的前序遍历
 Medium**
 - https://leetcode-cn.com/problems/binary-tree-preorder-traversal/description/
+- https://juejin.im/post/59e3fde451882578c20858a5
 - 同[94] 二叉树的中序遍历 https://leetcode-cn.com/problems/binary-tree-inorder-traversal/description/
 
 
