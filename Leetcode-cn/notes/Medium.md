@@ -52,7 +52,7 @@ Medium**
 
 **[64] 最小路径和
 Medium**
-- https://leetcode-cn.com/problems/minimum-path-sum/description/
+- https://leetcode-cn.com/problems/minimum-path-dsum/description/
 - 用`dp`数组记录当前行走到当前点的最小路径值，`dp[i][j] = grid[i][j] + Math.min(dp[i - 1][j], dp[i][j - 1])`
 - `dp`第一行只能从左走，第一列只能从上走，提前初始化
 
@@ -64,6 +64,16 @@ Medium**
 - 翻转完成后一个节点
 - 中间翻转
 - 转完连接
+
+
+**[94] 二叉树的中序遍历
+Medium**
+- https://leetcode-cn.com/problems/binary-tree-inorder-traversal/description/
+- https://juejin.im/post/59e3fde451882578c20858a5
+- 将二叉树分为“左”（包括一路向左，经过的所有实际左+根）、“右”（包括实际的右）两种节点
+- 使用同样的顺序将“左”节点入栈
+- 在合适的时机转向（转向后，“右”节点即成为“左”节点）、访问节点、或出栈
+- 在出栈之后才访问这个节点。因为先序先访问实际根，后访问实际左，而中序恰好相反。相同的是，访问完根+左子树（先序）或左子树+根（中序）后，都需要转向到“右”节点，使“右”节点称为新的“左”节点。
 
 
 **[116] 填充每个节点的下一个右侧节点指针
@@ -80,6 +90,13 @@ Medium**
 - 如果子树路径 < 0 则返回 0，否则返回 当前节点value + Math.max(左子树最大路径和 + 右子树最大路径和)
 - 使用数组来保存值，如果使用变量每次递归会更新值，无法保存最大的值
   
+
+**[144] 二叉树的前序遍历
+Medium**
+- https://leetcode-cn.com/problems/binary-tree-preorder-traversal/description/
+- https://juejin.im/post/59e3fde451882578c20858a5
+- 同[94] 二叉树的中序遍历 https://leetcode-cn.com/problems/binary-tree-inorder-traversal/description/
+
 
 **[146] LRU缓存机制
 Medium**
