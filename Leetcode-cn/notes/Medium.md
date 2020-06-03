@@ -66,6 +66,13 @@ Medium**
 - 转完连接
 
 
+**[116] 填充每个节点的下一个右侧节点指针
+Medium**
+- 递归，先中间走到底，再逐层向外
+- 如果使用`parent`指向会导致不是父节点，同一层中间两个节点连不上
+- 动图：![](https://cdn.jsdelivr.net/gh/joey66666/algorithms//Leetcode-cn/notes/pic/20200603221215.gif)
+
+
 **[124] 二叉树中的最大路径和
 Medium**
 - https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/description/
@@ -81,6 +88,7 @@ Medium**
 - 双向链表中存储`Key`和`Value`, `HashMap`中存储`Key`和`Node`
 - 链表从头到尾按以旧到新，新插入放到尾，最近get放到尾，`HashMap.size() >= capcity`删除头，`put`新`Node`
 - ![image](https://user-images.githubusercontent.com/25404074/80353709-4fa02500-88a8-11ea-90ee-770fb2ad2277.png)
+
 
 **[200] 岛屿数量
 Medium**
