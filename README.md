@@ -12,3 +12,5 @@
 [Easy](https://github.com/joey66666/Algorithms/blob/master/Leetcode-cn/notes/Easy.md)
 
 [Medium](https://github.com/joey66666/Algorithms/blob/master/Leetcode-cn/notes/Medium.md)
+
+[Hard](https://github.com/joey66666/Algorithms/blob/master/Leetcode-cn/notes/Hard.md)
