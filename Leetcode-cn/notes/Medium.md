@@ -35,6 +35,23 @@ Medium**
     - 否则说明target在[mid, right]的不规则区间里，搜索右边区间，则使left = mid + 1;
 
 
+**[46] 全排列
+Medium**
+- https://leetcode-cn.com/problems/permutations/description/
+- 回溯法框架：
+  ```
+  for 选择 in 选择列表:
+    # 做选择
+    将该选择从选择列表移除
+    路径.add(选择)
+    backtrack(路径, 选择列表)
+    # 撤销选择
+    路径.remove(选择)
+    将该选择再加入选择列表
+   ```
+- https://labuladong.gitbook.io/algo/di-ling-zhang-bi-du-xi-lie/hui-su-suan-fa-xiang-jie-xiu-ding-ban
+
+
 **[49]  Group Anagrams，字母异位词分组
 Medium**
 - https://leetcode-cn.com/problems/group-anagrams/description/
