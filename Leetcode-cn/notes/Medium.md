@@ -38,6 +38,7 @@ Medium**
 **[46] 全排列
 Medium**
 - https://leetcode-cn.com/problems/permutations/description/
+- - https://labuladong.gitbook.io/algo/di-ling-zhang-bi-du-xi-lie/hui-su-suan-fa-xiang-jie-xiu-ding-ban
 - 回溯法框架：
   ```
   for 选择 in 选择列表:
@@ -49,7 +50,6 @@ Medium**
     路径.remove(选择)
     将该选择再加入选择列表
    ```
-- https://labuladong.gitbook.io/algo/di-ling-zhang-bi-du-xi-lie/hui-su-suan-fa-xiang-jie-xiu-ding-ban
 
 
 **[49]  Group Anagrams，字母异位词分组
