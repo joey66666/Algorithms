@@ -2,33 +2,49 @@ public class UnionFind {
 
     // TODO - Add instance variables?
 
+    public int[] id;
+
     /* Creates a UnionFind data structure holding n vertices. Initially, all
        vertices are in disjoint sets. */
     public UnionFind(int n) {
         // TODO
+        id = new int[n];
     }
 
     /* Throws an exception if v1 is not a valid index. */
     private void validate(int vertex) {
         // TODO
+        try {
+            int i= id[vertex];
+        }catch (Exception e){
+            throw e;
+        }
     }
 
     /* Returns the size of the set v1 belongs to. */
     public int sizeOf(int v1) {
         // TODO
-        return -1;
+        int parent = id[v1];
+        int count = 0;
+        for (int i : id) {
+            if (i == parent) count += 1;
+        }
+        return count;
+//        return -1;
     }
 
     /* Returns the parent of v1. If v1 is the root of a tree, returns the
        negative size of the tree for which v1 is the root. */
     public int parent(int v1) {
         // TODO
+        if (id[v1] != v1) return id[v1];
         return -1;
     }
 
     /* Returns true if nodes v1 and v2 are connected. */
     public boolean connected(int v1, int v2) {
         // TODO
+        if (id[v1] == id[v2]) return true;
         return false;
     }
 
