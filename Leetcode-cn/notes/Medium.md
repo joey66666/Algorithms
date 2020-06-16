@@ -67,6 +67,13 @@ Medium**
 - 所以就有状态转移方程了：`dp[i] = max(dp[i - 1], nums[i - 1]) - 1`，如果当某一个时刻 `dp` 数组的值为负了，说明无法抵达当前位置，则直接返回 `false`，最后循环结束后直接返回 `true ` 即可
 
 
+**[62] 不同路径
+Medium**
+- https://leetcode-cn.com/problems/unique-paths/description/
+- DP数组，长宽+1，第一行第一列置0，dp[1][1] = 1
+- dp[i][j] = dp[i - 1][j] + dp[i][j - 1]，统计到该点的所有路径
+
+
 **[64] 最小路径和
 Medium**
 - https://leetcode-cn.com/problems/minimum-path-dsum/description/
