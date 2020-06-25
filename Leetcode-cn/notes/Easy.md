@@ -391,6 +391,12 @@ Easy**
 - Pop: 若`out`不为空则`out.pop()`，若`out`空则`out.push(in.pop())`转移所有`in`元素，再`out.pop()`
 
 
+**[237] 删除链表中的节点
+Easy**
+- https://leetcode-cn.com/problems/delete-node-in-a-linked-list/description/
+- 直接操作
+
+
 **[278] 第一个错误的版本
 Easy**
 - https://leetcode-cn.com/problems/first-bad-version/description/
