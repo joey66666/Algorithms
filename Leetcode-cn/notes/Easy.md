@@ -391,6 +391,13 @@ Easy**
 - Pop: 若`out`不为空则`out.pop()`，若`out`空则`out.push(in.pop())`转移所有`in`元素，再`out.pop()`
 
 
+**[235] 二叉搜索树的最近公共祖先
+Easy**
+- https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
+- 利用二叉搜索树特性：left.val < root.val < right.val
+- 若p、q < root 则一定在左子树中，若p、q > root 则一定在右子树中，否则return root
+
+
 **[237] 删除链表中的节点
 Easy**
 - https://leetcode-cn.com/problems/delete-node-in-a-linked-list/description/
