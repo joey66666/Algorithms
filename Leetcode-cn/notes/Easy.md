@@ -392,13 +392,13 @@ Easy**
 
 
 **[234] 回文链表
-**
+Easy**
 - https://leetcode-cn.com/problems/palindrome-linked-list/description/
 - Time: O(n), Space: O(1)
 - 1. 快指针指到头时慢指针指到中间
   2. 反向慢指针到结尾之间的节点
   3. 逐个比较前一半和反向过的后一半
-  4. 
+   
 
 **[235] 二叉搜索树的最近公共祖先
 Easy**
