@@ -391,6 +391,15 @@ Easy**
 - Pop: 若`out`不为空则`out.pop()`，若`out`空则`out.push(in.pop())`转移所有`in`元素，再`out.pop()`
 
 
+**[234] 回文链表
+**
+- https://leetcode-cn.com/problems/palindrome-linked-list/description/
+- Time: O(n), Space: O(1)
+- 1. 快指针指到头时慢指针指到中间
+  2. 反向慢指针到结尾之间的节点
+  3. 逐个比较前一半和反向过的后一半
+  4. 
+
 **[235] 二叉搜索树的最近公共祖先
 Easy**
 - https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
