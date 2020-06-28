@@ -413,6 +413,12 @@ Easy**
 - 直接操作
 
 
+**[268] 缺失数字
+Easy**
+- https://leetcode-cn.com/problems/missing-number/description/
+- 1 - n 相加减去nums中的和
+
+
 **[278] 第一个错误的版本
 Easy**
 - https://leetcode-cn.com/problems/first-bad-version/description/
