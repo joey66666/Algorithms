@@ -413,6 +413,12 @@ Easy**
 - 直接操作
 
 
+**[242] 有效的字母异位词
+Easy**
+- https://leetcode-cn.com/problems/valid-anagram/description/
+- 三种解法：HashMap, Alphabet Array, Arrays.toCharArray() -> Sort()
+
+
 **[268] 缺失数字
 Easy**
 - https://leetcode-cn.com/problems/missing-number/description/
