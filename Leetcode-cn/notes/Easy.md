@@ -419,6 +419,12 @@ Easy**
 - 三种解法：HashMap, Alphabet Array, Arrays.toCharArray() -> Sort()
 
 
+**[257] 二叉树的所有路径
+Easy**
+- https://leetcode-cn.com/problems/binary-tree-paths/description/
+- traverse()函数，递归深入
+  
+
 **[268] 缺失数字
 Easy**
 - https://leetcode-cn.com/problems/missing-number/description/
