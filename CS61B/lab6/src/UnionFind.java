@@ -46,16 +46,21 @@ public class UnionFind {
        vertex with itself or vertices that are already connected should not 
        change the sets but may alter the internal structure of the data. */
     public void union(int v1, int v2) {
-        int size1 = sizeOf(v1);
-        int size2 = sizeOf(v2);
-        if (size1 <= size2) {
-            // v1接到v2上
-            parentArray[find(v2)] -= size1;
-            parentArray[find(v1)] = find(v2);
-        } else {
-            // v2接到v1上
-            parentArray[find(v1)] -= size2;
-            parentArray[find(v2)] = find(v1);
+        validate(v1);
+        validate(v2);
+
+        if (!connected(v1, v2)) {
+            int size1 = sizeOf(v1);
+            int size2 = sizeOf(v2);
+            if (size1 <= size2) {
+                // v1接到v2上
+                parentArray[find(v2)] -= size1;
+                parentArray[find(v1)] = find(v2);
+            } else {
+                // v2接到v1上
+                parentArray[find(v1)] -= size2;
+                parentArray[find(v2)] = find(v1);
+            }
         }
     }
 
@@ -76,7 +81,6 @@ public class UnionFind {
             parentArray[vertex] = root;
             vertex = curParent;
         }
-
         return root;
     }
 
