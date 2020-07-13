@@ -9,7 +9,7 @@
 
 ---
 
-### [Berkeley Sp19 (To Be Continue)](https://github.com/joey66666/Algorithms/tree/master/CS61B)
+### [Berkeley Sp19 (To Be Continued)](https://github.com/joey66666/Algorithms/tree/master/CS61B)
 
 ### Leetcode Solution Notes
 
