@@ -7,6 +7,10 @@
 [1]:	https://sp19.datastructur.es/
 [2]:	https://leetcode-cn.com
 
+---
+
+### [Berkeley Sp19 (To Be Continue)](https://github.com/joey66666/Algorithms/tree/master/CS61B)
+
 ### Leetcode Solution Notes
 
 🔧 [Easy](https://github.com/joey66666/Algorithms/blob/master/Leetcode-cn/notes/Easy.md)
@@ -15,4 +19,3 @@
 
 🛠 [Hard](https://github.com/joey66666/Algorithms/blob/master/Leetcode-cn/notes/Hard.md)
 
-### [Berkeley Sp19 (To Be Continue)](https://github.com/joey66666/Algorithms/tree/master/CS61B)
