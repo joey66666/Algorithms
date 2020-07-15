@@ -1,5 +1,7 @@
 # Data Structure & Algorithms in Java
 
+## Resources 
+
 👍🏻 [UC Berkeley Data Structures, Spring 2019][1]
 
 🔩 [Leetcode-cn][2]
@@ -9,9 +11,11 @@
 
 ---
 
-### [Berkeley Sp19 (To Be Continued)](https://github.com/joey66666/Algorithms/tree/master/CS61B)
+## Code and Notes
 
-### Leetcode Solution Notes
+**[Berkeley Sp19 (To Be Continued)](https://github.com/joey66666/Algorithms/tree/master/CS61B)**
+
+**Leetcode Solution Notes**
 
 🔧 [Easy](https://github.com/joey66666/Algorithms/blob/master/Leetcode-cn/notes/Easy.md)
 
