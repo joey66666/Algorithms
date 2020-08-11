@@ -486,6 +486,13 @@ Easy**
    3. 与原数字按位求异或。
 - `Integer.highestOneBit(num)`：拿到num最高位，后面补0，如 101 返回 100 
 
+
+**[496] 下一个更大元素 I
+Easy**
+- https://leetcode-cn.com/problems/next-greater-element-i/description/
+- HashMap 简单解法
+
+
 **[543] 二叉树的直径
 Easy**
 - https://leetcode-cn.com/problems/diameter-of-binary-tree/description/
