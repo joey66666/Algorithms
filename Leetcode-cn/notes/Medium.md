@@ -178,6 +178,18 @@ Medium**
 再从右往左遍历，右边的所有数乘积乘上左边的` res[i] *= right; right *= nums[i];  `
 
 
+**[503] 下一个更大元素 II
+Medium**
+- https://leetcode-cn.com/problems/next-greater-element-ii/description/
+1. Solution1, 暴力，每个数向前向后遍历两次，注意判断当前index是否已被置过
+2. Solution2, 单调栈
+   1. 将数组中所有元素全部置为-1
+   2. 遍历两次，相当于循环遍历，取余进行边界回归
+   3. 第一遍遍历，入栈索引i
+   4. 只要后面元素比栈顶索引对应的元素大，索引出栈，更改res[sta.pop()]的数值
+   5. 最后栈里面剩余的索引对应的数组值，都为默认的-1（因为后面未找到比它大的值） */
+
+
 **[525] 连续数组
 Medium**
 - https://leetcode-cn.com/problems/contiguous-array/description/
