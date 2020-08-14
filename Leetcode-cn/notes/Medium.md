@@ -235,6 +235,19 @@ Medium**
     - 若遍历完 > 0，之前一轮遍历中 * 变的 数量 ( < 这一轮数量 ) ，表示部分 * 可变为 ( 或 ) 抵消，部分为空字符串, return true
 
 
+
+**[901] 股票价格跨度
+Medium**
+- https://leetcode-cn.com/problems/online-stock-span/description/
+1. Solution1，暴力
+2. Solution2，单调递减栈
+   - 只需要找到数字A其前面有多少个连续的并且比它小的数字个数a，
+   - 出现数字B，当B>=A时，在B前面小于等于B的连续数字共有a + 1个；
+   - 当B < A时，在B前面小于等于B的连续数字只有1个，B自己。
+   - 栈保存的是当前的价格向前可以找连续的多少天。
+   - 如果新来的数值大于了栈顶元素，把栈顶的元素弹出，直到当前元素小于栈顶
+
+
 **[1008] 先序遍历构造二叉树
 Medium**
 - https://leetcode-cn.com/problems/construct-binary-search-tree-from-preorder-traversal/description/
