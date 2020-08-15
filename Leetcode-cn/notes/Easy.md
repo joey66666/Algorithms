@@ -423,7 +423,13 @@ Easy**
 Easy**
 - https://leetcode-cn.com/problems/binary-tree-paths/description/
 - traverse()函数，递归深入
-  
+
+
+**[258] 各位相加
+Easy**
+- https://leetcode-cn.com/problems/add-digits/description/
+- 找规律
+    
 
 **[268] 缺失数字
 Easy**
