@@ -241,12 +241,25 @@ Medium**
 - https://leetcode-cn.com/problems/online-stock-span/description/
 1. Solution1，暴力
 2. Solution2，单调递减栈
-   - 只需要找到数字A其前面有多少个连续的并且比它小的数字个数a，
-   - 出现数字B，当B>=A时，在B前面小于等于B的连续数字共有a + 1个；
-   - 当B < A时，在B前面小于等于B的连续数字只有1个，B自己。
-   - 栈保存的是当前的价格向前可以找连续的多少天。
+   - 只需要找到数字A其前面有多少个连续的并且比它小的数字个数a
+   - 出现数字B，当B>=A时，在B前面小于等于B的连续数字共有a + 1个
+   - 当B < A时，在B前面小于等于B的连续数字只有1个，B自己
+   - 两个栈，第一个保存数， 第二个保存当前的价格向前可以找连续的多少天
    - 如果新来的数值大于了栈顶元素，把栈顶的元素弹出，直到当前元素小于栈顶
 
+
+**[907] 子数组的最小值之和
+Medium**
+- https://leetcode-cn.com/problems/sum-of-subarray-minimums/description/
+1. Solution1，DP，三次遍历
+   - 假设A[i]左边有L个数大于它，右边有R个数大于它
+   - 则以A[i]为最小数共有 (L-1)*(R-1) 个子数组
+   - 结果为 `A[i] * left[i] * right[i]`
+   - 防止出现重复多算的情况，在一边计算大于等于，另一边计算大于
+   - Time：O(N)
+   - https://leetcode.flowerplayer.com/2019/04/12/leetcode-907-sum-of-subarray-minimums-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90/
+2. Solution2，单调栈，思路同[901]
+   
 
 **[1008] 先序遍历构造二叉树
 Medium**
