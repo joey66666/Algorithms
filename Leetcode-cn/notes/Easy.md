@@ -456,6 +456,14 @@ Easy**
 2. S2，单指针，非0往前移，统计0个数n；后n个置0
 
 
+**[290] 单词规律
+Easy**
+- https://leetcode-cn.com/problems/word-pattern/description/
+1. Solution
+   - 简单HashMap，注意区分a和b的value不能相等
+   - 使用`Object.equals()`取代 `==` 更健壮
+
+
 **[367] 有效的完全平方数
 Easy**
 - https://leetcode-cn.com/problems/valid-perfect-square/description/
