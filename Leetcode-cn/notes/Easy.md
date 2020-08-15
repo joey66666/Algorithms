@@ -431,6 +431,12 @@ Easy**
 - 找规律
     
 
+**[263] 丑数
+Easy**
+- https://leetcode-cn.com/problems/ugly-number/description/
+- 除到底，判断是否有因子
+
+
 **[268] 缺失数字
 Easy**
 - https://leetcode-cn.com/problems/missing-number/description/
