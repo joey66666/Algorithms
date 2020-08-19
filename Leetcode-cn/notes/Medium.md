@@ -178,6 +178,20 @@ Medium**
 再从右往左遍历，右边的所有数乘积乘上左边的` res[i] *= right; right *= nums[i];  `
 
 
+**[402] 移掉K位数字
+Medium**
+- https://leetcode-cn.com/problems/remove-k-digits/description/
+1. Solution1，贪心；
+   - 从左到右找到第一个递减的位置，将前面的大数删掉；
+     - 例如：
+     - 1432219 “43”位置递减，将4删掉
+     - 132219 “32”位置递减，将3删掉
+     - 12219 “21”位置递减，将2删掉
+     - 最后结果1219
+   - 若整个数字全部是递增的，只把末尾删除；
+   - 不能有前导0，即”0200“，把前导0删掉，即”200“
+
+
 **[503] 下一个更大元素 II
 Medium**
 - https://leetcode-cn.com/problems/next-greater-element-ii/description/
