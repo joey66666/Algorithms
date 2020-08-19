@@ -140,6 +140,7 @@ Medium**
 **[201] 数字范围按位与
 Medium**
 - https://leetcode-cn.com/problems/bitwise-and-of-numbers-range/description/
+- https://www.youtube.com/watch?v=fskPWs3Nuhc
 1. Solution 1 
    - 最后的数是该数字范围内所有的数的左边共同的部分
    - 只要找到左边公共的部分
@@ -150,6 +151,21 @@ Medium**
    - 逐渐将最右边不同的置为0, 最后只剩下最左边m 和 n相同的位置.
    - 举例：110与上(110-1)，得到100，相当于去掉最低位的1，
    - n就这样每次去掉最低位的1，如果小于等于m了，返回此时的n
+
+
+**[207] 课程表
+Medium**
+- https://leetcode-cn.com/problems/course-schedule/description/
+1. Solution1, BFS
+   - https://www.youtube.com/watch?v=fskPWs3Nuhc
+   - 设置出度邻接表和入度数组，构建图
+       - 邻接表结构：[index, index出度的List]
+   - 设置一个Queue，放入入度为0的数a，即没有其他课程依赖该课程a
+   - 然后while(!Queue.isEmpty()), Queue.poll()，即BFS依赖该课程a的其他课程
+   - 邻接表 index==a 的List里的每个课程都-=1
+   - 若过程中有课程b入度为0，则放入queue
+   - 最后遍历入度数组，若存在>0则表示该课程仍有先修课没完成，即false；遍历完true
+   - ![image](https://user-images.githubusercontent.com/25404074/90650728-c9508a00-e26e-11ea-9dbb-8a813cd8eb38.png)
 
 
 **[215] 数组中的第K个最大元素
