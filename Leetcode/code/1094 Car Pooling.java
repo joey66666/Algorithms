@@ -33,8 +33,25 @@
 //0 <= trips[i][1] < trips[i][2] <= 1000
 //1 <= capacity <= 100000
 
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Solution {
     public boolean carPooling(int[][] trips, int capacity) {
-
+        int[] location = new int[1000];
+        for (int i = 0; i < trips.length; i++) {
+            location[trips[i][1]] += trips[i][0];
+            location[trips[i][2]] -= trips[i][0];
+        }
+        int sum = 0;
+        for (int i = 0; i < location.length; i++) {
+            sum += location[i];
+            if (sum > capacity) {
+                return false;
+            }
+        }
+        return true;
     }
 }
