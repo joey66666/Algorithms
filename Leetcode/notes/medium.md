@@ -10,3 +10,12 @@
 **[495] Teemo Attacking**
 - Compare last time + duration and current time
 - Time: O(n), Runtime: 99.3% 
+
+
+**[179] Largest Number**
+- Overide the Comparator to self-compare in dict order
+- e.g.: 
+    - if s1="76", s2="53", str1 = s1 + s2="7653", str2 = s2 + s1="5375"
+    - in which case str2 < str1
+    - call Arrays.Sort() with new comparator
+    - watch the corner case with all zero
