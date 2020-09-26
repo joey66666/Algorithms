@@ -7,3 +7,6 @@
 - Time: O(n), Runtime: 100%
 
 
+**[495] Teemo Attacking**
+- Compare last time + duration and current time
+- Time: O(n), Runtime: 99.3% 
