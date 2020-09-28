@@ -464,6 +464,12 @@ Easy**
    - 使用`Object.equals()`取代 `==` 更健壮
 
 
+**[350] 两个数组的交集 II
+Easy**
+- https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/description/
+- HashMap两次遍历两个数组
+
+
 **[367] 有效的完全平方数
 Easy**
 - https://leetcode-cn.com/problems/valid-perfect-square/description/
