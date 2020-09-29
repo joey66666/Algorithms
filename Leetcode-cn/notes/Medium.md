@@ -59,6 +59,13 @@ Medium**
    ```
 
 
+**[48] 旋转图像**
+- https://leetcode-cn.com/problems/rotate-image/description/
+- 二次调转
+  1. 沿着左上右下对角线对调，选定左下角为：j = i + 1
+  2. 沿着中轴纵线，两边对调
+
+
 **[49]  Group Anagrams，字母异位词分组
 Medium**
 - https://leetcode-cn.com/problems/group-anagrams/description/
