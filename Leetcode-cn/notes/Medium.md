@@ -138,6 +138,15 @@ Medium**
 - ![image](https://user-images.githubusercontent.com/25404074/80353709-4fa02500-88a8-11ea-90ee-770fb2ad2277.png)
 
 
+**[179] Largest Number**
+- Overide the Comparator to self-compare in dict order
+- e.g.: 
+    - if s1="76", s2="53", str1 = s1 + s2="7653", str2 = s2 + s1="5375"
+    - in which case str2 < str1
+    - call Arrays.Sort() with new comparator
+    - watch the corner case with all zero
+
+
 **[200] 岛屿数量
 Medium**
 - https://leetcode-cn.com/problems/number-of-islands/description/
@@ -213,6 +222,12 @@ Medium**
      - 最后结果1219
    - 若整个数字全部是递增的，只把末尾删除；
    - 不能有前导0，即”0200“，把前导0删掉，即”200“
+
+
+
+**[495] Teemo Attacking**
+- Compare last time + duration and current time
+- Time: O(n), Runtime: 99.3% 
 
 
 **[503] 下一个更大元素 II
@@ -303,6 +318,13 @@ Medium**
 - https://leetcode-cn.com/problems/construct-binary-search-tree-from-preorder-traversal/description/
 - 第一个是根，往后遍历，<=根为左子树，剩下为右子树
 - 递归遍历 
+
+
+**[1094] Car Pooling**
+- Use one-hot int array to record numbers at every location on and off the bus
+- Compute all the locations and compare with capacity
+- Two circle
+- Time: O(n), Runtime: 100%
 
 
 **[1143] 最长公共子序列
