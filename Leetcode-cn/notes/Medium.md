@@ -35,6 +35,13 @@ Medium**
     - 否则说明target在[mid, right]的不规则区间里，搜索右边区间，则使left = mid + 1;
 
 
+**[36] 有效的数独
+Medium**
+- https://leetcode-cn.com/problems/valid-sudoku/description/
+- 使用Set，关键在于校验cols, rows, cube里面数数字的唯一性
+- Cube使用`基数 + 浮动数`的方式，`(/ 3) * 3`和`(% 3) * 3`作基数，`/ 3`和 `% 3`作浮动数
+
+
 **[46] 全排列
 Medium**
 - https://leetcode-cn.com/problems/permutations/description/
