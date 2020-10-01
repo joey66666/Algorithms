@@ -501,7 +501,7 @@ Easy**
 **[387] 字符串中的第一个唯一字符
 Easy**
 - https://leetcode-cn.com/problems/first-unique-character-in-a-string/description/
-1. Solution1， HashMap计次数，遍历两次
+1. Solution1， HashMap计次数，遍历两次String
    - Runtime: 30%
    - Time: O(n) //2n
 2. 字母表数组计数，原理&Time同HashMap

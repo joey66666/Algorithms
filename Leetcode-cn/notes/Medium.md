@@ -13,6 +13,13 @@ Medium**
    - e.g.: 对于abba，当right指向最后的a的时候，left指向的是字典中保留的有第一个位置的a，如果不对此进行判断的话，left会移动到第一个字符b（回头）
 
 
+**[8] 字符串转换整数 (atoi)**
+- https://leetcode-cn.com/problems/string-to-integer-atoi/description/
+- 关键是处理各种corner case
+- trim()处理空格
+- 判断第一个符号后，后面再出现符号一律归类为!Character.isDigit()
+
+
 **[31] 下一个排列
 Medium**
 - https://leetcode-cn.com/problems/next-permutation/description/
