@@ -8,6 +8,8 @@ Easy**
 **[7] Reverse Int
 Easy**
 - https://leetcode-cn.com/problems/reverse-integer/
+- n = n * 10 + x % 10
+- 通过`long n == int n`判断是否溢出
 
 
 **[9] isPalindrome
