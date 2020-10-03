@@ -20,7 +20,7 @@ Easy**
 **[14] longestCommonPrefix
 Easy**
 - https://leetcode-cn.com/problems/longest-common-prefix
-1. 暴力，注意边界条件，先纵向再横向，逻辑要写清晰
+1. 暴力，先内循环选定数组第一个元素，再外循环与数组内其他元素比较
 2. 从后往前裁剪至符合，若不符合则裁剪至空
 
 
