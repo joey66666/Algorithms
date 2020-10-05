@@ -413,7 +413,7 @@ Easy**
 **[237] 删除链表中的节点
 Easy**
 - https://leetcode-cn.com/problems/delete-node-in-a-linked-list/description/
-- 直接操作
+- next.val赋值给node,删除下一个node
 
 
 **[242] 有效的字母异位词
