@@ -20,6 +20,13 @@ Medium**
 - 判断第一个符号后，后面再出现符号一律归类为!Character.isDigit()
 
 
+**[19] 删除链表的倒数第N个节点**
+- https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/description/
+- 双指针，`prev`和`cur`
+- `cur`先走n步，若到尾部，则直接返回`head.next`
+- 若`cur`不到尾部，则`prev`也和`cur`走，直到`cur`走到尾，`prev`走到待删除的前一个node
+
+
 **[31] 下一个排列
 Medium**
 - https://leetcode-cn.com/problems/next-permutation/description/
