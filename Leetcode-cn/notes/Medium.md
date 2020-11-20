@@ -80,8 +80,7 @@ Medium**
   2. 沿着中轴纵线，两边对调
 
 
-**[49]  Group Anagrams，字母异位词分组
-Medium**
+**[49]  Group Anagrams，字母异位词分组**
 - https://leetcode-cn.com/problems/group-anagrams/description/
 1. 每个单词 sorted 作为 key 放入 HashMap
 2. 每个单词每个字母映射成字母表 int 数组，组成唯一 String key (E.g. 1a1e1t) 作为 key 
