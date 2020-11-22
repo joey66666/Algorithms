@@ -88,6 +88,12 @@
 - 所以就有状态转移方程了：`dp[i] = max(dp[i - 1], nums[i - 1]) - 1`，如果当某一个时刻 `dp` 数组的值为负了，说明无法抵达当前位置，则直接返回 `false`，最后循环结束后直接返回 `true ` 即可
 
 
+**[61] 旋转链表**
+- https://leetcode-cn.com/problems/rotate-list/description/
+- 双指针`prev, p`，常规移动题
+- 注意 `k % length`，不然Time Limit
+
+
 **[62] 不同路径**
 - https://leetcode-cn.com/problems/unique-paths/description/
 - DP数组，长宽+1，第一行第一列置0，dp[1][1] = 1
