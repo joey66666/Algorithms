@@ -106,6 +106,14 @@
 - `dp`第一行只能从左走，第一列只能从上走，提前初始化
 
 
+ **[86] 分隔链表**
+ - https://leetcode-cn.com/problems/partition-list/description/
+ - Solution1, inPlace
+   1. 遍历到第一个大于`x`的Node `a`
+   2. 再从这里遍历到第一个小于`x`的Node `b`
+   3. `b`插到`a`之前
+
+
 **[92] Reverse Linked List II**
 - https://leetcode.com/problems/reverse-linked-list-ii/
 - 翻转开始前一个节点
