@@ -19,6 +19,14 @@
 - 判断第一个符号后，后面再出现符号一律归类为!Character.isDigit()
 
 
+**[15] 三数之和**
+- https://leetcode-cn.com/problems/3sum/description/
+- Solution：滑动窗口
+  - 先排序，再找到第一个负数
+  - 再对剩下的区间进行左右逼近，找到三数相加等于`0`的两数。
+  - **注意过滤相同数字：往下走一位**
+
+
 **[19] 删除链表的倒数第N个节点**
 - https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/description/
 - 双指针，`prev`和`cur`
@@ -104,6 +112,10 @@
 - https://leetcode-cn.com/problems/minimum-path-dsum/description/
 - 用`dp`数组记录当前行走到当前点的最小路径值，`dp[i][j] = grid[i][j] + Math.min(dp[i - 1][j], dp[i][j - 1])`
 - `dp`第一行只能从左走，第一列只能从上走，提前初始化
+
+
+**[78] 子集**
+- https://leetcode-cn.com/problems/subsets/description/
 
 
 **[86] 分隔链表**
