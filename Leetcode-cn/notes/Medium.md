@@ -294,6 +294,15 @@ if(matrix[i][j] == 1){
 -  Time:O(n), Space:O(n)
 
 
+**[659] 分割数组为连续子序列**
+- https://leetcode-cn.com/problems/split-array-into-consecutive-subsequences/description/
+- Solution：
+  - HashMap先统计一遍所有数字的出现频率
+  - 遍历数组，记录subArray的大小，遍历当前数字的下一个数，统计频率
+  - 若下一个数频率` > 1`，即可加入现有subArray或构建新array，下一个数频率`-= 1`， 继续遍历
+  - 否则停止，比较subArray大小，若`> 1 && < 3`则当前subArray不符合条件，即无法拆分原数组，`return false`
+
+
 **[678] 有效的括号字符串**
 - https://leetcode-cn.com/problems/valid-parenthesis-string/description/
 1. Solution 1 
