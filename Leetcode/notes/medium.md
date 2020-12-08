@@ -18,4 +18,4 @@
     - if s1="76", s2="53", str1 = s1 + s2="7653", str2 = s2 + s1="5375"
     - in which case str2 < str1
     - call Arrays.Sort() with new comparator
-    - watch the corner case with all zero
+    - mind the corner case with all zero
