@@ -547,6 +547,15 @@ Easy**
 - 栈比字符串性能高挺多
 
 
+**[860] 柠檬水找零**
+- https://leetcode-cn.com/problems/lemonade-change/description/
+- 维护两个变量，统计5和10的个数
+- 对每个bill需要找零的情况分情况讨论
+  - 5: 不找
+  - 10: 找5，收10
+  - 20: 找三张5，或一张5一张10
+
+
 **[876] 链表的中间结点
 Easy**
 - https://leetcode-cn.com/problems/middle-of-the-linked-list/description/

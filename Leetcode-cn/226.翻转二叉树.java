@@ -53,15 +53,6 @@
  */
 // 递归调换，先进入子树调换完，再调换root.left, root.right
 class Solution {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public TreeNode invertTree(TreeNode root) {
         if (root == null) return root;

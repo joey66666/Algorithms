@@ -62,7 +62,7 @@
 
 **[46] 全排列**
 - https://leetcode-cn.com/problems/permutations/description/
-- - https://labuladong.gitbook.io/algo/di-ling-zhang-bi-du-xi-lie/hui-su-suan-fa-xiang-jie-xiu-ding-ban
+- https://labuladong.gitbook.io/algo/di-ling-zhang-bi-du-xi-lie/hui-su-suan-fa-xiang-jie-xiu-ding-ban
 - 回溯法框架：
   ```
   for 选择 in 选择列表:

@@ -91,9 +91,9 @@ class DoubleLinkedList {
 }
 
 class LRUCache {
-    public int capacity = 0;
+    int capacity = 0;
     HashMap<Integer, DoubleLinkedNode> hm = new HashMap<>();
-    public DoubleLinkedList list = new DoubleLinkedList();
+    DoubleLinkedList list = new DoubleLinkedList();
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
