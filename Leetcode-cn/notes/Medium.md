@@ -294,6 +294,16 @@ if(matrix[i][j] == 1){
 -  Time:O(n), Space:O(n)
 
 
+**[649] Dota2 参议院**
+- https://leetcode-cn.com/problems/dota2-senate/description/
+- Solution：char[] newSenate
+  
+  - 不是要统计数字，而是要ban到一方无法投票为止；
+  - 用一个新char数组记录senate，并统计两方被ban个数，有被ban则ban掉对方的senator；
+  - 每一轮结束查看newSenate里双方情况；
+  - 直到一方被ban空为止，退出循环，return另一方。
+
+
 **[659] 分割数组为连续子序列**
 - https://leetcode-cn.com/problems/split-array-into-consecutive-subsequences/description/
 - Solution：
