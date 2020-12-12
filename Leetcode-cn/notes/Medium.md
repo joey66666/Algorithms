@@ -241,6 +241,27 @@ if(matrix[i][j] == 1){
 再从右往左遍历，右边的所有数乘积乘上左边的` res[i] *= right; right *= nums[i];  `
 
 
+**[376] 摆动序列**
+- https://leetcode-cn.com/problems/wiggle-subsequence/description/
+- https://www.acwing.com/solution/LeetCode/content/4912/
+1. Solution 1, 贪心，Time: O(n)
+   - ![image](https://user-images.githubusercontent.com/25404074/101989006-603ac980-3cd8-11eb-955e-c726b7e3ad74.png)
+   - 寻找峰点（极大值）和谷点（极小值）
+   - 使用一个变量`trend`标记上一个元素的趋势，`1`递增，`-1`递减
+   - 若`nums[i] > nums[i - 1] && trend < 0`则为谷点，`res += 1`
+   - 若`nums[i] < nums[i - 1] && trend > 0`则为峰点，`res += 1`
+   - 否则为山腰点，即处于递增和递减的过程中，不计
+2. Solution 2, DP，Time: O(n)
+   - 寻找拐点
+   - 状态表示：`dp_up[n]`代表前`i`个元素且最后一个状态是上升的最长摆动序列长度, `dp_down[n]`代表前`i`个元素且最后一个状态是下降的最长摆动序列长度, 
+   - 初始状态：`dp_up, dp_down`初始化为1，仅有一个元素的情况
+   - 状态转移：
+     - 若`nums[i] > nums[i - 1]`则`dp_up[n] = dp_down[n - 1] + 1`，表示发生一次由下降到上升的转折
+     - 若`nums[i] < nums[i - 1]`则`dp_down[n] = dp_up[n - 1] + 1`，表示发生一次由上升到下降的转折
+     - 否则`dp_up[i] = dp_up[i - 1], dp_down[i] = dp_down[i - 1]`，表示趋势未变，即没有转折，最长摆动序列长度保持，不增加
+   - 结果表示：`Math.max(dp_up[n - 1], dp_down[n - 1])`
+
+
 **[402] 移掉K位数字**
 - https://leetcode-cn.com/problems/remove-k-digits/description/
 1. Solution1，贪心；
