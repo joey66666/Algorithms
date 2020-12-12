@@ -16,7 +16,7 @@ Data Structure, Algorithm, Leetcode
 
 - Notes [[🔨 Medium](https://github.com/joey66666/Codeyard/blob/master/Leetcode/notes/medium.md)]
 
-### Berkeley Sp19
+### Berkeley CS61B Sp19
 
 - [Code](https://github.com/joey66666/Algorithms/tree/master/CS61B)
 
