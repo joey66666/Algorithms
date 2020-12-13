@@ -347,13 +347,14 @@ Easy**
 - https://leetcode.com/problems/reverse-linked-list/
 
 
-**[217] 存在重复元素
-Easy**
+**[217] 存在重复元素**
 - https://leetcode-cn.com/problems/contains-duplicate/description/
-1. Solution1, 简单HashMap
-2. Solution2, HashSet
+1. Solution1, 简单HashMap/ HashSet, Time: 48%/ 55%
+2. Solution2, HashSet比较长度, Time: 70%
    - HashSet特点：无序；不存储重复元素；没有get()，只能iterator访问
    - 遍历一遍存入HashSet，`HashSet.size() < nums.length() ? true : false `
+3. 内置流，比较`return Arrays.stream(nums).distinct().count() < nums.length`，Time: 55%
+4. 排序后比较`nums[i] == nums[i - 1]`, Time: 99%
 
 
 **[219] 存在重复元素 II
@@ -399,8 +400,8 @@ Easy**
 - https://leetcode-cn.com/problems/palindrome-linked-list/description/
 - Time: O(n), Space: O(1)
 - 1. 快指针指到头时慢指针指到中间
-  2. 反向慢指针到结尾之间的节点
-  3. 逐个比较前一半和反向过的后一半
+  1. 反向慢指针到结尾之间的节点
+  2. 逐个比较前一半和反向过的后一半
    
 
 **[235] 二叉搜索树的最近公共祖先

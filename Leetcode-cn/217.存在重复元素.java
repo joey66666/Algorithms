@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
  * @lc app=leetcode.cn id=217 lang=java
  *
@@ -61,16 +63,36 @@
 // HashSet
 // Set特点：不存储重复元素；没有get，只可以iterator访问；无序
 // Runtime: 70%
-import java.util.HashSet;
-import java.util.Set;
 
-class Solution {
+// class Solution {
+//     public boolean containsDuplicate(int[] nums) {
+//         if (nums.length == 0) return false;
+//         Set<Integer> hs = new HashSet<Integer>();
+//         for (int i : nums) hs.add(i);
+//         return hs.size() < nums.length ? true : false;
+//     }
+// }
+
+
+// 内置函数
+// class Solution{
+//     public boolean containsDuplicate(int[] nums) {
+//         return Arrays.stream(nums).distinct().count() < nums.length;
+//     }    
+// }
+
+
+// 排序后比较
+class Solution{
     public boolean containsDuplicate(int[] nums) {
-        if (nums.length == 0) return false;
-        Set<Integer> hs = new HashSet<Integer>();
-        for (int i : nums) hs.add(i);
-        return hs.size() < nums.length ? true : false;
-    }
+        Arrays.sort(nums);
+        for(int i = 1; i < nums.length; i++){
+            if(nums[i] == nums[i - 1]){
+                return true;
+            }
+        }
+        return false;
+    }    
 }
 // @lc code=end
 
