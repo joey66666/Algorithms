@@ -161,6 +161,14 @@
 - 使用数组来保存值，如果使用变量每次递归会更新值，无法保存最大的值
   
 
+**[127] 单词接龙**
+- https://leetcode-cn.com/problems/word-ladder/description/
+1. Solution 1，单向BFS，Time：7%
+   - `Quene`记录当前`word`访问队列，下一邻结点需满足与`word`有且只有一个`char`不同，且未访问过，`HashMap`记录已访问过的结点及所需步数；
+   - 若下一邻结点为`endWord`，return当前结点步数+1；
+
+
+
 **[144] 二叉树的前序遍历**
 - https://leetcode-cn.com/problems/binary-tree-preorder-traversal/description/
 - https://juejin.im/post/59e3fde451882578c20858a5
