@@ -57,42 +57,74 @@
  *
  */
 
-import java.util.*;
-
 // @lc code=start
-// Solution1, 单向BFS
+// Solution1.1, 单向BFS
+// class Solution {
+//     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+//         if (wordList == null || wordList.size() == 0 || !wordList.contains(endWord)) return 0;
+//         HashMap<String, Integer> hm = new HashMap<>();
+//         Queue<String> q = new ArrayDeque();
+//         hm.put(beginWord, 0);
+//         q.add(beginWord);
+
+//         while (!q.isEmpty()) {
+//             String t = q.poll();
+//             for (String word : wordList) {
+//                 if (check(word, t) && !hm.containsKey(word)) {
+//                     hm.put(word, hm.get(t) + 1);
+//                     q.add(word);
+//                     if (Objects.equals(endWord, word)) {
+//                         return hm.get(word) + 1;
+//                     }
+//                 }
+//             }
+//         }
+//         return 0;
+//     }
+
+//     public boolean check(String a, String b) {
+//         int count = 0;
+//         int n = a.length();
+//         for (int i = 0; i < n; i++) {
+//             if (a.charAt(i) != b.charAt(i)) {
+//                 count += 1;
+//             }
+//         }
+//         return count == 1;
+//     }
+// }
+
+// Solution1.2，单向BFS
 class Solution {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-        if (wordList == null || wordList.size() == 0 || !wordList.contains(endWord)) return 0;
-        HashMap<String, Integer> hm = new HashMap<>();
-        Queue<String> q = new ArrayDeque();
-        hm.put(beginWord, 0);
-        q.add(beginWord);
+        if (wordList.size() == 0 || !wordList.contains(endWord)) return 0;
+        HashSet<String> hs = new HashSet(wordList);
+        Queue<String> queue = new ArrayDeque();
+        queue.add(beginWord);
+        int step = 1;
 
-        while (!q.isEmpty()) {
-            String t = q.poll();
-            for (String word : wordList) {
-                if (check(word, t) && !hm.containsKey(word)) {
-                    hm.put(word, hm.get(t) + 1);
-                    q.add(word);
-                    if (Objects.equals(endWord, word)) {
-                        return hm.get(word) + 1;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                String t = queue.poll();
+                char[] tArray = t.toCharArray();
+                for (int j = 0; j < tArray.length; j++) {
+                    char temp = tArray[j];
+                    for (char c = 'a'; c <= 'z'; c++) {
+                        tArray[j] = c;
+                        String s = new String(tArray);
+                        if (hs.contains(s)) {
+                            queue.add(s);
+                            hs.remove(s);
+                            if (s.equals(endWord)) return step + 1;
+                        }
                     }
+                    tArray[j] = temp;
                 }
             }
+            step += 1;
         }
         return 0;
-    }
-
-    public boolean check(String a, String b) {
-        int count = 0;
-        int n = a.length();
-        for (int i = 0; i < n; i++) {
-            if (a.charAt(i) != b.charAt(i)) {
-                count += 1;
-            }
-        }
-        return count == 1;
     }
 }
 // @lc code=end

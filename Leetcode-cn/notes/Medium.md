@@ -163,9 +163,13 @@
 
 **[127] 单词接龙**
 - https://leetcode-cn.com/problems/word-ladder/description/
-1. Solution 1，单向BFS，Time：7%
+- Solution1.1: https://www.acwing.com/solution/content/18017/
+- Solution1.2: https://www.youtube.com/watch?v=hB_nYXFtwP0
+1. Solution1.1，单向BFS，Time：7%
    - `Quene`记录当前`word`访问队列，下一邻结点需满足与`word`有且只有一个`char`不同，且未访问过，`HashMap`记录已访问过的结点及所需步数；
    - 若下一邻结点为`endWord`，return当前结点步数+1；
+2. Solution1.2，单向BFS，Time：62%
+   - 对`queue`里每个邻结点，对`String`的每个`char`进行`a ~ z`字母更换匹配，若在`wordList`中则放入`queue`
 
 
 
