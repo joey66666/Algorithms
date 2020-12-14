@@ -2,6 +2,8 @@
 
 Data Structure, Algorithm, Leetcode
 
+<a title="Hits" target="_blank" href="https://github.com/joey66666/codeyard"><img src="https://hits.b3log.org/joey66666/codeyard.svg"></a>
+
 ## Code and Notes
 
 ### Leetcode-cn
