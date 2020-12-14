@@ -85,8 +85,13 @@
 
 **[49]  Group Anagrams，字母异位词分组**
 - https://leetcode-cn.com/problems/group-anagrams/description/
-1. 每个单词 sorted 作为 key 放入 HashMap
-2. 每个单词每个字母映射成字母表 int 数组，组成唯一 String key (E.g. 1a1e1t) 作为 key 
+1. Solution1, Runtime: 95%: 
+   - 每个单词 `sorted` 作为 `key`
+     1. 实现1: `value`为`List<List<String>> res`每个`List<String>`的`index`
+     2. 实现2: `value`为单独的`List<String>`
+   - 判断`HashMap`是否存在`key`，不存在则新建`List<String>`，存在则取该`List`，添加当前单词
+2. Solution2, Runtime: 11% : 
+   - 每个单词每个字母映射成字母表 int 数组，组成唯一 String key (E.g. 1a1e1t) 作为 key 
 
 
 **[55] 跳跃游戏**

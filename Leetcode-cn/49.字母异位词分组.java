@@ -63,6 +63,34 @@ class Solution {
     }
 }
 
+//Solution1，实现2
+// class Solution {
+//     public List<List<String>> groupAnagrams(String[] strs) {
+//         List<List<String>> res = new ArrayList<>();
+//         if (strs.length == 0) return res;
+//         HashMap<String, List<String>> hm = new HashMap();
+//         for (String str : strs) {
+//             char[] strArray = str.toCharArray();
+//             Arrays.sort(strArray);
+//             String strString = new String(strArray);
+//             if (hm.containsKey(strString)) {
+//                 List<String> t = hm.get(strString);
+//                 t.add(str);
+//                 hm.put(strString, t);
+//             } else {
+//                 List<String> t = new ArrayList<>();
+//                 t.add(str);
+//                 hm.put(strString, t);
+//             }
+//         }
+
+//         for (String k : hm.keySet()) {
+//             res.add(hm.get(k));
+//         }
+//         return res;
+//     }
+// }
+
 // Solution2，字母数组映射替代排序
 // Time: O(m * n)，但 runtime：11%
 // Space: O(n)
