@@ -464,7 +464,7 @@ Easy**
 Easy**
 - https://leetcode-cn.com/problems/word-pattern/description/
 1. Solution
-   - 简单HashMap，注意区分a和b的value不能相等
+   - 简单HashMap，注意区分a和b的value不能相等，通过加入时判断`hm.containsValue`
    - 使用`Object.equals()`取代 `==` 更健壮
 
 

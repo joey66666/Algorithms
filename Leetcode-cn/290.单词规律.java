@@ -42,9 +42,6 @@
  *
  */
 
-import java.util.HashMap;
-import java.util.Objects;
-
 // @lc code=start
 // 简单HashMap，注意区分a和b的value不能相等
 // 使用`Object.equals()`取代 `==` 更健壮

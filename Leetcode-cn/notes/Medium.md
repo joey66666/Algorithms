@@ -369,6 +369,12 @@ if(matrix[i][j] == 1){
     - 若遍历完 > 0，之前一轮遍历中 * 变的 数量 ( < 这一轮数量 ) ，表示部分 * 可变为 ( 或 ) 抵消，部分为空字符串, return true
 
 
+**[738] 单调递增的数字**
+- https://leetcode-cn.com/problems/monotone-increasing-digits/description/
+1. Solution1: Greddy, Time:O(n), Runtime: 97%
+  - 从左到右遍历，找到第一个转折点(非递增位)，将该位`-1`，后面所有位置为`9`
+
+
 **[861] 翻转矩阵后的得分**
 - https://leetcode-cn.com/problems/score-after-flipping-matrix/description/
 - Solution: 
