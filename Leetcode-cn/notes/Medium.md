@@ -369,10 +369,21 @@ if(matrix[i][j] == 1){
     - 若遍历完 > 0，之前一轮遍历中 * 变的 数量 ( < 这一轮数量 ) ，表示部分 * 可变为 ( 或 ) 抵消，部分为空字符串, return true
 
 
+**[714] 买卖股票的最佳时机含手续费**
+- https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/description/
+1. Solution1: DP，DP数组优化为DP变量
+   - 两个变量`sold, hold`表示当天持有股票价值和卖出股票收益
+   - 初始状态：第一天买入，`hold = -prices[0], sold = 0`；
+   - 状态转移：
+      1. 今天持有股票，取决于昨天持有股票或昨天今天买入新股票后两者的最大值 `hold = Math.max(hold, sold - prices[i])`
+      2. 今天卖出股票，取决于继续持有股票(不卖出)或卖出今天股票获取收益后两者的最大值 `sold = Math.max(sold, hold + prices[i] -fee)`
+      3. 最终收益为`sold`
+
+
 **[738] 单调递增的数字**
 - https://leetcode-cn.com/problems/monotone-increasing-digits/description/
 1. Solution1: Greddy, Time:O(n), Runtime: 97%
-  - 从左到右遍历，找到第一个转折点(非递增位)，将该位`-1`，后面所有位置为`9`
+   - 从左到右遍历，找到第一个转折点(非递增位)，将该位`-1`，后面所有位置为`9`
 
 
 **[861] 翻转矩阵后的得分**
