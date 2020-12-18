@@ -1,5 +1,5 @@
-**[145] 二叉树的后序遍历
-Hard**
+- [[145] 二叉树的后序遍历](#145-二叉树的后序遍历)
+##### [145] 二叉树的后序遍历
 - https://leetcode-cn.com/problems/binary-tree-postorder-traversal/description/
 - https://juejin.im/post/59e3fde451882578c20858a5
 - 递归
