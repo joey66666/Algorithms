@@ -59,24 +59,42 @@
  */
 
 // @lc code=start
+// Solution1, char[] alphabet, Runtime: 100%, Memory: 51%
+// class Solution {
+//     public char findTheDifference(String s, String t) {
+//         if (t.length() - s.length() != 1)
+//             return 'a';
+//         char[] sArray = s.toCharArray();
+//         char[] tArray = t.toCharArray();
+//         int[] alphabet = new int[26];
+//         for (char c : sArray) {
+//             alphabet[c - 'a'] += 1;
+//         }
+//         for (char c : tArray) {
+//             alphabet[c - 'a'] -= 1;
+//         }
+//         for (int i = 0; i < alphabet.length; i++) {
+//             if (alphabet[i] < 0)
+//                 return (char) (i + 'a');
+//         }
+//         return 'a';
+//     }
+// }
+
+
+// Solution2, 位操作, Runtime: 100%, Memory: 91%
 class Solution {
     public char findTheDifference(String s, String t) {
         if (t.length() - s.length() != 1)
             return 'a';
         char[] sArray = s.toCharArray();
         char[] tArray = t.toCharArray();
-        int[] alphabet = new int[26];
-        for (char c : sArray) {
-            alphabet[c - 'a'] += 1;
+        char res = tArray[tArray.length - 1];
+        for(int i = 0; i < sArray.length; i++){
+            res ^= sArray[i];
+            res ^= tArray[i];
         }
-        for (char c : tArray) {
-            alphabet[c - 'a'] -= 1;
-        }
-        for (int i = 0; i < alphabet.length; i++) {
-            if (alphabet[i] < 0)
-                return (char) (i + 'a');
-        }
-        return 'a';
+        return res;
     }
 }
 // @lc code=end

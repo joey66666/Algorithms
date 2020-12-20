@@ -310,6 +310,11 @@ if(matrix[i][j] == 1){
 再从右往左遍历，右边的所有数乘积乘上左边的` res[i] *= right; right *= nums[i];  `
 
 
+##### [316] 去除重复字母
+- https://leetcode-cn.com/problems/remove-duplicate-letters/description/
+1. Solution1: Stack
+   - 遍历，若当前字母小于栈顶字母，且后面存在栈顶字母，则弹出栈顶
+
 ##### [376] 摆动序列
 - https://leetcode-cn.com/problems/wiggle-subsequence/description/
 - https://www.acwing.com/solution/LeetCode/content/4912/

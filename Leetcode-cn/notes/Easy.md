@@ -525,9 +525,10 @@ else right = mid - 1;
 
 ##### [389] 找不同
 - https://leetcode-cn.com/problems/find-the-difference/description/
-1. Solution1: Time: O(n), Runtime: 100%
+1. Solution1: Time: O(n), Runtime: 100%, Meomory: 51%
    - `char[] alphabet`字母表，跑一遍s, +=1，跑一遍t, -=1，再遍历找到-1的character
-   - 过于Easy
+2. Solution2: Time: O(n), Runtime: 100%, Meomory: 91%
+   - 位操作，按位异或，与自身异或为零
 
 
 ##### [476] 数字的补数
