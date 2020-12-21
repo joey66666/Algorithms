@@ -185,10 +185,14 @@
 
 ##### [92] Reverse Linked List II
 - https://leetcode.com/problems/reverse-linked-list-ii/
-- 翻转开始前一个节点
-- 翻转完成后一个节点
-- 中间翻转
-- 转完连接
+1. Solution1:
+  - 翻转开始前一个节点
+  - 翻转完成后一个节点
+  - 中间翻转
+  - 转完连接
+2. Solution2: 双指针，Runtime: 100%
+   - `prev`移动到待操作结点`m`前一个，`node`从`m`到`n`移动，每个结点都接到`prev`的后面
+   - 使用`sentinel node`防止在`list = [3, 5], m = 1, n = 2`的Testcase下出现`Null Pointer`
 
 
 ##### [93] 复原IP地址
