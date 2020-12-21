@@ -555,6 +555,11 @@ else right = mid - 1;
 - **向上一层 return 1 + Math.max( left_depth, right_depth )**
 
 
+##### [746] 使用最小花费爬楼梯
+- https://leetcode-cn.com/problems/min-cost-climbing-stairs/description/
+1. Solution1: 经典DP
+   - `dp[i] = Math.min((dp[i - 1] + cost[i - 1]),(dp[i - 2] + cost[i - 2]))`
+
 ##### [771] 宝石与石头
 - https://leetcode-cn.com/problems/jewels-and-stones/description/
 - 简单`HashMap`
