@@ -55,18 +55,25 @@
 // 头尾和 < target, 头指针右移
 // Time: O(n)
 class Solution {
-    public int[] twoSum(int[] numbers, int target) {
-        int i = 0;
-        int j = numbers.length - 1;
-        while (i < j) {
-            int sum = numbers[i] + numbers[j];
-            if (sum < target) i += 1;
-            else if (sum > target) j -= 1;
-            else {
-                return new int[]{i+1,j+1};
+    public int[] twoSum(int[] nums, int target) {
+        int[] res = new int[2];
+        if(nums == null || nums.length == 0) {
+            return res;
+        }
+        int left = 0;
+        int right = nums.length - 1;
+        while(left <= right){
+            if(nums[left] + nums[right] < target){
+                left += 1;
+            }else if(nums[left] + nums[right] > target) {
+                right -= 1;
+            }else if(nums[left] + nums[right] == target){
+                res[0] = left + 1;
+                res[1] = right + 1;
+                return res;
             }
         }
-        return new int[2];
+        return res;
     }
 }
 
