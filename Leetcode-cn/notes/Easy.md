@@ -82,8 +82,9 @@
 
 ##### [1] Two Sum 两数之和
 - https://leetcode-cn.com/problems/two-sum/
-- HashSet
-- 使用一个 HashMap，来建立数字和其坐标位置之间的映射，在遍历数组的时候，用 target 减去遍历到的数字，就是另一个需要的数字了，直接在 HashMap 中查找其是否存在即可，注意要判断查找到的数字不是第一个数字，比如 target 是4，遍历到了一个2，那么另外一个2不能是之前那个2
+1. Solution1: HashMap
+   - `HashMap`存`value`和`index`，遍历判断`target - nums[i]`在不在`HashMap`中
+   - 存入时判断，一遍O(n)，Runtime: 100%
 
 
 ##### [7] Reverse Int
