@@ -71,6 +71,13 @@
 - 判断第一个符号后，后面再出现符号一律归类为!Character.isDigit()
 
 
+##### [11] 盛最多水的容器
+- https://leetcode-cn.com/problems/container-with-most-water/description/
+1. Solution1: 双指针
+   - 左右指针，中间距离为边长，左右指针指向高度中短的那个为容器的高度（木桶原理），盛水容量为 `边长 * 高`
+   - 左右往中间逼近，移动`height`小的那个指针，因为逼近过程中边长一定`- 1`，所以尽可能减弱容器高度的短板，使盛水最多
+
+
 ##### [15] 三数之和
 - https://leetcode-cn.com/problems/3sum/description/
 - Solution：滑动窗口
