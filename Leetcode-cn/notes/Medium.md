@@ -86,6 +86,16 @@
   - **注意过滤相同数字：往下走一位**
 
 
+##### [16] 最接近的三数之和
+- https://leetcode-cn.com/problems/3sum-closest/description/
+1. Solution1: 排序后遍历，双指针逼近, Time: O(n^2), Runtime: 94%
+   - 排序后从左到右，先遍历至`i`，再在`[i + 1, n - 1]`中寻找最靠近`target - nums[i]`的`left`和`right`
+   - 优化：
+     1. 遍历`i`时跳过重复
+     2. `left`和`right`左右逼近时跳过重复
+     3. 与`target`相等可直接`return`
+
+
 ##### [19] 删除链表的倒数第N个节点
 - https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/description/
 - 双指针，`prev`和`cur`
