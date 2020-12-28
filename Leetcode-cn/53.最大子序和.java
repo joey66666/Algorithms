@@ -47,25 +47,42 @@
 // }
 // DP2
 // 若last < 0, 则 now + last < now，故 now = now 而不是 last + now
+// class Solution {
+//     public int maxSubArray(int[] nums) {
+//         int[] sum = new int[nums.length];
+//         sum[0] = nums[0];
+//         for (int i = 1; i < nums.length; i++) {
+//             if (sum[i - 1] < 0) {
+//                 sum[i] = nums[i];
+
+//             } else {
+//                 sum[i] = nums[i] + sum[i - 1];
+//             }
+//         }
+//         int temp = sum[0];
+//         for (int i = 1; i < sum.length; i++) {
+//             if (temp < sum[i]) {
+//                 temp = sum[i];
+//             }
+//         }
+//         return temp;
+//     }
+// }
+
+
+// DP
 class Solution {
     public int maxSubArray(int[] nums) {
-        int[] sum = new int[nums.length];
-        sum[0] = nums[0];
-        for (int i = 1; i < nums.length; i++) {
-            if (sum[i - 1] < 0) {
-                sum[i] = nums[i];
-
-            } else {
-                sum[i] = nums[i] + sum[i - 1];
-            }
+        int n = nums.length;
+        if(n == 0) return n;
+        int[] dp = new int[n];
+        dp[0] = nums[0];
+        int res = nums[0];
+        for(int i = 1; i < n; i++){
+            dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
+            res = Math.max(res, dp[i]);
         }
-        int temp = sum[0];
-        for (int i = 1; i < sum.length; i++) {
-            if (temp < sum[i]) {
-                temp = sum[i];
-            }
-        }
-        return temp;
+        return res;
     }
 }
 // @lc code=end

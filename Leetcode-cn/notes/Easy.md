@@ -138,8 +138,10 @@
 
 ##### [53] Maximum Subarray
 - https://leetcode-cn.com/problems/maximum-subarray
-- 暴力, O(n^2). ##### （不正确）##### 
-- DP 动态规划（初始状态 + 状态转移公式）
+1. Solution1: DP, Time: O(n), Space: O(n), Runtime: 93%
+   - 初始状态:`dp[0] = nums[0]`
+   - 状态转移:`dp[i] = Math.max(dp[i - 1] + nums[i], nums[i])`，若之前数组`sum < 0`，丢弃之前数组，新数组只有`nums[i]`，否则将`nums[i]`加入新数组，继续遍历
+   - 遍历过程中存在遍历到负值，不加，维持之前数组的可能。所以另需变量保存遍历过程遇到的数组之和最大值，即结果
 
 
 ##### [58] 最后一个单词的长度
@@ -532,6 +534,16 @@ else right = mid - 1;
    - 位操作，按位异或，与自身异或为零
 
 
+##### [455] 分发饼干
+- https://leetcode-cn.com/problems/assign-cookies/description/
+1. Solution1: 排序 + 贪心
+   - Time: O(nlogn + mlogm), Space: O(logn + logm), Runtime: 89%
+   - 尽量使用最小的饼干满足胃口最小的孩子
+   - 先排序，再同步遍历两个数组，若当前饼干能满足当前孩子，则均向右移动一个，否则向右移动饼干
+   - 优化：
+     1. 不能满足该孩子胃口的情况下跳过不符合条件`s[index] < g[child]`的饼干（Runtime未得到优化）
+
+
 ##### [476] 数字的补数
 - https://leetcode-cn.com/problems/number-complement/description/
 - 直接 ~ 按位取反，前缀的0也会被取反。
@@ -547,7 +559,6 @@ else right = mid - 1;
 ##### [496] 下一个更大元素 I
 - https://leetcode-cn.com/problems/next-greater-element-i/description/
 - HashMap 简单解法
-
 
 
 ##### [543] 二叉树的直径
