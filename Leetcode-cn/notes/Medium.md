@@ -226,6 +226,20 @@
 - 在出栈之后才访问这个节点。因为先序先访问实际根，后访问实际左，而中序恰好相反。相同的是，访问完根+左子树（先序）或左子树+根（中序）后，都需要转向到“右”节点，使“右”节点称为新的“左”节点。
 
 
+##### [98] 验证二叉搜索树
+- https://leetcode-cn.com/problems/validate-binary-search-tree/description/
+1. Solution1: 中序遍历为升序, Time: O(n), Space: O(n), Runtime: 29%
+   - 中序遍历（先左，再根，后右）结果为升序序列，则满足二叉搜索树（左子节点小于根节点，根节点小于右子节点）
+2. Solution2: 递归遍历, Time: O(n), Space: O(n), Runtime: 100%
+   - 二叉搜索树，若根结点值为`node.val`，则左子树应满足`node.left.val < node.val`，即在开区间`(min, node.val)`内
+   - 设计递归函数`traverse(TreeNode node, Integer min, Integer max)`，若递归过程中`node.val <= min` 或 `node.val >= max`，直接`false`
+   - 遍历子树: `traverse(node.left, min, node.val)`
+   - Tips: 
+      1. 使用`Ineger`而不是`int`，并判断`min`是否为`null`(无法判断`int`是否为`null`)，解决遍历到无左/右子节点的corner case
+      2. 调用为`traverse(root, null, null)`
+      3. `if (node == null) return true`，否则无法work
+
+
 ##### [103] 二叉树的锯齿形层次遍历
 - https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/description/
 1. Solution1, 递归，头尾插入
