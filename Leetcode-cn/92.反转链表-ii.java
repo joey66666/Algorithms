@@ -50,7 +50,7 @@ class Solution{
         sentinel.next = head;
         ListNode prev = sentinel;
         ListNode node = sentinel;
-        for(int i = 1; i < m - 1; i++){
+        for(int i = 1; i < m; i++){
             prev = prev.next;
         }
         node = prev.next;
@@ -60,7 +60,7 @@ class Solution{
             remove.next = prev.next;
             prev.next = remove;
         }
-        return head;
+        return sentinel.next;
     }
 }
 // @lc code=end
