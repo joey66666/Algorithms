@@ -561,11 +561,14 @@ Medium(Maybe)
 1. Solution1: 暴力
    - 使用系统自带最小堆，add一遍在poll一遍，排序交给最小堆自动完成，暴力
    - Time: O(n^2logn), Runtime: 14%
-1. Solution2: 改进最小堆
+   - 遍历放入后用系统内置数组排序，暴力
+   - Time: O(nlogn), Runtime: 26%
+  
+2. Solution2: 改进最小堆
    - 最小堆放入每行第一个元素，取出元素后放入该元素的右一个，直到堆为空
    - 需要自定义一个数据结构表示该元素的坐标，并重写堆的Comparator
    - Time: O(nlogk)，总元素n，k行/个数组, Runtime: 64%
-2. Solution3: Merge归并
+3. Solution3: Merge归并
    - 合并两个数组：双指针同时遍历比较，返回合并后的数组
    - 合并k个数组：对k维数组进行递归，拆解到最后每两个一组，使用合并两个数组方法两两再两两合并。结束条件为`left == right`或`left + 1 == right`
    - Time: O(nlogk), Runtime: 83%

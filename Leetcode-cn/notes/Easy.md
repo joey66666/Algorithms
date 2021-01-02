@@ -619,3 +619,10 @@ else right = mid - 1;
 - https://leetcode-cn.com/problems/check-if-it-is-a-straight-line/description/
 - 只存在两个点直接return true
 - 检查第三个点与12两点之间的斜率是否相等(乘法计算替代除法，防止除数corner case)
+
+
+##### [1346] 检查整数及其两倍数是否存在
+- https://leetcode-cn.com/problems/check-if-n-and-its-double-exist/description/
+1. Solution1: HashSet
+   - 简单`HashSet`，用`float`加速判断
+   - Runtime: 87%

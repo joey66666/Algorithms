@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
 Lintcode 486. 合并k个排序数组
 将 k 个有序数组合并为一个大的有序数组。
@@ -56,54 +58,79 @@ k 是数组的个数。
 //     }
 // }
 
+// Solution1: 系统自带数组排序，暴力
+// Time: O(nlogn), Runtime: 26%
+// public class Solution {
+//     /**
+//      * @param arrays: k sorted integer arrays
+//      * @return: a sorted array
+//      */
+//     public int[] mergekSortedArrays(int[][] arrays) {
+//         // write your code here
+//         if (arrays.length == 0 || arrays[0].length == 0) return new int[0];
+//         List<Integer> list = new ArrayList<>();
+//         for(int i = 0; i < arrays.length; i++){
+//             for(int j = 0; j < arrays[i].length; j++){
+//                 list.add(arrays[i][j]);
+//             }
+//         }
+//         int[] res = new int[list.size()];
+//         for(int i = 0; i < list.size(); i++){
+//             res[i] = list.get(i);
+//         }
+//         Arrays.sort(res);
+//         return res;
+//     }
+// }
+
 // Solution2: 改进最小堆
 // 最小堆放入每行第一个元素，取出元素后放入该元素的右一个，直到堆为空
 // 需要自定义一个数据结构表示该元素的坐标，并重写堆的Comparator
 // Time: O(nlogk)，总元素n，k行/个数组, Runtime: 64%
-public class Solution {
-    /**
-     * @param arrays: k sorted integer arrays
-     * @return: a sorted array
-     */
-    class num {
-        public int row, col, val;
+// public class Solution {
+//     /**
+//      * @param arrays: k sorted integer arrays
+//      * @return: a sorted array
+//      */
+//     class num {
+//         public int row, col, val;
 
-        num(int row, int col, int val) {
-            this.row = row;
-            this.col = col;
-            this.val = val;
-        }
-    }
+//         num(int row, int col, int val) {
+//             this.row = row;
+//             this.col = col;
+//             this.val = val;
+//         }
+//     }
 
-    public int[] mergekSortedArrays(int[][] arrays) {
-        // write your code here
-        if (arrays.length == 0 || arrays[0].length == 0) return new int[0];
-        PriorityQueue<num> heap = new PriorityQueue<num>(arrays.length, new Comparator<num>() {
-            @Override
-            public int compare(num o1, num o2) {
-                return o1.val - o2.val;
-            }
-        });
-        int count = 0;
-        for (int i = 0; i < arrays.length; i++) {
-            num n = new num(i, 0, arrays[i][0]);
-            heap.add(n);
-            count += arrays[i].length;
-        }
-        int[] res = new int[count];
-        int index = 0;
-        while (!heap.isEmpty()) {
-            num n = heap.poll();
-            res[index++] = n.val;
-            if (n.col + 1 < arrays[n.row].length) {
-                n.col += 1;
-                n.val = arrays[n.row][n.col];
-                heap.add(n);
-            }
-        }
-        return res;
-    }
-}
+//     public int[] mergekSortedArrays(int[][] arrays) {
+//         // write your code here
+//         if (arrays.length == 0 || arrays[0].length == 0) return new int[0];
+//         PriorityQueue<num> heap = new PriorityQueue<num>(arrays.length, new Comparator<num>() {
+//             @Override
+//             public int compare(num o1, num o2) {
+//                 return o1.val - o2.val;
+//             }
+//         });
+//         int count = 0;
+//         for (int i = 0; i < arrays.length; i++) {
+//             num n = new num(i, 0, arrays[i][0]);
+//             heap.add(n);
+//             count += arrays[i].length;
+//         }
+//         int[] res = new int[count];
+//         int index = 0;
+//         while (!heap.isEmpty()) {
+//             num n = heap.poll();
+//             res[index++] = n.val;
+//             if (n.col + 1 < arrays[n.row].length) {
+//                 n.col += 1;
+//                 n.val = arrays[n.row][n.col];
+//                 heap.add(n);
+//             }
+//         }
+//         return res;
+//     }
+// }
 
 // Solution3: Merge归并
 // 合并两个数组：双指针同时遍历比较，返回合并后的数组
