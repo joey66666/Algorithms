@@ -626,3 +626,11 @@ else right = mid - 1;
 1. Solution1: HashSet
    - 简单`HashSet`，用`float`加速判断
    - Runtime: 87%
+
+
+##### 剑指 Offer 53 - II. 0～n-1中缺失的数字
+- https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/
+1. Solution1: 二分，Time: O(logn), Space: O(1), Runtime: 100%
+   - **对于有序数组，都应该想到二分**
+   - key: 左子数组: nums[i] == i; 右子数组: nums[i] != i;
+   - 二分查找，左右两指针，`left = mid - 1 / right = mid + 1`，迭代，判断，返回
