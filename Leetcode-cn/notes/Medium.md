@@ -188,6 +188,22 @@
 - `dp`第一行只能从左走，第一列只能从上走，提前初始化
 
 
+##### [75] 颜色分类
+- https://leetcode-cn.com/problems/sort-colors/description/
+- https://leetcode-cn.com/problems/sort-colors/solution/yan-se-fen-lei-by-leetcode-solution/
+1. Solution1: 单指针遍历两次, Time: O(n), Space: O(1), Runtime: 100%
+   - 第一次把`0`交换到前面
+   - 第二次把`1`继续上面的交换到前面
+2. Solution2: 双指针遍历一次, Time: O(n), Space: O(1), Runtime: 100%
+   - `p0, p1`分别表示`0`和`1`的位置，初始为`0`
+   - 遇到`1`: 交换`nums[i], nums[p1]`,移动`p1`
+   - 遇到`0`: 
+     - 此情况下可能发生把前面的`1`交换到后面的情况，所以把`1`交换到后面后再交换到`p1`
+     - 先交换`nums[i], nums[p0]`，
+     - 如果`p0 < p1`, 再交换`nums[i], nums[p1]`, 
+     - `p0`和`p1`均移动
+
+
 ##### [78] 子集
 - https://leetcode-cn.com/problems/subsets/description/
 

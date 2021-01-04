@@ -561,6 +561,14 @@ else right = mid - 1;
 - HashMap 简单解法
 
 
+##### [509] 斐波那契数
+- https://leetcode-cn.com/problems/fibonacci-number/description/
+1. Solution1: 经典DP, Time: O(n), Space: O(n), Runtime: 100%
+   - 按`F(n) = F(n - 1) + F(n - 2)`构建`dp`数组
+2. Solution1: 优化DP, Time: O(n), Space: O(1), Runtime: 100%
+   - 结果只与三个数有关，使用`i, j, k`三个变量表示计算结果，迭代，`Space`优化到`O(1)`
+
+
 ##### [543] 二叉树的直径
 - https://leetcode-cn.com/problems/diameter-of-binary-tree/description/
 - **depth = Math.max( depth, left_depth + right_depth )**
@@ -632,5 +640,5 @@ else right = mid - 1;
 - https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/
 1. Solution1: 二分，Time: O(logn), Space: O(1), Runtime: 100%
    - **对于有序数组，都应该想到二分**
-   - key: 左子数组: nums[i] == i; 右子数组: nums[i] != i;
+   - key: 左子数组: `nums[i] == i`; 右子数组: `nums[i] != i`;
    - 二分查找，左右两指针，`left = mid - 1 / right = mid + 1`，迭代，判断，返回
