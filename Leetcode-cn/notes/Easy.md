@@ -629,6 +629,17 @@ else right = mid - 1;
 - 检查第三个点与12两点之间的斜率是否相等(乘法计算替代除法，防止除数corner case)
 
 
+##### [1266] 访问所有点的最小时间
+- https://leetcode-cn.com/problems/minimum-time-visiting-all-points/description/
+- https://leetcode-cn.com/problems/minimum-time-visiting-all-points/solution/fang-wen-suo-you-dian-de-zui-xiao-shi-jian-by-le-2/
+1. Solution1: 切比雪夫距离
+   - 两点 `(x0, y0), (x1, y1)` 之间的距离差为 `dx = Math.abs(x0 - x1), dy = Math.abs(y0 - y1)`
+     1. `dx < dy`：沿对角线移动 `dx` 次，再竖直移动 `dy - dx` 次，总计 `dx + (dy - dx) = dy` 次
+     2. `dx == dy`：沿对角线移动 `dx` 次
+     3.  `dx > dy`：沿对角线移动 `dy` 次，再水平移动 `dx - dy` 次，总计 `dy + (dx - dy) = dx` 次
+   - 最少移动次数为 `Math.max(dx, dy)`
+
+
 ##### [1346] 检查整数及其两倍数是否存在
 - https://leetcode-cn.com/problems/check-if-n-and-its-double-exist/description/
 1. Solution1: HashSet
