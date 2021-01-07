@@ -553,6 +553,16 @@ if(matrix[i][j] == 1){
 - ![image](https://user-images.githubusercontent.com/25404074/80450199-96972480-8953-11ea-8641-656efe8beffe.png)
 
 
+#### [1551] 使数组中所有元素相等的最小操作数
+- https://leetcode-cn.com/problems/minimum-operations-to-make-array-equal/description/
+- https://leetcode-cn.com/problems/minimum-operations-to-make-array-equal/solution/shi-shu-zu-zhong-suo-you-yuan-su-xiang-deng-de-z-4/
+1. Solution1，贪心, Time: O(n), Space: O(1), Runtime: 56%
+   - 每次同时进行了「加」操作和「减」操作，只需要记录「减」操作的数量可知道操作了多少次。
+   - 对于每一个大于 `n` 的数，其与 `n` 的差值即为该元素需要进行的「减」操作的数量。统计所有大于 `n` 的数与 `n` 的差值
+2. Solution2，数学方法, Time: O(1), Space: O(1), Runtime: 100%
+   - ANS展开，分奇偶，再合并，得出结果为`n^2 / 4`
+
+
 #### First Unique Numer
 Medium(Maybe)
 - https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3313/
