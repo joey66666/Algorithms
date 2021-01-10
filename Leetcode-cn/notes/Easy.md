@@ -412,6 +412,12 @@ n >>= 1
 - 递归调换，先进入子树调换完，再调换root.left, root.right
 
 
+#### [228] 汇总区间
+- https://leetcode-cn.com/problems/summary-ranges/description/
+1. Solution1, 双指针, Time: O(n), Space: O(1), Runtime: 82%
+   - 左右指针，判断遍历到的数和后一个数的差值是否为1，不是则可构成区间
+
+
 #### [231] 2的幂
 - https://leetcode-cn.com/problems/power-of-two/description/
 - 2的倍数二进制第一位为1，后面均为0，取最高位异或本身
