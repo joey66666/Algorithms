@@ -632,6 +632,13 @@ else right = mid - 1;
 - 证明：如果入度和出度的差 = N - 1，又入度、出度 >= 0，那么入度 = N- 1，出度 = 0，满足条件1和2。一旦存在一个点满足条件，那么说明这个点没有出度，所以不存在另一个点的入度是N - 1，满足条件3。
 
 
+ #### [1018] 可被 5 整除的二进制前缀
+- https://leetcode-cn.com/problems/binary-prefix-divisible-by-5/description/
+1. Solution1, Time: O(n), Space: O(1), Runtime: 93%
+   - 能否被 `5` 整除只与末位有关，所以每次算完一位 `%= 10`，不能暴力算下去，不然 `double` 也会越界
+   - `<<= 1` 代替 `*= 2`，加速运算
+  
+
 #### [1046] 最后一块石头的重量
 - https://leetcode-cn.com/problems/last-stone-weight/
 
