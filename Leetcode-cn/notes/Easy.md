@@ -645,8 +645,10 @@ else right = mid - 1;
 
 #### [1232] 缀点成线
 - https://leetcode-cn.com/problems/check-if-it-is-a-straight-line/description/
-- 只存在两个点直接return true
-- 检查第三个点与12两点之间的斜率是否相等(乘法计算替代除法，防止除数corner case)
+1. Solution1, 改良斜率法，Time: O(n), Space: O(1), Runtime: 100%
+   - 只存在两个点直接 `return`
+   - 检查第三个点与12两点之间的斜率是否相等(乘法计算替代除法，防止除数corner case为 `0`)
+   - 判断 `Δy1 / Δx1 == Δy2 / Δx2 -> Δy1 * Δx2 == Δx1 * Δy2`, 哪两个`Δ`相乘不要搞错 
 
 
 #### [1266] 访问所有点的最小时间
