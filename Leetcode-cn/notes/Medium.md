@@ -600,6 +600,18 @@ Medium(Maybe)
    - Time: O(nlogk), Runtime: 83%
 
 
+#### 面试题 08.04. 幂集
+- https://leetcode-cn.com/problems/power-set-lcci/
+- https://wy-ei.github.io/leetcode/78-subsets/
+1. Solution1, 迭代，Time: O(nlogn), Space: O(1), Runtime: 100%
+   - 初始化 `res` 加入空 `List`，每新遇到一个数，把 `res` 中所有`List`都加上这个数，组成新 `List` 再放入 `res`
+2. Solution2, 位图，Time: O(n*2^n), Space: O(1), Runtime: 88%
+   - 长度为 `n` 的数组共有 `2 ^ n` 个幂集
+   - 把 `nums` 中的元素映射到一个表中，对应位置有元素则可放入结果中
+   - 这个方法，更像是数学题，找到了一种的规律
+   - ![位图](https://github.com/joey66666/ImgHost/blob/main/leetcode/power-set-lcci-bitmap.png?raw=true)
+
+
 #### 面试题 16.20. T9键盘
 - https://leetcode-cn.com/problems/t9-lcci/
 1. Solution1: 数组映射
