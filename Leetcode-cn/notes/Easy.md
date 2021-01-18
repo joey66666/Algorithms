@@ -662,6 +662,11 @@ else right = mid - 1;
    - 最少移动次数为 `Math.max(dx, dy)`
 
 
+#### [1342] 将数字变成 0 的操作次数
+- https://leetcode-cn.com/problems/number-of-steps-to-reduce-a-number-to-zero/description/
+1. Solution1: 奇数 `-1`，偶数 `/2`，Time: O(n), Space: O(1), Runtime: 100%
+
+
 #### [1346] 检查整数及其两倍数是否存在
 - https://leetcode-cn.com/problems/check-if-n-and-its-double-exist/description/
 1. Solution1: HashSet
