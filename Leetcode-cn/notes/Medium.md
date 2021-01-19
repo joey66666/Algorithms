@@ -553,6 +553,13 @@ if(matrix[i][j] == 1){
 - ![image](https://user-images.githubusercontent.com/25404074/80450199-96972480-8953-11ea-8641-656efe8beffe.png)
 
 
+#### [1395] 统计作战单位数
+- https://leetcode-cn.com/problems/count-number-of-teams/description/
+1. Solution1, 统计左右, `Time: O(n^2), Space: O(1), Runtime: 10%`
+   - 每一轮对中间数 `num`, 可构成的三元数组数量为 `左边 < num的数量 * 右边 > num 的数量` + `左边 > num的数量 * 右边 < num 的数量`
+   - 一轮遍历 `O(n)`，内部两轮左右遍历 `O(2n)`，结果 `Time: O(2n^2) = O(n^2)`
+
+
 #### [1551] 使数组中所有元素相等的最小操作数
 - https://leetcode-cn.com/problems/minimum-operations-to-make-array-equal/description/
 - https://leetcode-cn.com/problems/minimum-operations-to-make-array-equal/solution/shi-shu-zu-zhong-suo-you-yuan-su-xiang-deng-de-z-4/
