@@ -5,6 +5,7 @@
    - 正向遍历，如果后一个`rating`高，后一个加一个糖果
    - 反向遍历，如果后一个`rating`高，后一个糖果数为`Math.max(现有糖果，前一个糖果数 + 1)`
 
+
  #### [145] 二叉树的后序遍历
 - https://leetcode-cn.com/problems/binary-tree-postorder-traversal/description/
 - https://juejin.im/post/59e3fde451882578c20858a5
