@@ -58,6 +58,7 @@
  */
 
 // @lc code=start
+// Solution1, 奇数减一，偶数除以二, Time: O(logn), Space: O(1), Runtime: 100%
 class Solution {
     public int numberOfSteps (int num) {
         int steps = 0;

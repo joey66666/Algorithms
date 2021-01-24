@@ -550,6 +550,11 @@ else right = mid - 1;
      1. 不能满足该孩子胃口的情况下跳过不符合条件`s[index] < g[child]`的饼干（Runtime未得到优化）
 
 
+#### [674] 最长连续递增序列
+- https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/description/
+1. Solution1, 遍历, Time: O(n), Space: O(1), Runtime: 46%
+
+
 #### [476] 数字的补数
 - https://leetcode-cn.com/problems/number-complement/description/
 - 直接 ~ 按位取反，前缀的0也会被取反。
@@ -664,7 +669,7 @@ else right = mid - 1;
 
 #### [1342] 将数字变成 0 的操作次数
 - https://leetcode-cn.com/problems/number-of-steps-to-reduce-a-number-to-zero/description/
-1. Solution1: 奇数 `-1`，偶数 `/2`，Time: O(n), Space: O(1), Runtime: 100%
+1. Solution1: 奇数 `-1`，偶数 `/2`，Time: O(logn), Space: O(1), Runtime: 100%
 
 
 #### [1346] 检查整数及其两倍数是否存在
