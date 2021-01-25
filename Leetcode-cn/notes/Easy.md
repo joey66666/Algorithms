@@ -518,6 +518,16 @@ else right = mid - 1;
 - 注意要用`long`数据类型
 
 
+#### [371] 两整数之和
+- https://leetcode-cn.com/problems/sum-of-two-integers/description/
+1. Slution1, 位运算，Time: O(n), Space: O(1), Runtime: 100%
+   - 模仿计组加法过程
+   - `a + b = 进位位 << 1 + 末位位`
+   - `进位位 = a & b` 
+   - `末位位 = a ^ b`
+   - 把 `b` 加到 `a` 上，循环直到 `b` 为 `0`
+
+
 #### [383] 赎金信
 - https://leetcode-cn.com/problems/ransom-note/description/
 - `int[26]`数组遍历`magzine`统计26个字母使用次数，再遍历`ransomNote`, `if 对应字母 <= 0`则return
