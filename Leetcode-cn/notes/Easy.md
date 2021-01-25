@@ -522,9 +522,9 @@ else right = mid - 1;
 - https://leetcode-cn.com/problems/sum-of-two-integers/description/
 1. Slution1, 位运算，Time: O(n), Space: O(1), Runtime: 100%
    - 模仿计组加法过程
-   - `a + b = 进位位 << 1 + 末位位`
-   - `进位位 = a & b` 
-   - `末位位 = a ^ b`
+   - `a + b = 有进位 + 无进位`循环
+   - `有进位 = a & b/ a & b 再位移` 
+   - `无进位 = a ^ b`
    - 把 `b` 加到 `a` 上，循环直到 `b` 为 `0`
 
 
