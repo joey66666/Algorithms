@@ -658,6 +658,14 @@ else right = mid - 1;
 - https://leetcode-cn.com/problems/last-stone-weight/
 
 
+#### [1128] 等价多米诺骨牌对的数量
+- https://leetcode-cn.com/problems/number-of-equivalent-domino-pairs/description/
+1. Solution1, 二元组表示，Time: O(n), Space: O(1), Runtime: 99%
+   - `1 <= dominoes[i][j] <= 9` 可得 `i + j <= 99`
+   - 使用数组 `i * 10 + j / j * 10 + i` 储存每对的`index`
+   - 要计算的是可以有多少对，例如三张相同的牌，可以组成三对 `res = index * (index - 1) / 2` 
+
+
 #### [1232] 缀点成线
 - https://leetcode-cn.com/problems/check-if-it-is-a-straight-line/description/
 1. Solution1, 改良斜率法，Time: O(n), Space: O(1), Runtime: 100%
