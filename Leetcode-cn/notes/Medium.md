@@ -50,6 +50,11 @@
 - [First Unique Numer](#first-unique-numer)
 - [Check If a String Is a Valid Sequence from Root to Leaves Path in a Binary Tree](#check-if-a-string-is-a-valid-sequence-from-root-to-leaves-path-in-a-binary-tree)
 
+#### [2] 两数相加
+- https://leetcode-cn.com/problems/add-two-numbers/description/
+1. Solution1, 模拟加法运算，Time: O(max(m, n)), Space: O(1), Runtime: 99%
+   - 按位相加，`> 9` 则进位，最后加上进位位
+
 #### [3] 无重复字符的最长子串
 - https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/description/
 1. Solution 1, 双循环遍历
