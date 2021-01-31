@@ -291,6 +291,15 @@
    - 对`queue`里每个邻结点，对`String`的每个`char`进行`a ~ z`字母更换匹配，若在`wordList`中则放入`queue`
 
 
+#### [134] 加油站
+- https://leetcode-cn.com/problems/gas-station/description/
+- https://www.youtube.com/watch?v=97CjZvrlTS4
+1. Solution1，贪心，Time: O(n), Space: O(1), Runtime: 100%
+   - `if coutn(gas) < count(cost), return -1`
+   - 遍历 `gas`，`if gas[i] + remain < cost`，则 `gas[i]` 无法作为 `start`，跳下一位，重置 `remain`
+   - 否则表示当前区间可用，更新 `remain += gas[i] - cost[i]`，继续遍历
+   - 并不需要考虑完整个 circle，只要找到一个 starting point，也就是说如果前面存在小于的情况，在总 `gas > cost` 的前提下，可以 assume 后面的会得到更多的 remain，进而跑完前面的
+
 
 #### [144] 二叉树的前序遍历
 - https://leetcode-cn.com/problems/binary-tree-preorder-traversal/description/
