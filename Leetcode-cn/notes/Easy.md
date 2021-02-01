@@ -632,6 +632,14 @@ else right = mid - 1;
 - 快慢指针，注意 if( p.next! = null )
 
 
+#### [888] 公平的糖果交换
+- https://leetcode-cn.com/problems/fair-candy-swap/description/
+1. Solution1, 暴力，Time: O(n * m), Space: O(1), Runtime: 15%
+2. Solution2, 二分，Time: O(max(m, n)), Space: O(1), Runtime: 48%
+   - 先计算 `count(A)` 和 `count(B)`的总差值`aCount - (aCount + bCount) / 2`，再 `sort(A), sort(B)` 后双指针遍历
+   - 比较 `A[i] - B[j]`与总差值的大小，若大于总差值则表示当前 `B[j]` 不够填补差值，`j += 1`；反之 `i += 1`
+
+
 #### [993] 二叉树的堂兄弟节点
 - https://leetcode-cn.com/problems/cousins-in-binary-tree/description/
 - 递归遍历，到x, y节点保存parent和depth
