@@ -420,6 +420,14 @@ if(matrix[i][j] == 1){
    - 不能有前导0，即”0200“，把前导0删掉，即”200“
 
 
+#### [424] 替换后的最长重复字符
+- https://leetcode-cn.com/problems/longest-repeating-character-replacement/description/
+- https://leetcode-cn.com/problems/longest-repeating-character-replacement/solution/ti-huan-hou-de-zui-chang-zhong-fu-zi-fu-eaacp/
+1. Solution1, 滑动窗口, Time: O(n), Space: O(1), Runtime: 89%
+   - 右边界先移动找到一个满足题意的可以替换 k 个字符以后，所有字符都变成一样的当前看来最长的子串，直到右边界纳入一个字符以后，不能满足的时候停下
+   - 然后考虑左边界向右移动，左边界只须要向右移动一格以后，右边界就又可以开始向右移动了，继续尝试找到更长的目标子串
+   - 替换后的最长重复子串就产生在右边界、左边界交替向右移动的过程中。
+
 
 #### [495] Teemo Attacking
 - Compare last time + duration and current time
