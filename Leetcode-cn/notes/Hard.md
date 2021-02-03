@@ -12,3 +12,12 @@
 - 递归
 - 非递归，栈实现。
 - 先`stack.push()`进入最左子结点，到最左子结点再`stack.peek()`，判断该结点.right是否为空或已访问过（使用一个`TreeNode last`），若访问过则放入`res`，再`stakck.pop()`，再更新`last`
+
+
+#### [480] 滑动窗口中位数
+- https://leetcode-cn.com/problems/sliding-window-median/description/
+- https://zxi.mytechroad.com/blog/difficulty/hard/leetcode-480-sliding-window-median/
+1. Solution1, 插入排序改进BF，`Time: O((n – k + 1) * k), Space: O(k), Runtime: 67%`
+   - `BF: O((n - k + 1) * klogk)` 会 **TLE**，因为每次加入新元素都要重新 `sort(window)`，消耗 `O(nlogn)` 时间，而没有这个必要
+   - 改进思路是构造一个 `window`，实现 `insert()` 和 `remove()` 方法，`remove` 时先 `binarySearch` 到 `num`，再把后面的数字往前面补；`insert` 先`binarySearch` 到 `num`，再把前面的往后面补，空出位置，插入 `num`
+   - 将每个 `window` 的处理时间优化到 `O(k)`，从而将整体时间复杂度降低一个量级, 到 `O((n - k + 1) * k)`
