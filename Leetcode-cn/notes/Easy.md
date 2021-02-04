@@ -596,6 +596,12 @@ else right = mid - 1;
 - **向上一层 return 1 + Math.max( left_depth, right_depth )**
 
 
+#### [643] 子数组最大平均数 I
+- https://leetcode-cn.com/problems/maximum-average-subarray-i/description/
+1. Solution1, Sliding Window, Time: O(n), Space: O(1), Runtime: 100%
+   - 固定长度的 `window`，使用 `int count` 取代 `int[] window`，每次移动吐出左边的 `num`，吞下右边的 `num`，移动过程中 `int count` 取代`double`，加速处理，最后返回前除以 `k`
+
+
 #### [746] 使用最小花费爬楼梯
 - https://leetcode-cn.com/problems/min-cost-climbing-stairs/description/
 1. Solution1: 经典DP
