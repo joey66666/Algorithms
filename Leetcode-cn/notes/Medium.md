@@ -575,6 +575,13 @@ if(matrix[i][j] == 1){
 - ![image](https://user-images.githubusercontent.com/25404074/80450199-96972480-8953-11ea-8641-656efe8beffe.png)
 
 
+#### [1208] 尽可能使字符串相等
+- https://leetcode-cn.com/problems/get-equal-substrings-within-budget/description/
+1. Solution1, 滑动窗口, Time: O(n), Space: O(1), Runtime: 94%
+   - 滑动窗口模板：双指针，右指针无脑滑，左指针看情况收缩
+   - 维护子数组的元素和 `sum`，初始值为 `0`。在移动两个指针的过程中，更新 `sum` 的值，判断子数组的元素和是否大于 `maxCost`，并决定是否收缩左指针
+
+
 #### [1395] 统计作战单位数
 - https://leetcode-cn.com/problems/count-number-of-teams/description/
 1. Solution1, 统计左右, `Time: O(n^2), Space: O(1), Runtime: 10%`
