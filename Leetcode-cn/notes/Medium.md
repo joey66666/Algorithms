@@ -553,6 +553,14 @@ if(matrix[i][j] == 1){
 2. Solution2，单调栈，思路同[901]
    
 
+#### [1004] 最大连续1的个数 III
+- https://leetcode-cn.com/problems/max-consecutive-ones-iii/description/
+1. Solution1, 滑动窗口, Time: O(n), Space: O(1), Runtime: 94%
+   - **重点：题意转换。把「最多可以把 K 个 0 变成 1，求仅包含 1 的最长子数组的长度」转换为「找出一个最长的子数组，该子数组内最多允许有 K 个 0 」。**
+   - **思路，思路，还是思路！**
+   - 右边界指针主动移，左边界指针被动移，保持区间内 `0` 的个数小于 `K`，区间长度最大值就是结果
+
+
 #### [1008] 先序遍历构造二叉树
 - https://leetcode-cn.com/problems/construct-binary-search-tree-from-preorder-traversal/description/
 - 第一个是根，往后遍历，<=根为左子树，剩下为右子树
