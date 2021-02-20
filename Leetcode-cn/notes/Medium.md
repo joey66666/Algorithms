@@ -386,6 +386,14 @@ if(matrix[i][j] == 1){
 1. Solution1: Stack
    - 遍历，若当前字母小于栈顶字母，且后面存在栈顶字母，则弹出栈顶
 
+
+#### [324] 摆动排序 II
+- https://leetcode-cn.com/problems/wiggle-sort-ii/description/
+1. Solution1, 辅助数组，排序后穿插，Time: O(n), Space: O(n), Runtime: 99%
+   - 数组按照从小到大排序后，从中间切分,比如 123456 切分后123，456 穿插进行后142536符合题意
+   - 但是1223这种就不行了，但是穿插规则可以变一下，两部分逆序穿插，即2 3 1 2
+
+
 #### [376] 摆动序列
 - https://leetcode-cn.com/problems/wiggle-subsequence/description/
 - https://www.acwing.com/solution/LeetCode/content/4912/
