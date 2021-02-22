@@ -607,6 +607,13 @@ else right = mid - 1;
 1. Solution1: 经典DP
    - `dp[i] = Math.min((dp[i - 1] + cost[i - 1]),(dp[i - 2] + cost[i - 2]))`
 
+
+#### [766] 托普利茨矩阵
+- https://leetcode-cn.com/problems/toeplitz-matrix/description/
+1. Solution1, 遍历, Time: O(mn), Space: O(1), Runtime: 100%
+   - 遍历，比较元素和左上角元素是否相等
+
+
 #### [771] 宝石与石头
 - https://leetcode-cn.com/problems/jewels-and-stones/description/
 - 简单`HashMap`
