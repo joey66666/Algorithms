@@ -315,6 +315,16 @@
    - 并不需要考虑完整个 circle，只要找到一个 starting point，也就是说如果前面存在小于的情况，在总 `gas > cost` 的前提下，可以 assume 后面的会得到更多的 remain，进而跑完前面的
 
 
+#### [142] 环形链表 II
+- https://leetcode-cn.com/problems/linked-list-cycle-ii/description/
+- https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/huan-xing-lian-biao-ii-by-leetcode-solution/
+1. Solution1, HashSet, Time:O(n), Space: O(n), Runtime: 21%
+   - 没法 `set.add(p)` 就是重复
+2. Solution2, 快慢指针，Time: O(n), Space: O(1), Runtime: 100%
+   - 画图，计算得出距离的规律：从相遇点到入环点的距离加上 `n − 1` 圈的环长，恰好等于从链表头部到入环点的距离
+   - 当快慢指针相遇，设置另一个指针 `ptr` 从 `head` 出发， 与 `slow` 同步走，相遇的点就是入环点
+
+
 #### [144] 二叉树的前序遍历
 - https://leetcode-cn.com/problems/binary-tree-preorder-traversal/description/
 - https://juejin.im/post/59e3fde451882578c20858a5
