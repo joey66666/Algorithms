@@ -259,7 +259,9 @@ for ( TreeNode node : next_level ){
 
 #### [141] 环形链表
 - https://leetcode-cn.com/problems/linked-list-cycle/description/
-- 快慢指针，若存在环则指针总会相遇，以`fast != null && fast.next != null`为循环条件
+1. Solution1, 快慢指针，Time: O(n), Space: O(1), Runtime: 100%
+   - 循环条件: `fast != null & fast.next != null`
+   - 如果用 `slow` 判断，会出现无环的 case 中 `fast` 跑到 `null` 的情况
 
 
 #### [155] 最小栈

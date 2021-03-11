@@ -66,10 +66,12 @@
  *     }
  * }
  */
+
+// Solution1, 快慢指针，Time: O(n), Space: O(1), Runtime: 100%
+//    - 循环条件: `fast != null & fast.next != null`
 public class Solution {
     public boolean hasCycle(ListNode head) {
         ListNode fast = head, slow = head;
-
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;

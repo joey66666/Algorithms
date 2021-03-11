@@ -108,6 +108,20 @@
 - 若`cur`不到尾部，则`prev`也和`cur`走，直到`cur`走到尾，`prev`走到待删除的前一个node
 
 
+#### [24] 两两交换链表中的节点
+- https://leetcode-cn.com/problems/swap-nodes-in-pairs/description/
+- https://leetcode-cn.com/problems/swap-nodes-in-pairs/solution/liang-liang-jiao-huan-lian-biao-zhong-de-jie-di-91/
+1. Solution1, 迭代, Time: O(n), Space: O(1), Runtime: 100%
+   - 新建一个 `sentinel.next = head` ，使用 `temp` 从 `sentinel` 开始遍历, 遍历结束条件: `temp.next == null || temp.next.next == null`
+   - 令 `node1 = temp.next, node2 = temp.next.next`
+   - 核心:
+      ```java
+      temp.next = node2; 
+      node1.next = node2.next; 
+      node2.next = node1; 
+      temp = node1;
+      ```
+
 #### [31] 下一个排列
 - https://leetcode-cn.com/problems/next-permutation/description/
 1. 数组从后往前遍历，找到第一个降序数字
