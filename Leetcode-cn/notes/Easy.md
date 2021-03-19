@@ -720,6 +720,11 @@ else right = mid - 1;
    - Runtime: 87%
 
 
+#### [1603] 设计停车系统
+- https://leetcode-cn.com/problems/design-parking-system/description/
+1. Solution1, 数组模拟, Time: O(1), Space: O(1), Runtime: 100%
+
+
 #### 剑指 Offer 53 - II. 0～n-1中缺失的数字
 - https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/
 1. Solution1: 二分，Time: O(logn), Space: O(1), Runtime: 100%
