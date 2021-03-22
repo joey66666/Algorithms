@@ -55,13 +55,30 @@
  */
 
 // @lc code=start
+// Solution1，按位与, Time: O(n), Space: O(1), Runtime: 95%
+// public class Solution {
+//     // you need to treat n as an unsigned value
+//     public int hammingWeight(int n) {
+//         int count = 0;
+//         for(int i = 0; i < 32; i++){
+//             if((n & (1 << i)) != 0){
+//                 count += 1;
+//             }
+//         }
+//         return count;
+//     }
+// }
+
+// Solution2, 按位与优化, Time: O(logn), Space: O(1), Runtime: 95%
+// - n & (n−1) = 把 n 的二进制位中的最低位的 1 变为 0 之后的结果
+// - 如：6 & (6-1) = 4, 6 = (110)2, 4 = (100)2, 运算结果 4 即为把 6 的二进制位中的最低位的 1 变为 0 之后的结果。
 public class Solution {
     // you need to treat n as an unsigned value
     public int hammingWeight(int n) {
         int count = 0;
-        for (int i = 0; i < 32; i++) {
-            count += (n & 1);
-            n >>= 1;
+        while(n != 0){
+            n &= n - 1;
+            count += 1;
         }
         return count;
     }
