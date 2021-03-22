@@ -71,7 +71,7 @@
 
 // Solution2, 按位与优化, Time: O(logn), Space: O(1), Runtime: 95%
 // - n & (n−1) = 把 n 的二进制位中的最低位的 1 变为 0 之后的结果
-// - 如：6 & (6-1) = 4, 6 = (110)2, 4 = (100)2, 运算结果 4 即为把 6 的二进制位中的最低位的 1 变为 0 之后的结果。
+// - 如：6 & (6-1) = 4, 6 = (110)2, 4 = (100)2, 运算结果 4 即为把 6 的二进制位中的最低位的 1 变为 0 之后的结果
 public class Solution {
     // you need to treat n as an unsigned value
     public int hammingWeight(int n) {
