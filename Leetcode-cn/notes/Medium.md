@@ -418,6 +418,12 @@ if(matrix[i][j] == 1){
    - 但是1223这种就不行了，但是穿插规则可以变一下，两部分逆序穿插，即2 3 1 2
 
 
+#### [341] 扁平化嵌套列表迭代器
+- https://leetcode-cn.com/problems/flatten-nested-list-iterator/description/
+1. Solution1, 递归, Time: O(n), Space: O(n), Runtime: 91%
+   - dfs，遍历并放到数组里，遍历到 `Integer` 放进去，遍历到数组就继续 dfs 这个数组
+
+
 #### [376] 摆动序列
 - https://leetcode-cn.com/problems/wiggle-subsequence/description/
 - https://www.acwing.com/solution/LeetCode/content/4912/
