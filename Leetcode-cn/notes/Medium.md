@@ -418,6 +418,13 @@ if(matrix[i][j] == 1){
    - 但是1223这种就不行了，但是穿插规则可以变一下，两部分逆序穿插，即2 3 1 2
 
 
+#### [338] 比特位计数
+- https://leetcode-cn.com/problems/counting-bits/description/
+1. Solution1, 遍历，每个num再遍历计算，Time: O(n*sizeof(integer)), Space: O(n), Runtime: 23%
+2. Solution2, 利用之前计算好的，Time: O(n), Space: O(n), Runtime: 99%
+    - i >> 1会把最低位去掉，因此i >> 1 也是比i小的，同样也是在前面的数组里算过。当 i 的最低位是0，则 i 中1的个数和i >> 1中1的个数相同；当i的最低位是1，i 中1的个数是 i >> 1中1的个数再加1
+
+
 #### [341] 扁平化嵌套列表迭代器
 - https://leetcode-cn.com/problems/flatten-nested-list-iterator/description/
 1. Solution1, 递归, Time: O(n), Space: O(n), Runtime: 91%
