@@ -1,3 +1,12 @@
+#### [25] K 个一组翻转链表
+- https://leetcode-cn.com/problems/reverse-nodes-in-k-group/description/
+ 1. Solution1，遍历, Time: O(n), Space: O(1), Runtime: 100%
+    - prev每次移动k个节点，tail先移动这组的末尾，和prev一起框定边界，再对这组倒序，再把首位重新连接
+    1. 框定边界
+    2. 切断该组，组内倒序
+    3. 重新连接该组首尾
+
+
 #### [135] 分发糖果
 - https://leetcode-cn.com/problems/candy/description/
 1. Solution1: 贪心，正反遍历
