@@ -33,20 +33,18 @@
  * Definition for singly-linked list. public class ListNode { int val; ListNode
  * next; ListNode(int x) { val = x; } }
  */
+// 1. Solution1, 一次遍历, Time: O(n), Space: O(1), Runtime: 100%
+//    - 注意边界，判断null
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        if (head == null || head.next == null)
-            return head;
-        ListNode p = head.next;
-        ListNode last = head;
+        ListNode p = head;
         while (p != null) {
-            if (p.val == last.val) {
-                last.next = p.next;
-                p = p.next;
-            } else {
-                last = p;
-                p = p.next;
+            ListNode next = p.next;
+            while (next != null && next.val == p.val) {
+                next = next.next;
             }
+            p.next = next;
+            p = p.next;
         }
         return head;
     }

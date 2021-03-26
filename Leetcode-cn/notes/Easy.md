@@ -166,7 +166,8 @@
 
 #### [83] 删除排序链表中的重复元素
 - https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/description/
-- 删除重复节点后若 last 后移一位则会移到已删除的节点上，所以若重复 last 不动，不重复 last 后移一位
+1. Solution1, 一次遍历, Time: O(n), Space: O(1), Runtime: 100%
+    - 注意边界，判断`null`
 
 
 #### [88] Merge Sorted Array
