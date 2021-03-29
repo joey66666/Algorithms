@@ -324,18 +324,19 @@ for ( TreeNode node : next_level ){
 
 #### [190] 颠倒二进制位
 - https://leetcode-cn.com/problems/reverse-bits/description/
-- 思路：把n最右边一位取出来，res左移一位后加到res上，循环移动32次
-```
-res = res * 2 + n % 2
-n /= 2
-```
-- 以上运算，有符号数下不能用，因为使用补码表示
-- 应使用位操作实现：`n & 1`来取最后一位
-```
-res = (res << 1) | (n & 1)
-n >>= 1
-```
-- Time: O(logN)
+1. Solution1, 循环按位运算, Time: O(1), Space: O(1), Runtime: 96%
+   -  思路：把n最右边一位取出来，res左移一位后加到res上，循环移动32次
+   ```
+   res = res * 2 + n % 2
+   n /= 2
+   ```
+   - 以上运算，有符号数下不能用，因为使用补码表示
+   - 应使用位操作实现：`n & 1`来取最后一位
+   ```
+   res = (res << 1) | (n & 1)
+   n >>= 1
+   ```
+   - Time: O(logN)
 
 
 #### [191] 位1的个数
