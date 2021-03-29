@@ -336,7 +336,6 @@ for ( TreeNode node : next_level ){
    res = (res << 1) | (n & 1)
    n >>= 1
    ```
-   - Time: O(logN)
 
 
 #### [191] 位1的个数
