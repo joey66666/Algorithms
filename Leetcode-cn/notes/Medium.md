@@ -207,6 +207,14 @@
 - `dp`第一行只能从左走，第一列只能从上走，提前初始化
 
 
+#### [74] 搜索二维矩阵
+- https://leetcode-cn.com/problems/search-a-2d-matrix/description/
+1. Solution1, 两次查找，先确定是否在这行左右区间，再从左往右扫描, Time: O(m + n), Space: O(1), Runtime: 60%
+    - 从右上往左下角找，更显著, Runtime: 83%
+2. Solution2, 一次二分，用二分查找改进Solution1中单向遍历, Time: O(n + logM), Space: O(1), Runtime: 94%
+3. Solution3, 两次二分，用二分查找改进Solution2中第一次单向遍历, Time: O(logN + logM), Space: O(1), Runtime: 94%
+
+
 #### [75] 颜色分类
 - https://leetcode-cn.com/problems/sort-colors/description/
 - https://leetcode-cn.com/problems/sort-colors/solution/yan-se-fen-lei-by-leetcode-solution/
