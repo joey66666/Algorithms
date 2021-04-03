@@ -635,10 +635,18 @@ if(matrix[i][j] == 1){
 
 #### [1143] 最长公共子序列
 - https://leetcode-cn.com/problems/longest-common-subsequence/description/
-- dp[text1.length() + 1][text2.length() + 1]
-- dp[i][j]表示两个字符串在i, j之前位置（不包含i, j）的最大公共子序列长度
-- if(text1.charAt(i - 1) == text2.charAt(j - 1)) dp[i][j] = dp[i - 1][j - 1] + 1
-- else dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1])
+1. Solution1, DP, Time: O(m * n), Space: O(m * n), Runtime:85%
+   - dp[i][j]表示两个字符串在i, j之前位置（不包含i, j）的最大公共子序列长度
+   ```java
+   dp[][] = new int[text1.length() + 1][text2.length() + 1]
+   
+   if(text1.charAt(i - 1) == text2.charAt(j - 1)) {
+      dp[i][j] = dp[i - 1][j - 1] + 1
+   }
+   
+   else dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1])
+
+   ```
 - ![image](https://user-images.githubusercontent.com/25404074/80450199-96972480-8953-11ea-8641-656efe8beffe.png)
 
 
