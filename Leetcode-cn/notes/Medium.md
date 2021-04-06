@@ -235,6 +235,15 @@
 - https://leetcode-cn.com/problems/subsets/description/
 
 
+#### [80] 删除有序数组中的重复项 II
+- https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/description/
+- https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/solution/shan-chu-pai-xu-shu-zu-zhong-de-zhong-fu-yec2/
+1. Solution1, 双指针，Time: O(n) , Space: O(1), Runtime: 28%
+   - 慢指针表示处理出的数组的长度，快指针表示已经检查过的数组的长度，即 \textit{nums}[\textit{fast}]nums[fast] 表示待检查的第一个元素，\textit{nums}[\textit{slow} - 1]nums[slow−1] 为上一个应该被保留的元素所移动到的指定位置
+   - 需要检查上上个应该被保留的元素 nums[slow - 2] 是否和当前待检查元素 nums[fast] 相同。当且仅当 nums[slow−2]=nums[fast] 时，当前待检查元素 nums[fast] 不应该被保留（因为此时必然有 nums[slow−2]=nums[slow−1]=nums[fast]）
+   - 最后，slow 即为处理好的数组的长度
+2. Solution2, 双指针优雅版, Time: O(n), Space: O(1), Runtime: 78%
+
 #### [82] 删除排序链表中的重复元素 II
 - https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/description/
 1. Solution1, Time: O(n), Space: O(1), Runtime: 64%
