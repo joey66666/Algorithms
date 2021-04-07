@@ -1,6 +1,4 @@
-# Codeyard
-
-编程后花园
+# Codeyard 编程后花园
 
 Data Structure, Algorithms, Leetcode
 
