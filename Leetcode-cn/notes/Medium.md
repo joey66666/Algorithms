@@ -132,14 +132,16 @@
 
 #### [33] 搜索旋转排序数组
 - https://leetcode-cn.com/problems/search-in-rotated-sorted-array/description/
-- 做一次二分，分析应该搜索左边还是右边。每次二分有三种情况：
-1. nums[mid] = target，则可以返回mid
-2. nums[mid] < nums[right]，说明在[mid, right]区间是右边递增的区间，然后判断target是否在这个区间内
-    - 如果nums[mid] < target <= nums[right]，说明target在右边区间里，则left = mid + 1;
-    - 否则在左边区间里，搜索左边区间，right = mid - 1;
-3. nums[mid] >= nums[right]，说明[elft, mid]区间是在左边的递增区间，然后判断target是否在这个左边区间里
-    - 如果nums[left] <= target < nums[mid]，说明target在这个区间里，则使right = mid - 1;
-    - 否则说明target在[mid, right]的不规则区间里，搜索右边区间，则使left = mid + 1;
+1. Solution1, 二分, Time: O(logn), Space: O(1), Runtime: 62%
+   - 做一次二分，分析应该搜索左边还是右边：
+   ```java
+   if (mid < right)
+      右半段有序
+   else if (mid > right)
+      左半段有序
+   
+   在有序半段判断左右区间，保留，进入再二分搜素
+   ```
 
 
 #### [36] 有效的数独
@@ -243,6 +245,15 @@
    - 需要检查上上个应该被保留的元素 nums[slow - 2] 是否和当前待检查元素 nums[fast] 相同。当且仅当 nums[slow−2]=nums[fast] 时，当前待检查元素 nums[fast] 不应该被保留（因为此时必然有 nums[slow−2]=nums[slow−1]=nums[fast]）
    - 最后，slow 即为处理好的数组的长度
 2. Solution2, 双指针优雅版, Time: O(n), Space: O(1), Runtime: 78%
+
+
+#### [81] 搜索旋转排序数组 II
+- https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/description/
+1. Solution1, 二分, Time: O(logn), Space: O(1), Runtime: 88%
+   - 解法同[[33] 搜索旋转排序数组](#33-搜索旋转排序数组)
+   - 查找时可能会有 `a[l] == a[mid] == a[r]`，此时无法判断区间 [l,mid] 和区间 [mid+1,r] 哪个是有序的。例如 nums=[3,1,2,3,3,3,3], target=2，首次二分时无法判断区间 [0,3][0,3] 和区间 [4,6][4,6] 哪个是有序的。
+   - 此时，将当前二分区间的左边界加一，右边界减一，然后在新区间上继续二分查找
+
 
 #### [82] 删除排序链表中的重复元素 II
 - https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/description/
