@@ -475,7 +475,7 @@ for ( TreeNode node : next_level ){
 
 #### [263] 丑数
 - https://leetcode-cn.com/problems/ugly-number/description/
-- 除到底，判断是否有因子
+1. Solution1, 暴力, 除到底，判断是否有余数, Time: O(logn), Space: O(1), Runtime: 50%
 
 
 #### [268] 缺失数字
