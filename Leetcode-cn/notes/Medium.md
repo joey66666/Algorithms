@@ -373,13 +373,14 @@
 - ![image](https://user-images.githubusercontent.com/25404074/80353709-4fa02500-88a8-11ea-90ee-770fb2ad2277.png)
 
 
-#### [179] Largest Number
-- Overide the Comparator to self-compare in dict order
-- e.g.: 
-    - if s1="76", s2="53", str1 = s1 + s2="7653", str2 = s2 + s1="5375"
-    - in which case str2 < str1
-    - call Arrays.Sort() with new comparator
-    - watch the corner case with all zero
+#### [179] Largest Number 最大数
+- https://leetcode-cn.com/problems/largest-number/description/
+1. Solution1，暴力，冒泡遍历比较, Time: O(n^2), Space: O(1), Runtime: 66%
+   - 比较 `nums[i] + nums[j]` 和 `nums[j] + nums[i]` 的大小，小则交换
+2. Solution2，重写 `compare` 方法, Time: O(NlogN), Space: O(n), Runtime: 77%
+   - Overide the Comparator to self-compare in dict order
+   - if s1="76", s2="53", str1 = s1 + s2="7653", str2 = s2 + s1="5375", in which case str2 < str1
+   - call Arrays.Sort() with new comparator, watch the corner case with all zero
 
 
 #### [200] 岛屿数量
