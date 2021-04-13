@@ -625,6 +625,13 @@ else right = mid - 1;
 - 简单`HashMap`
 
 
+#### [783] 二叉搜索树节点最小距离
+- https://leetcode-cn.com/problems/minimum-distance-between-bst-nodes/description/
+1. Solution1, 遍历，放到list，排序后再遍历，Time: O(n), Space: O(n), Runtime: 70%
+2. Solution2，中序遍历，遍历过程中记录`pre`并比较, Time: O(n), Space: O(1), Runtime: 96%
+   - **二叉搜索树中序遍历得到的值序列是递增有序的**
+
+
 #### [830] 较大分组的位置
 - https://leetcode-cn.com/problems/positions-of-large-groups/description/
 1. Solution1: 双指针
