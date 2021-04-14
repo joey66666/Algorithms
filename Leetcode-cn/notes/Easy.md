@@ -105,6 +105,9 @@
 
 #### [20] Valid Parentheses，判断对等括号
 - https://leetcode-cn.com/problems/valid-parentheses/
+1. Solution1, 栈，Time: O(n), Space: O(n), Runtime: 86%
+   - 简单栈，左边括号放进去，右边括号pop出来并匹配
+   - 注意只有一个括号的边界情况
 - 根据 now 指向来 push 对应的括号，判断 pop 是否==对应
 
 
