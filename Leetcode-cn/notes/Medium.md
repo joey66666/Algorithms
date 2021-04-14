@@ -417,6 +417,15 @@
    - ![image](https://user-images.githubusercontent.com/25404074/90650728-c9508a00-e26e-11ea-9dbb-8a813cd8eb38.png)
 
 
+#### [208] 实现 Trie (前缀树)
+- https://leetcode-cn.com/problems/implement-trie-prefix-tree/description/
+1. Solution1, 前缀树, Time: O(字符串长度)，Space: O(字符串长度)，Runtime: 18%
+   - 每一层都是字符数组[26]，每个 cell 表示指向下一个字符
+   - 设置一个 bool 标识当前字符是否是末尾字符
+2. Solution2, 前缀树, Time: O(字符串长度)，Space: O(字符串长度)，Runtime: 15%
+   - 每一层用 dict 实现
+
+
 #### [215] 数组中的第K个最大元素
 - https://leetcode-cn.com/problems/kth-largest-element-in-an-array/description/
 - 先排序再输出，`Arrays.sort()`升序排列
