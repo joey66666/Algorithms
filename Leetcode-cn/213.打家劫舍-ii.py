@@ -55,7 +55,6 @@
 #
 
 # @lc code=start
-
 # 1. Solution1, DP, Time: O(n), Space: O(n), Runtime: 83%
 #   - 不同时触发首尾：拆成两个数组，[0, n - 1], [1, n]，取两个数组dp的最大值
 #   - n == 1: 返回, n == 2: 取最大值返回
