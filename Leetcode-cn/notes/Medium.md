@@ -426,6 +426,16 @@
    - 每一层用 dict 实现
 
 
+#### [213] 打家劫舍 II
+- https://leetcode-cn.com/problems/house-robber-ii/description/
+1. Solution1, DP, Time: O(n), Space: O(n), Runtime: 83%
+   - 不同时触发首尾：拆成两个数组，[0, n - 1], [1, n]，取两个数组dp的最大值
+   - n == 1: 返回, n == 2: 取最大值返回
+   - dp[i] = max(nums[i] + dp[i - 2], dp[i - 1])
+2. Solution2, 优化DP, 两个变量存储过程中的结果，Time: O(n), Space: O(1), Runtime: 95%
+   - 过程中只需要保存dp数组最后两个数，用变量代替
+
+
 #### [215] 数组中的第K个最大元素
 - https://leetcode-cn.com/problems/kth-largest-element-in-an-array/description/
 - 先排序再输出，`Arrays.sort()`升序排列
