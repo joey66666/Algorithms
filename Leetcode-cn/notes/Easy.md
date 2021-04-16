@@ -108,6 +108,7 @@
 1. Solution1, 栈，Time: O(n), Space: O(n), Runtime: 86%
    - 简单栈，左边括号放进去，右边括号pop出来并匹配
    - 注意只有一个括号的边界情况
+2. Solution2, 高级写法, TIme: O(n), Sapce: O(n), Runtime: 17%
 - 根据 now 指向来 push 对应的括号，判断 pop 是否==对应
 
 

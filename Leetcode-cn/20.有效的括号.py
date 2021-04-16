@@ -80,4 +80,17 @@ class Solution:
         if len(stack) > 0:
             return False
         return True
+
+
+# 2. Solution2, 高级写法, TIme: O(n), Sapce: O(n), Runtime: 17%
+class Solution:
+    def isValid(self, s: str) -> bool:
+        map = {')': '(', ']': '[', '}': '{'}
+        stack = []
+        for c in s:
+            if c not in map:
+                stack.append(c)
+            elif not stack or stack.pop() != map[c]:
+                return False
+        return not stack
 # @lc code=end
