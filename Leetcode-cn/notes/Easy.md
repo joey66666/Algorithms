@@ -438,9 +438,10 @@ for ( TreeNode node : next_level ){
 
 #### [232] 用栈实现队列
 - https://leetcode-cn.com/problems/implement-queue-using-stacks/description/
-- 双栈`in`和`out`
-- Push: `in.push()`
-- Pop: 若`out`不为空则`out.pop()`，若`out`空则`out.push(in.pop())`转移所有`in`元素，再`out.pop()`
+1. Solution1, 双栈实现, Time: O(1), Space: O(n), Runtime: 98%
+   - 双栈`in`和`out`
+   - Push: `in.push()`
+   - Pop: 若`out`不为空则`out.pop()`，若`out`空则`out.push(in.pop())`转移所有`in`元素，再`out.pop()`
 
 
 #### [234] 回文链表
