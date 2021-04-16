@@ -7,6 +7,12 @@
     3. 重新连接该组首尾
 
 
+#### [87] 扰乱字符串
+- https://leetcode-cn.com/problems/scramble-string/description/
+- https://leetcode-cn.com/problems/scramble-string/solution/rao-luan-zi-fu-chuan-by-leetcode-solutio-8r9t/
+1. Solution1, 递归 + DP, Time: O(n^4), Space: O(n^3), Runtime: 43%
+
+
 #### [135] 分发糖果
 - https://leetcode-cn.com/problems/candy/description/
 1. Solution1: 贪心，正反遍历
