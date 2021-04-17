@@ -441,6 +441,16 @@
 - 先排序再输出，`Arrays.sort()`升序排列
 
 
+#### [220] 存在重复元素 III
+- https://leetcode-cn.com/problems/contains-duplicate-iii/description/
+- https://leetcode-cn.com/problems/contains-duplicate-iii/solution/cun-zai-zhong-fu-yuan-su-iii-by-leetcode-bbkt/
+1. Solution1, DP + 有序集合, Time: O(n * log(min(n, k))), Space: O(min(n, k)), Runtime: 43%
+   - 使用`DP`，在 `[i - k, i + k]` 内存在 index，满足 `nums[i] - t <= index <= nums[i] + t`，则返回 `true`
+   - 使用有序集合，加速`DP`内部查找速度
+   - 使用`TreeSet`作为有序集合，`ceiling(set, nums[i] - t)`方法，返回`set`中 `>= nums[i] - t` 的最小值，若不存在则返回`null`
+   - 因为每次`i`增加，区间内 `k - 1` 个数字依然不变，所以在 `i >= k` 时，移除有序集合内最老的元素，该元素值为 `nums[i - k]`
+
+
 #### [221] 最大正方形
 - https://leetcode-cn.com/problems/maximal-square/description/
 - dp[i][j]数组用来保存以matrix[i][j]为右下角的最大正方形边长
