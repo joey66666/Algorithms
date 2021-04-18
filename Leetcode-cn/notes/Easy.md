@@ -114,8 +114,8 @@
 
 #### [26] Remove Duplicated from Sorted Array 删除排序数组中的重复项
 - https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array
-- 只需要前i个，后面不用管
-- return的count要+1，因为根据count来print数组
+1. Solution1, 双指针, Time: O(n), Sapce: O(1), Runtime: 97%
+   - 外循环作右指针，设置一个变量作为左指针，当左右不同时，右赋值给左，左移动一位
 
 
 #### [27] Remove Element 移除元素
