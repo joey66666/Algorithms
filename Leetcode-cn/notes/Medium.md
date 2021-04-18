@@ -438,7 +438,10 @@
 
 #### [215] 数组中的第K个最大元素
 - https://leetcode-cn.com/problems/kth-largest-element-in-an-array/description/
-- 先排序再输出，`Arrays.sort()`升序排列
+1. Solution1, 暴力，排序后返回, Time: O(nlogn), Space: O(n), Runtime: 81%
+   - Time: O(nlogn) 和 Space: O(n) 都是python 自带 sorted() 方法的 Time Sort 的开销
+2. Solution2, 使用自带堆, Time: O(n), Space: O(n), Runtime: 91%
+   - 开销是构建堆和在堆查找的开销
 
 
 #### [220] 存在重复元素 III
