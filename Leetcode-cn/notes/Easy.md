@@ -120,7 +120,11 @@
 
 #### [27] Remove Element 移除元素
 - https://leetcode-cn.com/problems/remove-element
-- 循环中不动即跳过
+1. Solution1, 排序后双指针遍历，移动到左和右区间，继续遍历，右覆盖左, Time: O(nlogn), Space: O(1), Runtime: 60%
+2. Solution2, 优化1，用自带的nums.index()先拿到左指针位置, Time: O(n), Space: O(1), Runtime: 94%
+3. Solution3, 双指针从左开始遍历，赋值非 val 的数值, Time: O(n), Space: O(1), Runtime: 60%
+   - 右指针走，if nums[right] != val, nums[left] = nums[right]
+4. Solution4, 双指针从左右往中间逼近，不用考虑顺序，所以可以把末尾那段逆向赋值到val段，Time: O(n), Space: O(1), Runtime: 60%
 
 
 #### [28] 实现 strStr()
