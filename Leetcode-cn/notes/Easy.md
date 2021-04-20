@@ -129,6 +129,9 @@
 
 #### [28] 实现 strStr()
 - https://leetcode-cn.com/problems/implement-strstr/description/
+1. Solution1, 暴力，Time: O(n * m), Space: O(1), Runtime: 39%
+   - 每个 haystack 按字符匹配 needle, 不符合立即停止该字串匹配,
+2. 好的解法：KMP，暂时不看
 
 
 #### [35] Search Insert Position 搜索插入位置
