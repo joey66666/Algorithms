@@ -269,6 +269,18 @@
   3. `b`插到`a`之前
 
 
+#### [91] 解码方法
+- https://leetcode-cn.com/problems/decode-ways/description/
+1. Solution1, DP数组, Time: O(n), Space: O(n), Runtime: 71%
+   - DP含义：`dp[i]`表示前`i`个字符的解码方式数
+   - 初始条件：`dp[0] = 1`, 空字符串有一种解码方式，解析出空字符串
+   - 状态转移方程：
+      1. 使用当前位解析一位数, 需要满足的条件: `s[i] != "0"`，当前解码方式数等`i - 1`解码方式数，即`dp[i] = dp[i - 1]`
+      2. 使用上一位和这一位解析两位数, 需要满足的条件：`s[i - 1] != "0" and s[i - 1] + s[i] <= 26`, 此时 `dp[i] = dp[i - 2]`
+   - 终止：每一步满足条件时对`dp[i]`进行累加，最后结果为`dp[-1]`
+2. Solution2, DP变量, Time: O(n), Space: O(1), Runtime: 5%
+
+
 #### [92] Reverse Linked List II
 - https://leetcode.com/problems/reverse-linked-list-ii/
 1. Solution1:
