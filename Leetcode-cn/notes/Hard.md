@@ -29,6 +29,14 @@
 - 先`stack.push()`进入最左子结点，到最左子结点再`stack.peek()`，判断该结点.right是否为空或已访问过（使用一个`TreeNode last`），若访问过则放入`res`，再`stakck.pop()`，再更新`last`
 
 
+#### [363] 矩形区域不超过 K 的最大数值和
+- https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/description/
+- https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/solution/ju-xing-qu-yu-bu-chao-guo-k-de-zui-da-sh-70q2/
+1. Solution1, 有序集合, Time: O(m^2nlogn), Spac: O(n), Runtime:
+   - 其实就是暴力，在每一行的上下边界内，对每一列进行计算方格满足条件的值，进而遍历矩阵内每一个方格
+   - 将：寻找矩阵内部矩形区域的不超过 k 的最大数值和 的问题 -> 转化成：计算每组最大区间和, 找到不大于 k 的区间和
+
+
 #### [480] 滑动窗口中位数
 - https://leetcode-cn.com/problems/sliding-window-median/description/
 - https://zxi.mytechroad.com/blog/difficulty/hard/leetcode-480-sliding-window-median/
