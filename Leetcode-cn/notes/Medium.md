@@ -531,6 +531,15 @@ if(matrix[i][j] == 1){
    - 结果表示：`Math.max(dp_up[n - 1], dp_down[n - 1])`
 
 
+#### [377] 组合总和 Ⅳ
+- https://leetcode-cn.com/problems/combination-sum-iv/description/
+1. Solution1, DP, Time: O(target * n), Space: O(target), Runtime: 90%
+   - DP化：`dp[i]` 表示选取的元素之和 `== i` 的方案数量
+   - 初始情况: `dp[0] = 1`，都不选的情况下有一种方案可以构成 0
+   - 状态转移：对于 `[1, target]` 的每一个 `i`，遍历 `nums`，当 `num <= i`, `dp[i] += dp[i - num]`
+   - 边界：`return dp[-1]`
+
+
 #### [402] 移掉K位数字
 - https://leetcode-cn.com/problems/remove-k-digits/description/
 1. Solution1，贪心；
