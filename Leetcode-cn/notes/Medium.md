@@ -700,6 +700,18 @@ if(matrix[i][j] == 1){
 - 递归遍历 
 
 
+#### [1011] 在 D 天内送达包裹的能力
+- https://leetcode-cn.com/problems/capacity-to-ship-packages-within-d-days/description/
+1. Solution1, 二分查找, Time: O(nlogn), Space: O(1), Runtime: 72%
+   - 船舶容量的最小值是 `weights` 里最大的，不然装不下
+   - 船舶容量的最大值是 `weights` 里全部加起来，这样一次就能运完
+   - 在最大值和最小值之间双向逼近，每一次都使用当前的容量在 `weights` 上计算运输总天数 `days`. 这里使用二分查找，时间复杂度最好
+      - 如果 `days > D`, 即当前的容量不能满足 `D`，需要增加
+      - 否则说明容量还有压缩的空间，继续压缩
+   - 每一轮计算天数：`count += weights[i]`，如果 `count > capacity`, 说明 `weights[i]` 应该放到下一天，即 `count = weights[i], days += 1`
+
+
+
 #### [1094] Car Pooling
 - Use one-hot int array to record numbers at every location on and off the bus
 - Compute all the locations and compare with capacity
