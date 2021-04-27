@@ -678,6 +678,13 @@ else right = mid - 1;
    - 比较 `A[i] - B[j]`与总差值的大小，若大于总差值则表示当前 `B[j]` 不够填补差值，`j += 1`；反之 `i += 1`
 
 
+#### [938] 二叉搜索树的范围和
+- https://leetcode-cn.com/problems/range-sum-of-bst/description/
+1. Solution1, Naive DFS, Time: O(n), Space: O(n), Runtime: 48%
+2. Solution2, 优雅 DFS, Time: O(n), Space: O(n), Runtime: 58%
+3. Solution3, 非递归 BFS, Time: O(n), Space: O(n), Runtime: 58%
+
+
 #### [993] 二叉树的堂兄弟节点
 - https://leetcode-cn.com/problems/cousins-in-binary-tree/description/
 - 递归遍历，到x, y节点保存parent和depth
