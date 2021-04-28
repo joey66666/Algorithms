@@ -601,6 +601,12 @@ if(matrix[i][j] == 1){
 -  Time:O(n), Space:O(n)
 
 
+#### [633] 平方数之和
+- https://leetcode-cn.com/problems/sum-of-square-numbers/description/
+1. Solutio1, 双指针, Time: O(n), Space: O(1), Runtime: 48%
+   - 在 [1, int(根号c + 1)] 区间内计算，结果大于 c 右指针左移，结果小于 c 左指针右移
+
+
 #### [649] Dota2 参议院
 - https://leetcode-cn.com/problems/dota2-senate/description/
 - Solution：char[] newSenate
