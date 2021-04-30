@@ -361,6 +361,12 @@
    - 并不需要考虑完整个 circle，只要找到一个 starting point，也就是说如果前面存在小于的情况，在总 `gas > cost` 的前提下，可以 assume 后面的会得到更多的 remain，进而跑完前面的
 
 
+#### [137] 只出现一次的数字 II
+- https://leetcode-cn.com/problems/single-number-ii/description/
+1. Solution1, dict, Time: O(n), Space: O(n), Runtime: 85%
+   - 两次遍历，一次遍历 `nums`，放次数; 一次遍历 `dict`，找次数 `== 1` 的
+
+
 #### [142] 环形链表 II
 - https://leetcode-cn.com/problems/linked-list-cycle-ii/description/
 - https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/huan-xing-lian-biao-ii-by-leetcode-solution/
