@@ -620,6 +620,11 @@ else right = mid - 1;
    - 固定长度的 `window`，使用 `int count` 取代 `int[] window`，每次移动吐出左边的 `num`，吞下右边的 `num`，移动过程中 `int count` 取代`double`，加速处理，最后返回前除以 `k`
 
 
+#### [690] 员工的重要性
+- https://leetcode-cn.com/problems/employee-importance/description/
+1. Solution1, BFS, Time: O(n), Space: O(m), m 为员工和下属的总数量, Runtime: 96%
+
+
 #### [746] 使用最小花费爬楼梯
 - https://leetcode-cn.com/problems/min-cost-climbing-stairs/description/
 1. Solution1: 经典DP
