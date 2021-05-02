@@ -629,7 +629,7 @@ else right = mid - 1;
 - https://leetcode-cn.com/problems/min-cost-climbing-stairs/description/
 1. Solution1: 经典DP
    - `dp[i] = Math.min((dp[i - 1] + cost[i - 1]),(dp[i - 2] + cost[i - 2]))`
-
+$$
 
 #### [766] 托普利茨矩阵
 - https://leetcode-cn.com/problems/toeplitz-matrix/description/

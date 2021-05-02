@@ -598,6 +598,15 @@ if(matrix[i][j] == 1){
 - 再搞不清打草稿列举一下（[11223],[12233],[1122334],[0112233]）
 
 
+#### [554] 砖墙
+- https://leetcode-cn.com/problems/brick-wall/description/
+1. Solution1，找反例, HashMap, Time: O(n * m), Space: O(n), Runtime: 84%
+   - 找穿过最少的砖块数量，就是穿过最多的砖缝数量
+   - 对每一层对一块砖，计算一次砖缝到左边界的距离，放入整面墙的`HashMap`中，`Key`是该砖缝到左边界距离，`Value`是出现次数
+   - 最后结果是 `砖墙高度 - 出现最多的砖缝数`
+   - 最右边的砖缝不统计
+
+
 #### [560] 和为K的子数组
 - https://leetcode-cn.com/problems/subarray-sum-equals-k/description/
 -  prefixSum array 记录从0到i的前缀sum
