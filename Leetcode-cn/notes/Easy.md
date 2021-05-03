@@ -89,8 +89,14 @@
 
 #### [7] Reverse Int
 - https://leetcode-cn.com/problems/reverse-integer/
-- n = n * 10 + x % 10
-- 通过`long n == int n`判断是否溢出
+1. Solution1, java
+   - `n = n * 10 + x % 10`
+   - 通过`long n == int n`判断是否溢出
+1. Solution1, 模拟运算, Time: O(n), Space: O(1), Runtime: 77%
+   - `res = res * 10 + x % 10`
+   - `x //= 10`
+   - 在 `python` 里 `//=` 会对负数向下取整，所以正负数分情况
+   - `python3` 默认使用长整型，不存在溢出，通过 `-(2 ** 31) <= res <= 2 ** 31 - 1`判断溢出
 
 
 #### [9] isPalindrome
