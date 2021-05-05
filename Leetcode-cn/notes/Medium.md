@@ -676,6 +676,13 @@ if(matrix[i][j] == 1){
    - 从左到右遍历，找到第一个转折点(非递增位)，将该位`-1`，后面所有位置为`9`
 
 
+#### [740] 删除与获得点数
+- https://leetcode-cn.com/problems/delete-and-earn/description/
+1. Solution1, DP, Time: O(n + m), Space: O(m), Runtime: 50%
+   - 使用 `total` 数组，统计每个 `nums[i]` 的收益点数和，即 `次数 * nums[i]`
+   - 在 `total` 上隔一个计算一次最大收益，最大值即为答案
+
+
 #### [861] 翻转矩阵后的得分
 - https://leetcode-cn.com/problems/score-after-flipping-matrix/description/
 - Solution: 
