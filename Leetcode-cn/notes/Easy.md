@@ -635,7 +635,6 @@ else right = mid - 1;
 - https://leetcode-cn.com/problems/min-cost-climbing-stairs/description/
 1. Solution1: 经典DP
    - `dp[i] = Math.min((dp[i - 1] + cost[i - 1]),(dp[i - 2] + cost[i - 2]))`
-$$
 
 #### [766] 托普利茨矩阵
 - https://leetcode-cn.com/problems/toeplitz-matrix/description/
@@ -667,7 +666,7 @@ $$
 - 栈比字符串性能高挺多
 
 
-#### [860] 柠檬水找零#### 
+#### [860] 柠檬水找零
 - https://leetcode-cn.com/problems/lemonade-change/description/
 - 维护两个变量，统计5和10的个数
 - 对每个bill需要找零的情况分情况讨论
@@ -764,6 +763,14 @@ $$
 #### [1603] 设计停车系统
 - https://leetcode-cn.com/problems/design-parking-system/description/
 1. Solution1, 数组模拟, Time: O(1), Space: O(1), Runtime: 100%
+
+
+#### [1720] 解码异或后的数组
+- https://leetcode-cn.com/problems/decode-xored-array/description/
+1. Solution1, 反向异或, Time: O(n), Space: O(1), Runtime: 57%
+   - `encode[i] = arr[i] XOR arr[i + 1]`
+   - `encode[i - 1] = arr[i - 1] XOR arr[i]`
+   - `encode[i - 1] XOR arr[i - 1] = arr[i]`
 
 
 #### 剑指 Offer 53 - II. 0～n-1中缺失的数字
