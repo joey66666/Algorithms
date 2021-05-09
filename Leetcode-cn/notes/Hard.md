@@ -29,6 +29,13 @@
 - 先`stack.push()`进入最左子结点，到最左子结点再`stack.peek()`，判断该结点.right是否为空或已访问过（使用一个`TreeNode last`），若访问过则放入`res`，再`stakck.pop()`，再更新`last`
 
 
+#### [239] 滑动窗口最大值
+- https://leetcode-cn.com/problems/sliding-window-maximum/description/
+1. Solution1, 双端队列, Time: O(n), Space: O(k), Runtime: 56%
+   - 使用队列维护一个大小为 k 的滑动窗口，窗口中存 index
+   - 新进元素如果大于窗口中左边已有值，就把左边的值都弹出去；否则，放入队列中
+
+
 #### [363] 矩形区域不超过 K 的最大数值和
 - https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/description/
 - https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/solution/ju-xing-qu-yu-bu-chao-guo-k-de-zui-da-sh-70q2/
