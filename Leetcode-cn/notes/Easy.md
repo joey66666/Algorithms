@@ -675,6 +675,12 @@ else right = mid - 1;
   - 20: 找三张5，或一张5一张10
 
 
+#### [872] 叶子相似的树
+- https://leetcode-cn.com/problems/leaf-similar-trees/description/
+1. Solution1, DFS两次遍历, Time: O(m + n), Space: O(m + n), Runtime: 91%
+   - DFS遍历两棵树，结果放入两个list中，最后比较是否相等
+
+
 #### [876] 链表的中间结点
 - https://leetcode-cn.com/problems/middle-of-the-linked-list/description/
 - 快慢指针，注意 if( p.next! = null )
