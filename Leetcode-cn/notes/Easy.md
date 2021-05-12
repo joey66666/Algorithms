@@ -678,7 +678,7 @@ else right = mid - 1;
 #### [872] 叶子相似的树
 - https://leetcode-cn.com/problems/leaf-similar-trees/description/
 1. Solution1, DFS两次遍历, Time: O(m + n), Space: O(m + n), Runtime: 91%
-   - DFS遍历两棵树，结果放入两个list中，最后比较是否相等
+   - DFS遍历两棵树，结果放入两个`list`中，最后比较是否相等
 
 
 #### [876] 链表的中间结点

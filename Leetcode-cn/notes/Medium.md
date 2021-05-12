@@ -739,7 +739,6 @@ if(matrix[i][j] == 1){
    - 每一轮计算天数：`count += weights[i]`，如果 `count > capacity`, 说明 `weights[i]` 应该放到下一天，即 `count = weights[i], days += 1`
 
 
-
 #### [1094] Car Pooling
 - Use one-hot int array to record numbers at every location on and off the bus
 - Compute all the locations and compare with capacity
@@ -769,6 +768,15 @@ if(matrix[i][j] == 1){
 1. Solution1, 滑动窗口, Time: O(n), Space: O(1), Runtime: 94%
    - 滑动窗口模板：双指针，右指针无脑滑，左指针看情况收缩
    - 维护子数组的元素和 `sum`，初始值为 `0`。在移动两个指针的过程中，更新 `sum` 的值，判断子数组的元素和是否大于 `maxCost`，并决定是否收缩左指针
+
+
+#### [1310] 子数组异或查询
+- https://leetcode-cn.com/problems/xor-queries-of-a-subarray/description/
+1. Solution1, 异或性质, Time: O(n), Space: O(n), Runtime: 80%
+   - `[l, r] = [0, l - 1] XOR [0, r]`  
+      - 如`[2, 3] = [0, 1] XOR [0, 3]`
+   - 先遍历一遍 `attr`, 计算 `[0, r]`，再遍历`queries`，`append([l - 1] ^ [right])`
+      - trick: `l == 0` 的直接返回`[0, r]`
 
 
 #### [1395] 统计作战单位数
