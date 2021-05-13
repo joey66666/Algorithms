@@ -51,3 +51,18 @@
    - `BF: O((n - k + 1) * klogk)` 会 **TLE**，因为每次加入新元素都要重新 `sort(window)`，消耗 `O(nlogn)` 时间，而没有这个必要
    - 改进思路是构造一个 `window`，实现 `insert()` 和 `remove()` 方法，`remove` 时先 `binarySearch` 到 `num`，再把后面的数字往前面补；`insert` 先`binarySearch` 到 `num`，再把前面的往后面补，空出位置，插入 `num`
    - 将每个 `window` 的处理时间优化到 `O(k)`，从而将整体时间复杂度降低一个量级, 到 `O((n - k + 1) * k)`
+
+
+#### [1269] 停在原地的方案数
+- https://leetcode-cn.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/description/
+1. Solution1, DP, Time: O(m * n), Space: O(m * n), Runtime: 50%
+  - 定义: `dp[i][j]dp[i][j]` 代表 step 为 i, arr 数组下标为 j 时, 方案的个数
+  - 状态转移方程: `dp[i][j] = dp[i-1][j] + dp[i-1][j-1] + dp[i-1][j+1]dp[i][j]=dp[i−1][j]+dp[i−1][j−1]+dp[i−1][j+1]`
+     - 到达 j 原地不动的话, `dp[i][j] = dp[i-1][j]dp[i][j]=dp[i−1][j]`, 就是把 step = i-1 的方案数拿过来
+     - 到达 j 是从 j-1, 从 j 左边过来的, 移动一位可以到达 j, 所以把 `dp[i-1][j-1]dp[i−1][j−1]` 的方案数加上
+     - 到达 j 是从 j+1, 从 j 右边过来的, 移动一位可以到达 j, 所以把 `dp[i-1][j+1]dp[i−1][j+1]` 的方案数加上
+     - 题目允许不移动或者左右移动一位, 所以可以把以上的结果都加起来
+ - 初始状态: `dp[0][0] = 1，在[0][0]` 位置上只有一种方案是不动
+ - 注意下标边界
+     - 当 `j = 0` 时，`dp[i−1][j−1] = 0`
+     - 当 `j = min(arrLen−1, steps)` 时，`dp[i−1][j+1] = 0`
