@@ -565,7 +565,13 @@ if(matrix[i][j] == 1){
 1. Solution1, 滑动窗口, Time: O(n), Space: O(1), Runtime: 89%
    - 右边界先移动找到一个满足题意的可以替换 k 个字符以后，所有字符都变成一样的当前看来最长的子串，直到右边界纳入一个字符以后，不能满足的时候停下
    - 然后考虑左边界向右移动，左边界只须要向右移动一格以后，右边界就又可以开始向右移动了，继续尝试找到更长的目标子串
-   - 替换后的最长重复子串就产生在右边界、左边界交替向右移动的过程中。
+   - 替换后的最长重复子串就产生在右边界、左边界交替向右移动的过程中
+
+
+#### [421] 数组中两个数的最大异或值
+- https://leetcode-cn.com/problems/maximum-xor-of-two-numbers-in-an-array/description/
+- https://leetcode-cn.com/problems/maximum-xor-of-two-numbers-in-an-array/solution/shu-zu-zhong-liang-ge-shu-de-zui-da-yi-h-n9m9/
+1. Solutio1, HashSet, Time: O(nlogc), Space: O(n), Runtime: 73%
 
 
 #### [495] Teemo Attacking
