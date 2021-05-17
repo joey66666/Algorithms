@@ -703,8 +703,10 @@ else right = mid - 1;
 
 #### [993] 二叉树的堂兄弟节点
 - https://leetcode-cn.com/problems/cousins-in-binary-tree/description/
-- 递归遍历，到x, y节点保存parent和depth
-- 最后比较 parent不相等且depth相等
+1. Solution1, BFS, Time: O(n), Space: O(n), Runtime: 98%
+   - 遍历一遍树，保存到HashSet, K: 节点值, V: 节点深度和父节点
+   - 取HashSet，parent不相等且depth相等
+   - 优化：只存x和y，Space: O(n) -> O(1)
 
 
 #### [997] 找到小镇的法官
