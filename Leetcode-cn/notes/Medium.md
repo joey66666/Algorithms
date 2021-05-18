@@ -792,6 +792,14 @@ if(matrix[i][j] == 1){
    - 一轮遍历 `O(n)`，内部两轮左右遍历 `O(2n)`，结果 `Time: O(2n^2) = O(n^2)`
 
 
+#### [1442] 形成两个异或相等数组的三元组数目
+- https://leetcode-cn.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/description/
+1. Solution1, 找规律位运算, Time: O(n^2), Space: O(1), Runtime: 64%
+   - 如果 `a == b`, 则 `a ^ b == 0`，即 `arr[i] ^ arr[i + 1] ^ ... ^ arr[j] ^ ... ^ arr[k] == 0`
+   - `i < j`, `j`可以等于`k`，要在`arr`中找到长度大于等于`2`的数组
+   - 如果数组中连续`n`个元素异或结果是`0`，那么组合有`n - 1`种
+
+
 #### [1551] 使数组中所有元素相等的最小操作数
 - https://leetcode-cn.com/problems/minimum-operations-to-make-array-equal/description/
 - https://leetcode-cn.com/problems/minimum-operations-to-make-array-equal/solution/shi-shu-zu-zhong-suo-you-yuan-su-xiang-deng-de-z-4/
