@@ -1,4 +1,4 @@
-# Codeyard 编程后花园
+# Codeyard
 
 Data Structure, Algorithms, Leetcode
 
@@ -38,4 +38,4 @@ Data Structure, Algorithms, Leetcode
 
 "Rewards come to those who work hard, May it be." 
 
-“天道酬勤”
+“日拱一卒”
