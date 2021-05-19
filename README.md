@@ -36,6 +36,4 @@ Data Structure, Algorithms, Leetcode
 
 ## 
 
-"Rewards come to those who work hard, May it be." 
-
 “日拱一卒”
