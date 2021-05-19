@@ -821,6 +821,16 @@ if(matrix[i][j] == 1){
    - `p[i] = p[i – 1] ^ encoded[i – 1]`
 
 
+#### [1738] 找出第 K 大的异或坐标值
+- https://leetcode-cn.com/problems/find-kth-largest-xor-coordinate-value/description/
+- https://leetcode-cn.com/problems/find-kth-largest-xor-coordinate-value/solution/zhao-chu-di-k-da-de-yi-huo-zuo-biao-zhi-mgick/
+- https://leetcode-cn.com/problems/find-kth-largest-xor-coordinate-value/solution/chi-xiao-dou-python-jian-ming-jie-ti-si-doktr/
+1. Solution1, DP, Time: O(m * n * log(mn)), Space: O(m * n), Runtime: 79%
+   - 题意转化为：求【所有子矩阵中第 k 大的异或和】
+   - `p[i][j]` 表示前缀和，即以`matrix[i][j]`的子矩阵运算出的异或和
+   - `p[i][j] = p[i-1][j] ^ p[i][j-1] ^ p[i-1][j-1] ^ matrix[i-1][j-1]`
+
+
 #### First Unique Numer
 Medium(Maybe)
 - https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3313/
