@@ -665,6 +665,17 @@ if(matrix[i][j] == 1){
     - 若遍历完 > 0，之前一轮遍历中 * 变的 数量 ( < 这一轮数量 ) ，表示部分 * 可变为 ( 或 ) 抵消，部分为空字符串, return true
 
 
+#### [692] 前K个高频单词
+- https://leetcode-cn.com/problems/top-k-frequent-words/description/
+1. Solution1, HashMap + Sort, Time: O(n + nlogn), Space: O(n), Runtime: 44%
+   - HashMap<k: word, v: frequency>, 再两次排序，先按词字母，再按出现次数排序
+2. Solution2, Solution1的高级实现, Runtime: 85%
+   - 先统计每个单词出现的次数，再对字典进行双关键字排序
+      - sorted 方法默认正序排列
+      - 第一个参数 -hash[x] 即单词出现次数的相反数, 相当于词频的倒序排列
+      - 当词频相同时，用第二个参数 word 进行排序，即字母正序排列
+
+
 #### [714] 买卖股票的最佳时机含手续费
 - https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/description/
 1. Solution1: DP，DP数组优化为DP变量
