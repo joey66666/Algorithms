@@ -54,12 +54,28 @@
 #                 return False
 #         return True
 
-# Solution2, 排序后比较两个str，Time: O(nlogn), Space: O(1), Runtime: 78%
+
+# Solution2, 字母表模拟Hash, Time: O(n), Space: O(n), Runtime: 48%
+# class Solution:
+#     def isAnagram(self, s: str, t: str) -> bool:
+#         if len(s) != len(t):
+#             return False
+#         l = [0] * 26
+#         for c in s:
+#             l[ord(c) - ord('a')]  += 1
+#         for c in t:
+#             l[ord(c) - ord('a')] -= 1
+#         for c in l:
+#             if c != 0:
+#                 return False
+#         return True
+
+
+# Solution3, 排序后比较两个str，Time: O(nlogn), Space: O(1), Runtime: 78%
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         s = sorted(s)
         t = sorted(t)
         return s.equal(t)
-
 # @lc code=end
 
