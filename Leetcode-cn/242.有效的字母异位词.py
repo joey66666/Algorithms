@@ -74,8 +74,6 @@
 # Solution3, 排序后比较两个str，Time: O(nlogn), Space: O(1), Runtime: 78%
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        s = sorted(s)
-        t = sorted(t)
-        return s.equal(t)
+        return sorted(s) == sorted(t)
 # @lc code=end
 
