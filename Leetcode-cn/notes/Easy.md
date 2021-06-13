@@ -82,9 +82,8 @@
 
 #### [1] Two Sum 两数之和
 - https://leetcode-cn.com/problems/two-sum/
-1. Solution1: HashMap
-   - `HashMap`存`value`和`index`，遍历判断`target - nums[i]`在不在`HashMap`中
-   - 存入时判断，一遍O(n)，Runtime: 100%
+1. Solution1, Hash, Time: O(n), Space: O(n), Runtime: 50%
+   -  遍历`nums`，放入`num`, 判断 `target - num` 在不在 `Hash` 中
 
 
 #### [7] Reverse Int
