@@ -321,9 +321,9 @@
 2. Solution2: 递归遍历, Time: O(n), Space: O(n), Runtime: 100%
    - 二叉搜索树，若根结点值为`node.val`，则左子树应满足`node.left.val < node.val`，即在开区间`(min, node.val)`内
    - 设计递归函数`traverse(TreeNode node, Integer min, Integer max)`，若递归过程中`node.val <= min` 或 `node.val >= max`，直接`false`
-   - 遍历子树: `traverse(node.left, min, node.val)`
+   - 遍历子树: `traverse(node.left, min, node.val)`, `traverse(node.right, node.val, max)`
    - Tips: 
-      1. 使用`Ineger`而不是`int`，并判断`min`是否为`null`(无法判断`int`是否为`null`)，解决遍历到无左/右子节点的corner case
+      1. 使用`Integer`而不是`int`，并判断`min`是否为`null`(无法判断`int`是否为`null`)，解决遍历到无左/右子节点的corner case
       2. 调用为`traverse(root, null, null)`
       3. `if (node == null) return true`，否则无法work
 
