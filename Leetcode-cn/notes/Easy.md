@@ -665,6 +665,15 @@ else right = mid - 1;
 - 栈比字符串性能高挺多
 
 
+#### [852] 山脉数组的峰顶索引
+- https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/description/
+1. Solution1, 单指针, Time: O(n), Space: O(1), Runtime: 91%
+   - 从左到右遍历，找最大值位变小的前一位，即最大值，即山峰
+2. Solution2, 二分查找, Time: O(logn), Space: O(1), Runtime: 91%
+   - 左右之间二分，即寻找最小的 i，使 `arr[i] > arr[i + 1]`
+   - 若 `arr[mid] > arr[mid + 1]`，即`[mid, right]`见为递减，即答案在`[left, mid]`中，反之则在`[mid, right]`中
+
+
 #### [860] 柠檬水找零
 - https://leetcode-cn.com/problems/lemonade-change/description/
 - 维护两个变量，统计5和10的个数
