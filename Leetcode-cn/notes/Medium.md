@@ -713,7 +713,13 @@ if(matrix[i][j] == 1){
   1. 首先，翻转各行，把第一列全部置为1
   2. 然后，翻转各列，使各列内1数量达到最大
   3. 注意优化计算方式，可以在第二步同时计算结果
-  
+
+
+#### [877] 石子游戏
+- https://leetcode-cn.com/problems/stone-game/description/
+1. Solution1, 数学, Time: O(1), Space: O(1), Runtime: 72%
+   - 先手取的位置必定限制了后手能取的位置，即：先手取首位后手只能取偶数位，先手取末位后手只能取奇数位。 因此先手只需要计算好奇偶数位总和，则必赢
+
 
 #### [901] 股票价格跨度
 - https://leetcode-cn.com/problems/online-stock-span/description/
