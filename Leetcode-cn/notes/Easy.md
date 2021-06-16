@@ -466,8 +466,9 @@ for ( TreeNode node : next_level ){
 
 #### [235] 二叉搜索树的最近公共祖先
 - https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
-- 利用二叉搜索树特性：left.val < root.val < right.val
-- 若p、q < root 则一定在左子树中，若p、q > root 则一定在右子树中，否则return root
+1. Solution1, 一次遍历, Time: O(n), Space: O(1), Runtime: 53%
+   - 利用二叉搜索树特性：left.val < root.val < right.val
+   - 若p、q < root 则一定在左子树中，若p、q > root 则一定在右子树中，否则return root
 
 
 #### [237] 删除链表中的节点
