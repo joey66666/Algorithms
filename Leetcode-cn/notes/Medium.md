@@ -335,9 +335,10 @@
 
 
 #### [116] 填充每个节点的下一个右侧节点指针
-- 递归，先中间走到底，再逐层向外
-- 如果使用`parent`指向会导致不是父节点，同一层中间两个节点连不上
-- 动图：![](https://cdn.jsdelivr.net/gh/joey66666/algorithms//Leetcode-cn/notes/pic/20200603221215.gif)
+1. Solution1, 递归, Time: O(n), Space: O(1), Runtime: 86%
+   - 递归，先中间走到底，再逐层向外
+   - 如果使用`parent`指向会导致不是父节点，同一层中间两个节点连不上
+   - 动图：![](https://cdn.jsdelivr.net/gh/joey66666/algorithms//Leetcode-cn/notes/pic/20200603221215.gif)
 
 
 #### [124] 二叉树中的最大路径和

@@ -33,7 +33,6 @@ class Node {
 
 class Solution {
     public Node connect(Node root) {
-
         if (root == null) return root;
         Node left = root.left;
         Node right = root.right;
@@ -45,9 +44,7 @@ class Solution {
         connect(root.left);
         connect(root.right);
         return root;
-
     }
-
 }
 // @lc code=end
 
