@@ -70,7 +70,34 @@ class Node:
         self.right = right
         self.next = next
 """
-# 1. Solution1, 递归, Time: O(n), Space: O(1), Runtime: 86%  
+
+
+# 1. Solution1, 使用next指针层次遍历，Time: O(n), Space: O(1), Runtime: 86%
+#   - 每一层抽象成单链表，从左到右连接
+#   - 使用上一层已经完成的连接去连接下一层
+#   1. 情况1: left和right在一个父结点下，head.left.next = head.right
+#   2. 情况2: left和right不在一个父结点下，但上一层已经连接，可以通过上一层的next, head.right.next = head.next.left
+# class Solution:
+#     def connect(self, root: 'Node') -> 'Node':
+#         if not root:
+#             return root
+#         leftmost = root
+#         while leftmost.left:
+#             head = leftmost
+#             while head:
+#                 # 情况1
+#                 head.left.next = head.right
+#                 # 情况2
+#                 if head.next:
+#                     head.right.next = head.next.left
+#                 # 向右移动一次
+#                 head = head.next
+#             # 向下移动一层
+#             leftmost = leftmost.left
+#         return root  
+
+
+# 2. Solution2, 递归, Time: O(n), Space: O(1), Runtime: 86%
 class Solution:
     def connect(self, root: 'Node') -> 'Node':
         if not root:
@@ -81,10 +108,7 @@ class Solution:
             left.next = right
             left = left.right
             right = right.left
-        self.connect(self, root.left)
-        self.connect(self, root.right)
-        return root
-
-        
+        self.connect(root.left)
+        self.connect(root.right)
+        return root   
 # @lc code=end
-

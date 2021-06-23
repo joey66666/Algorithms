@@ -335,7 +335,12 @@
 
 
 #### [116] 填充每个节点的下一个右侧节点指针
-1. Solution1, 递归, Time: O(n), Space: O(1), Runtime: 86%
+1. Solution1, 使用`next`指针从上到下，从左到右连接，Time: O(n), Space: O(1), Runtime: 86%
+   - 每一层抽象成单链表，从左到右连接
+   - 使用上一层已经完成的连接去连接下一层
+   1. 情况1: `left`和`right`在一个父结点下，`head.left.next = head.right`
+   2. 情况2: `left`和`right`不在一个父结点下，但上一层已经连接，可以通过上一层的`next`, `head.right.next = head.next.left`
+2. Solution2, 递归, Time: O(n), Space: O(1), Runtime: 86%
    - 递归，先中间走到底，再逐层向外
    - 如果使用`parent`指向会导致不是父节点，同一层中间两个节点连不上
    - 动图：![](https://cdn.jsdelivr.net/gh/joey66666/algorithms//Leetcode-cn/notes/pic/20200603221215.gif)
