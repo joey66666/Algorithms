@@ -423,7 +423,10 @@
 
 #### [200] 岛屿数量
 - https://leetcode-cn.com/problems/number-of-islands/description/
-- == 1 则DFS遍历每个点的上下左右，把 1 变为 0，遍历结束count += 1
+1. Solution1, DFS, Time: O(n^2), Space: O(n), Runtime: 83%
+   - 遇到一个岛屿，消除他的所有边界，计数
+   - 即，遍历，遇到的每个1，DFS，从这个1可DFS到的的所有1，置为0，计数+1，即存在一个岛屿
+   - == 1 则DFS遍历每个点的上下左右，把 1 变为 0，遍历结束count += 1
 
 
 #### [201] 数字范围按位与
