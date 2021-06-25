@@ -346,6 +346,13 @@
    - 动图：![](https://cdn.jsdelivr.net/gh/joey66666/algorithms//Leetcode-cn/notes/pic/20200603221215.gif)
 
 
+#### [117] 填充每个节点的下一个右侧节点指针 II
+- https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii/description/
+1. Solution1, 使用next指针BFS，Time: O(n), Space: O(1), Runtime: 61%
+   - 每一横向层抽象成单链表，在上一层为下一层建立 next 指针，建立完一层再继续下一层
+   - 使用`sentinel` node, 判断左右子结点是否存在的情况
+
+
 #### [124] 二叉树中的最大路径和
 - https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/description/
 - 最大路径和 = 当前节点value + 左子树最大路径和 + 右子树最大路径和
