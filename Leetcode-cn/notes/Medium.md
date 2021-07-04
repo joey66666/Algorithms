@@ -237,6 +237,15 @@
    - 每个单词每个字母映射成字母表 int 数组，组成唯一 String key (E.g. 1a1e1t) 作为 key 
 
 
+#### [50] Pow(x, n)
+- https://leetcode-cn.com/problems/powx-n/description/
+1. Solution1, 递归分治, Time: O(logn), Space: O(1), Runtime: 40%
+   - 按奇偶分组，x<sup>n</sup> -> x<sup>(n/2)</sup> -> ... -> x<sup>1</sup> -> x<sup>0</sup>
+      1. 偶数: y = x<sup>n/2</sup>, res = y<sup>2</sup>
+      2. 奇数: y = x<sup>n//2</sup>, res = x * y<sup>2</sup>
+   - 注意`n < 0`，需要计算导数，即`res = myPow(1 / x, -n)`
+
+
 #### [55] 跳跃游戏
 - https://leetcode-cn.com/problems/jump-game/description/
 - `dp`数组中 `dp[i]` 表示达到`i`位置时剩余的跳力，若到达某个位置时跳力为负了，说明无法到达该位置。
