@@ -342,7 +342,7 @@ for ( TreeNode node : next_level ){
    - 假设 nums[0] 为最多元素，遍历，相同 + 1，不同 - 1
    - 若归零，则前面其他和本身数量相等，对冲抵消，指针当下指向另一个数，换成另一个数，对后面继续遍历比较
    - Runtime: 99%
-   -  Time: O(n), Space: O(1)
+   - Time: O(n), Space: O(1)
 
 
 #### [171] Excel表列序号
