@@ -244,6 +244,8 @@
       1. 偶数: y = x<sup>n/2</sup>, res = y<sup>2</sup>
       2. 奇数: y = x<sup>n//2</sup>, res = x * y<sup>2</sup>
    - 注意`n < 0`，需要计算导数，即`res = myPow(1 / x, -n)`
+1. Solution2, 非递归，分治，Time: O(logn), Space: O(1), Runtime: 66%
+  - 思路与 Solution1 相同
 
 
 #### [55] 跳跃游戏

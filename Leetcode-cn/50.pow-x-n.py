@@ -57,17 +57,32 @@
 #       1. 偶数: y = x^(n/2), res = y^2
 #       2. 奇数: y = x^(n//2), res = x * y^2
 #   - 注意 n < 0，需要计算导数，即res = myPow(1 / x, -n)
+# class Solution:
+#     def myPow(self, x: float, n: int) -> float:
+#         if n == 0:
+#             return 1
+#         if n < 0:
+#             return self.myPow(1 / x, -n)
+#         # 偶数
+#         if n % 2 == 0:
+#             return self.myPow(x ** 2, n // 2)
+#         # 奇数
+#         else:
+#             return self.myPow(x ** 2, n // 2) * x
+
+# 1. Solution2, 非递归，分治，Time: O(logn), Space: O(1), Runtime: 66%
+#   - 思路与 Solution1 相同
 class Solution:
     def myPow(self, x: float, n: int) -> float:
-        if n == 0:
-            return 1
         if n < 0:
-            return self.myPow(1 / x, -n)
-        # 偶数
-        if n % 2 == 0:
-            return self.myPow(x ** 2, n // 2)
-        # 奇数
-        else:
-            return self.myPow(x ** 2, n // 2) * x
-
+            x = 1 / x
+            n = -n
+        pow = 1
+        while n:
+            if n & 1:
+                pow *= x
+            x *= x
+            n >>= 1
+        return pow
+        
 # @lc code=end
