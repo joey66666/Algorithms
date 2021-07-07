@@ -917,6 +917,20 @@ if(matrix[i][j] == 1){
    - ANS展开，分奇偶，再合并，得出结果为`n^2 / 4`
 
 
+#### [1711] 大餐计数
+- https://leetcode-cn.com/problems/count-good-meals/description/
+1. Solution1, Hash + 枚举2的幂 + 两数和 + visted, Time: O(nlogc), Space: O(n), Runtime: 99%
+   - 思路：
+      1. 0 <= deliciousness[i] <= 2<sup>20</sup>, 2的幂是有限的，即：pows=[2<sup>0</sup>, 2<sup>1</sup>, ..., 2<sup>21</sup>]
+      2. 相同的数字，餐品数量为：`(n-1)! == n * (n-1) / 2`
+      3. 不同的数字，餐品数量为：`n * m`
+   - 解法
+       1. 统计`deliciousness`中每个数字出现的次数到`Hash`
+       2. 对`Hash`的`key`里的每个数字`k`，遍历`pows`，判断`pow - k`是否在`Hash`中
+           - 若存在，则`(k, pow - k)`可组成大餐，根据**思路2**和**思路3**可得到大餐数量
+       3. 如`(1,3)`和`(3,1)`可能统计两次，设置`visited`的set，通过两个数组成唯一key，判重
+
+
 #### [1734] 解码异或后的排列
 - https://leetcode-cn.com/problems/decode-xored-permutation/description/
 1. Solution1, 数学规律, Time: O(n), Space: O(1) (return 不算), Runtime: 47%
