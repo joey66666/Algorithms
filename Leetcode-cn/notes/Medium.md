@@ -14,6 +14,7 @@
 - [[46] 全排列](#46-全排列)
 - [[48] 旋转图像](#48-旋转图像)
 - [[49]  Group Anagrams，字母异位词分组](#49--group-anagrams字母异位词分组)
+- [[50] Pow(x, n)](#50-powx-n)
 - [[55] 跳跃游戏](#55-跳跃游戏)
 - [[61] 旋转链表](#61-旋转链表)
 - [[62] 不同路径](#62-不同路径)
@@ -49,6 +50,7 @@
 - [[215] 数组中的第K个最大元素](#215-数组中的第k个最大元素)
 - [[220] 存在重复元素 III](#220-存在重复元素-iii)
 - [[221] 最大正方形](#221-最大正方形)
+- [[236] 二叉树的最近公共祖先](#236-二叉树的最近公共祖先)
 - [[238] 除自身以外数组的乘积](#238-除自身以外数组的乘积)
 - [[316] 去除重复字母](#316-去除重复字母)
 - [[324] 摆动排序 II](#324-摆动排序-ii)
@@ -87,6 +89,7 @@
 - [[1395] 统计作战单位数](#1395-统计作战单位数)
 - [[1442] 形成两个异或相等数组的三元组数目](#1442-形成两个异或相等数组的三元组数目)
 - [[1551] 使数组中所有元素相等的最小操作数](#1551-使数组中所有元素相等的最小操作数)
+- [[1711] 大餐计数](#1711-大餐计数)
 - [[1734] 解码异或后的排列](#1734-解码异或后的排列)
 - [[1738] 找出第 K 大的异或坐标值](#1738-找出第-k-大的异或坐标值)
 - [First Unique Numer](#first-unique-numer)
@@ -825,7 +828,15 @@ if(matrix[i][j] == 1){
    - Time：O(N)
    - https://leetcode.flowerplayer.com/2019/04/12/leetcode-907-sum-of-subarray-minimums-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90/
 2. Solution2，单调栈，思路同[901]
-   
+
+
+#### [981] 基于时间的键值存储
+- https://leetcode-cn.com/problems/time-based-key-value-store/description/
+1. Solution1, Hash+二分, Time: O(logn), Space: O(n), Runtime: 96%
+   - `dic = {key: [[value1, timestamp1], [value2, timestamp2], ...}` Hash + 数组
+   - 每次`set(key, value, timestamp)`时，如果`key`不存在，放入新建数组；如果`key`存在，按`timestamp`头插入或尾插入现有数组
+   - `get(key, timestamp)`时，二分查找 `<= timestamp`的最大的`value`，不用二分会超时
+
 
 #### [1004] 最大连续1的个数 III
 - https://leetcode-cn.com/problems/max-consecutive-ones-iii/description/
