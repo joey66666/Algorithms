@@ -79,6 +79,7 @@
 - [[877] 石子游戏](#877-石子游戏)
 - [[901] 股票价格跨度](#901-股票价格跨度)
 - [[907] 子数组的最小值之和](#907-子数组的最小值之和)
+- [[981] 基于时间的键值存储](#981-基于时间的键值存储)
 - [[1004] 最大连续1的个数 III](#1004-最大连续1的个数-iii)
 - [[1008] 先序遍历构造二叉树](#1008-先序遍历构造二叉树)
 - [[1011] 在 D 天内送达包裹的能力](#1011-在-d-天内送达包裹的能力)
@@ -581,6 +582,12 @@ if(matrix[i][j] == 1){
 - https://leetcode-cn.com/problems/product-of-array-except-self/description/
 - 从左到右遍历保存`nums[i]`左边所有数的乘积`res[i] = left; left *= nums[i]`
 再从右往左遍历，右边的所有数乘积乘上左边的` res[i] *= right; right *= nums[i];  `
+
+
+#### [274] H 指数
+- https://leetcode-cn.com/problems/h-index/description/
+1. Solution1, 排序后比较，Time: O(nlogn), Space: O(1), Runtime: 98%
+   - 前`i`个都比`i`大，即`citations[i] >= i + 1`(i starts 0)
 
 
 #### [316] 去除重复字母
