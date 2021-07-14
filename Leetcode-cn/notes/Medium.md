@@ -970,6 +970,15 @@ if(matrix[i][j] == 1){
    - `p[i][j] = p[i-1][j] ^ p[i][j-1] ^ p[i-1][j-1] ^ matrix[i-1][j-1]`
 
 
+#### [1818] 绝对差值和
+- https://leetcode-cn.com/problems/minimum-absolute-sum-difference/description/
+1. Solution1, 排序+手写二分, Time: O(nlogn), Space: O(n), Runtime: 35%
+   - 核心思想：每次遍历到 i 时，在 nums1 中二分查找最接近 nums2[i] 的值，即可替换的 i，替换后构成最小的差值和，更新该差值，最后结果为 sum - ma
+   - 先对 nums1 进行拷贝并排序，得到 sortNums, 在遍历 nums1 和 nums2 计算总的差值 sum 时，通过对 sortNums 进行二分查找，找到最合适替换 nums[i] 的值, 即最接近 nums2[i] 的值, 再计算新差值，如果大于旧差值，则记录下来，不断更新，增大该差值, 最后结果为 `差值和 - 可减去的最大差值`, 即 `sum - ma`
+   - 注意：每次得到的值可能大于nums2[i]，也可能小于，所以计算两次
+2. Solution2, 库函数二分, Time: O(nlogn), Sapce: O(n), Runtime: 85%
+
+
 #### First Unique Numer
 Medium(Maybe)
 - https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3313/
