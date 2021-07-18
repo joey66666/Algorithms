@@ -1028,6 +1028,13 @@ Medium(Maybe)
    - ![位图](https://github.com/joey66666/ImgHost/blob/main/leetcode/power-set-lcci-bitmap.png?raw=true)
 
 
+#### 面试题 10.02. 变位词组
+
+- https://leetcode-cn.com/problems/group-anagrams-lcci
+1. Solution1, Hash, Time: O(n), Space: O(n), Runtime: 98%
+   - 使用排序后的`str`作为`key`
+
+
 #### 面试题 16.20. T9键盘
 - https://leetcode-cn.com/problems/t9-lcci/
 1. Solution1: 数组映射
