@@ -979,6 +979,14 @@ if(matrix[i][j] == 1){
 2. Solution2, 库函数二分, Time: O(nlogn), Sapce: O(n), Runtime: 85%
 
 
+#### [1838] 最高频元素的频数
+- https://leetcode-cn.com/problems/frequency-of-the-most-frequent-element/description/
+1. Solution1, 滑动窗口, Time: O(nlogn), Space: O(logn), Runtime: 89%
+   - 先排序，右窗口移动，从`r`开始，往左找`r - l`位，假设窗口内全符合条件，计算窗口内有可能全部变成`nums[r]`所需的最小全部元素和`total += (nums[r] - nums[r - 1]) * (r - l)`
+   - 如果`total > k`, 即窗口内`k`不满足，从左边开始收缩窗口，踢出不符合的元素，直到窗口内`total < k`, 即`k`满足为止
+   - 记录过程中产生的最大`res`
+
+
 #### First Unique Numer
 Medium(Maybe)
 - https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3313/
@@ -1029,7 +1037,6 @@ Medium(Maybe)
 
 
 #### 面试题 10.02. 变位词组
-
 - https://leetcode-cn.com/problems/group-anagrams-lcci
 1. Solution1, Hash, Time: O(n), Space: O(n), Runtime: 98%
    - 使用排序后的`str`作为`key`
