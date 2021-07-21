@@ -317,7 +317,10 @@ for ( TreeNode node : next_level ){
 
 #### [160] 相交链表
 - https://leetcode-cn.com/problems/intersection-of-two-linked-lists/description/
-- 计算长度差，长的先走到两边平齐，再一起走，相交则return，走到头不相交return null
+1. Solution1, 双指针先走到平齐再一起走，Time: O(n), Space: O(1), Runtime: 97%
+   - 计算长度差，长的先走到两边平齐，再一起走，相交则return，走到头不相交return null 
+2. Solution2, 双指针在两个链表上交叉循环遍历，Time: O(m + n), Space: O(1), Runtime: 99%
+   - a，b不为空往后走，若一个为空则从另一条链重新走
 
 
 #### [167] 两数之和 II - 输入有序数组
